@@ -1,0 +1,12 @@
+#spinnerPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+}

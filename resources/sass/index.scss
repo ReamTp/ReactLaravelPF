@@ -1,0 +1,27 @@
+@import './colors';
+@import './variables';
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    &::-webkit-scrollbar{
+        width: 8px;
+        background-color: #D0FFCB;
+        
+        &-thumb{
+            background-color: #5DC460;
+            border-radius: 10px;
+            
+            &:hover {
+                background-color: #42AB49;
+            }
+        }
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

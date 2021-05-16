@@ -1,0 +1,46 @@
+@import '../../../../sass/index.scss';
+
+.login-der{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: $dark-color;
+    padding: 0 !important;
+
+    div{
+        width: 80%;
+        height: 70%;
+
+        img{
+            width: 75px;
+            margin: 25px 0;
+        }
+
+        h2{
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 35px;
+        }
+
+        button {
+            display: block;
+            width: 80%;
+            margin: 40px auto;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .form-group {
+            width: 80%;
+            margin: 0 auto;
+
+            input {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
