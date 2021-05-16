@@ -15397,6 +15397,18 @@ function BarraLateral(props) {
       closeSession = _useState2[0],
       setCloseSession = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(nivel),
+      _useState4 = _slicedToArray(_useState3, 2),
+      level = _useState4[0],
+      setLevel = _useState4[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (isNaN(nivel)) {
+      setLevel(nivel);
+      console.log('Use State ' + level);
+    }
+  }, [level]);
+
   var clearSession = function clearSession() {
     localStorage.clear();
     setCloseSession(true);
@@ -15440,7 +15452,7 @@ function BarraLateral(props) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faBriefcase
             }), "Mis Funciones"]
-          }), nivel === 1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GGeneralLinks__WEBPACK_IMPORTED_MODULE_4__.default, {}) : '', nivel === 2 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GDAdminFinanLinks__WEBPACK_IMPORTED_MODULE_5__.default, {}) : '', nivel === 3 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_EAdminFinanLinks__WEBPACK_IMPORTED_MODULE_6__.default, {}) : '', nivel === 4 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GCHumanoLinks__WEBPACK_IMPORTED_MODULE_7__.default, {}) : '', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+          }), nivel === 1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GGeneralLinks__WEBPACK_IMPORTED_MODULE_4__.default, {}) : '', nivel === 2 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GDAdminFinanLinks__WEBPACK_IMPORTED_MODULE_5__.default, {}) : '', nivel === 3 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_GCHumanoLinks__WEBPACK_IMPORTED_MODULE_7__.default, {}) : '', nivel === 4 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_EAdminFinanLinks__WEBPACK_IMPORTED_MODULE_6__.default, {}) : '', nivel === 5 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_ECHumanoLinks__WEBPACK_IMPORTED_MODULE_8__.default, {}) : '', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
             to: "/",
             onClick: clearSession,
             className: "nav-link-logout",
@@ -15552,21 +15564,21 @@ function ECHumanoLinks() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/pagos',
+      to: '/echuman/pagos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faMoneyCheckAlt
       }), "Ver Pagos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/productos',
+      to: '/echuman/productos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faUserClock
       }), "Definir Horarios"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/ventas',
+      to: '/echuman/ventas',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChalkboardTeacher
@@ -15611,28 +15623,28 @@ function GCHumanoLinks() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/pagos',
+      to: '/gdchumano/pagos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faMoneyCheckAlt
       }), "Ver Pagos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/aumentos',
+      to: '/gdchumano/aumentos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faSortAmountUp
       }), "Ver Aumentos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/productos',
+      to: '/gdchumano/productos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faUserClock
       }), "Definir Horarios"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/ventas',
+      to: '/gdchumano/ventas',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChalkboardTeacher
@@ -15677,32 +15689,32 @@ function GDAdminFinanLinks() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentedepartamento/pagos',
+      to: '/gdAdminFinan/pagos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faMoneyCheckAlt
       }), "Ver Pagos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentedepartamento/productos',
+      to: '/gdAdminFinan/productos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faDollyFlatbed
       }), "Ver Productos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentedepartamento/ventas',
+      to: '/gdAdminFinan/ventas',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHandHoldingUsd
       }), "Ver Ventas"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentedepartamento/informes',
+      to: '/gdAdminFinan/informes',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faFileAlt
-      }), "Ver Informes"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChartPie
+      }), "Ver Reportes"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
       to: '/notificaciones',
@@ -15743,42 +15755,35 @@ function GGeneralLinks() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/pagos',
+      to: '/functions/gerentegeneral/pagos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faMoneyCheckAlt
       }), "Ver Pagos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/productos',
+      to: '/functions/gerentegeneral/productos',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faDollyFlatbed
       }), "Ver Productos"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/ventas',
+      to: '/functions/gerentegeneral/ventas',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHandHoldingUsd
       }), "Ver Ventas"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/reportes',
+      to: '/functions/gerentegeneral/reportes',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChartPie
       }), "Ver Reportes"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
       exact: true,
-      to: '/gerentegeneral/informes',
-      activeClassName: "active",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faFileAlt
-      }), "Ver Informes"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
-      exact: true,
-      to: '/notificaciones',
+      to: '/functions/notificaciones',
       activeClassName: "active",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faBell
@@ -15786,6 +15791,23 @@ function GGeneralLinks() {
     })]
   });
 }
+
+/***/ }),
+
+/***/ "./resources/src/components/BarraLateral/index.js":
+/*!********************************************************!*\
+  !*** ./resources/src/components/BarraLateral/index.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BarraLateral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BarraLateral */ "./resources/src/components/BarraLateral/BarraLateral.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_BarraLateral__WEBPACK_IMPORTED_MODULE_0__.default);
 
 /***/ }),
 
@@ -15810,7 +15832,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var _assets_img_logoCamposol_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/img/logoCamposol.png */ "./resources/src/assets/img/logoCamposol.png");
+/* harmony import */ var _utils_img__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/img */ "./resources/src/utils/img.js");
 /* harmony import */ var _BarraMenu_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BarraMenu.scss */ "./resources/src/components/BarraMenu/BarraMenu.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -15853,11 +15875,11 @@ function BarraMenu() {
     expand: "md",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Brand, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
           to: "/",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-            src: _assets_img_logoCamposol_png__WEBPACK_IMPORTED_MODULE_2__.default
-          })
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+            src: _utils_img__WEBPACK_IMPORTED_MODULE_2__.logo
+          }), " Camposol\xAE"]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Toggle, {
         "aria-controls": "basic-navbar-nav"
@@ -16057,7 +16079,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var _components_Carrusel_Carrusel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Carrusel/Carrusel */ "./resources/src/components/Carrusel/Carrusel.jsx");
 /* harmony import */ var _assets_img_Camposol_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/img/Camposol.png */ "./resources/src/assets/img/Camposol.png");
-/* harmony import */ var _assets_img_Filosofia_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/img/Filosofia.jpg */ "./resources/src/assets/img/Filosofia.jpg");
+/* harmony import */ var _assets_img_Filosofia2_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/img/Filosofia2.png */ "./resources/src/assets/img/Filosofia2.png");
 /* harmony import */ var _assets_img_Compromiso_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/img/Compromiso.jpg */ "./resources/src/assets/img/Compromiso.jpg");
 /* harmony import */ var _HomePage_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./HomePage.scss */ "./resources/src/pages/HomePage/HomePage.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -16080,30 +16102,24 @@ function Home() {
         className: "about",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
           children: "Nuestra Filosofia"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
-          src: _assets_img_Filosofia_jpg__WEBPACK_IMPORTED_MODULE_3__.default
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "about-box",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "philosophy",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Camposol se preocupa. Honramos y salvaguardamos la relaci\xF3n entre nuestras granjas, nuestros socios y las familias que disfrutan del fruto del trabajo."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Cultivamos nuestro fruto con amor \u2013 amor a la tierra, de nuestro inestimable equipo y socios de todo el mundo \u2013 para asegurar que nuestros socios y las familias a las que sirven tengan la mejor comida que la naturaleza puede proporcionar. Lo consideramos parte de nuestra familia y queremos compartir nuestro aprecio con sus clientes para que pueda seguir prosperando."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Como una de las pocas empresas de productos globales integradas verticalmente, somos capaces de garantizar un control interno completo de nuestra cadena de suministro desde nuestras propias granjas hasta estantes de supermercados, proporcion\xE1ndole as\xED frutas producidas de forma sostenible en las que sus clientes puedan confiar."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Todo nuestro equipo, en nuestras granjas, plantas de embalaje y oficinas, trabaja hacia nuestro objetivo compartido de crear la m\xE1s alta calidad y las frutas m\xE1s frescas, sabrosas y deliciosas a nuestros socios para garantizar que pueda servir mejor a sus clientes. "
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "philosophy",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Nuestro compromiso con la innovaci\xF3n, la coherencia, la trazabilidad y la integridad garantiza que nuestros frutos satisfagan sus necesidades. Somos una empresa con un fuerte prop\xF3sito moral, proporcionando empleos de alta calidad y un producto superior sin dejar de ser buenos administradores de nuestros recursos humanos y naturales. Y estamos siempre enfocados en nuestro objetivo principal: proporcionar la mejor y m\xE1s saludable comida para las familias de todo el mundo."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Con operaciones en Per\xFA, Colombia y Uruguay, Camposol emplea ahora, en temporada alta, a m\xE1s de 16.000 trabajadores en temporada alta. Nuestra cartera actual incluye ar\xE1ndanos, aguacates, uvas de mesa, mangos, mandarinas y camarones de nuestras granjas en Marinasol, el principal productor de camar\xF3n en Per\xFA."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "Seg\xFAn el estudio The Merco Talent 2018, una m\xE9trica universalmente respetada para la excelencia empresarial en el mundo de habla hispana, Camposol es una de las organizaciones l\xEDderes en atraer y mantener talento. Empleamos a los mejores, y se quedan con nosotros."
-            })]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            id: "about-img",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+              src: _assets_img_Filosofia2_png__WEBPACK_IMPORTED_MODULE_3__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            id: "about-box",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+              className: "philosophy",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                children: "Camposol se preocupa. Honramos y salvaguardamos la relaci\xF3n entre nuestras granjas, nuestros socios y las familias que disfrutan del fruto del trabajo."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                children: "Cultivamos nuestro fruto con amor \u2013 amor a la tierra, de nuestro inestimable equipo y socios de todo el mundo \u2013 para asegurar que nuestros socios y las familias a las que sirven tengan la mejor comida que la naturaleza puede proporcionar. Lo consideramos parte de nuestra familia y queremos compartir nuestro aprecio con sus clientes para que pueda seguir prosperando."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                children: "Nuestro compromiso con la innovaci\xF3n, la coherencia, la trazabilidad y la integridad garantiza que nuestros frutos satisfagan sus necesidades. Somos una empresa con un fuerte prop\xF3sito moral, proporcionando empleos de alta calidad y un producto superior sin dejar de ser buenos administradores de nuestros recursos humanos y naturales. Y estamos siempre enfocados en nuestro objetivo principal: proporcionar la mejor y m\xE1s saludable comida para las familias de todo el mundo."
+              })]
+            })
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
@@ -16111,8 +16127,8 @@ function Home() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
           children: "Nuestro Compromiso"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "commiment-box",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            id: "commiment-box",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               children: "Camposol cree firmemente que para garantizar su sostenibilidad futura, el respeto a los principios \xE9ticos, a los empleados y al medio ambiente es un requisito indispensable. Por lo tanto, operamos de acuerdo con nuestras directrices de responsabilidad social, los Objetivos del Milenio y los Principios del Pacto Mundial de las Naciones Unidas, de los cuales hemos sido miembros activos desde 2008."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
@@ -16120,8 +16136,11 @@ function Home() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               children: "El compromiso de Camposol con la calidad, la coherencia, la rendici\xF3n de cuentas, la frescura y la sostenibilidad sigue gan\xE1ndose el respeto y la confianza en nuestra industria, as\xED como con las familias de todas partes que disfrutan de nuestros productos. Camposol significa cuidado, por nuestros socios, por nuestros equipos y por nuestras comunidades."
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
-            src: _assets_img_Compromiso_jpg__WEBPACK_IMPORTED_MODULE_4__.default
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            id: "commiment-img",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+              src: _assets_img_Compromiso_jpg__WEBPACK_IMPORTED_MODULE_4__.default
+            })
           })]
         })]
       })]
@@ -16502,7 +16521,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ MyFunctions)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_BarraLateral_BarraLateral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/BarraLateral/BarraLateral */ "./resources/src/components/BarraLateral/BarraLateral.jsx");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var _utils_img__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/img */ "./resources/src/utils/img.js");
 /* harmony import */ var _MyFunctions_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MyFunctions.scss */ "./resources/src/pages/MyFunctions/MyFunctions.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
@@ -16510,11 +16530,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function MyFunctions(props) {
-  var nivel = props.nivel;
+
+
+function MyFunctions() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_BarraLateral_BarraLateral__WEBPACK_IMPORTED_MODULE_1__.default, {
-      nivel: nivel
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      id: "function-home",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "text",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+          children: "Bienvenido a tus Funciones"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: "Ac\xE1 es donde podras desempe\xF1ar todas tus funciones asignadas por tus jefes."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+          variant: "outline-success",
+          children: "Aprender m\xE1s"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "clearfix"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "s_circle",
+        children: "Camposol\xAE"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+        id: "campo",
+        src: _utils_img__WEBPACK_IMPORTED_MODULE_1__.campo
+      })]
     })
   });
 }
@@ -16535,6 +16575,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyFunctions */ "./resources/src/pages/MyFunctions/MyFunctions.jsx");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_MyFunctions__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
+/***/ "./resources/src/pages/NotificationsPage/NotificationsPage.jsx":
+/*!*********************************************************************!*\
+  !*** ./resources/src/pages/NotificationsPage/NotificationsPage.jsx ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ NotificationsPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _NotificacionesPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotificacionesPage.scss */ "./resources/src/pages/NotificationsPage/NotificacionesPage.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function NotificationsPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Mis Notificaciones"
+    })
+  });
+}
 
 /***/ }),
 
@@ -16613,6 +16680,182 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/src/pages/PaymentsPage/PaymentsPage.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/src/pages/PaymentsPage/PaymentsPage.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PaymentsPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _PaymentsPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentsPage.scss */ "./resources/src/pages/PaymentsPage/PaymentsPage.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function PaymentsPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Pagina de Pagos"
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/src/pages/PaymentsPage/index.js":
+/*!***************************************************!*\
+  !*** ./resources/src/pages/PaymentsPage/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PaymentsPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PaymentsPage */ "./resources/src/pages/PaymentsPage/PaymentsPage.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_PaymentsPage__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
+/***/ "./resources/src/pages/ProductsPage/ProductsPage.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/src/pages/ProductsPage/ProductsPage.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ProductsPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ProductsPaga_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductsPaga.scss */ "./resources/src/pages/ProductsPage/ProductsPaga.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function ProductsPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Pagina de Productos"
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/src/pages/ProductsPage/index.js":
+/*!***************************************************!*\
+  !*** ./resources/src/pages/ProductsPage/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ProductsPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductsPage */ "./resources/src/pages/ProductsPage/ProductsPage.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ProductsPage__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
+/***/ "./resources/src/pages/ReportPage/ReportPage.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/src/pages/ReportPage/ReportPage.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ReportPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ReportPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReportPage.scss */ "./resources/src/pages/ReportPage/ReportPage.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function ReportPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Pagina de Reportes"
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/src/pages/ReportPage/index.js":
+/*!*************************************************!*\
+  !*** ./resources/src/pages/ReportPage/index.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ReportPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ReportPage */ "./resources/src/pages/ReportPage/ReportPage.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ReportPage__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
+/***/ "./resources/src/pages/SalesPage/SalesPage.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/src/pages/SalesPage/SalesPage.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SalesPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _SalesPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SalesPage.scss */ "./resources/src/pages/SalesPage/SalesPage.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function SalesPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Mis vetas"
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/src/pages/SalesPage/index.js":
+/*!************************************************!*\
+  !*** ./resources/src/pages/SalesPage/index.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SalesPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SalesPage */ "./resources/src/pages/SalesPage/SalesPage.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_SalesPage__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
 /***/ "./resources/src/routes/AppRouter/AppRouter.jsx":
 /*!******************************************************!*\
   !*** ./resources/src/routes/AppRouter/AppRouter.jsx ***!
@@ -16628,8 +16871,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _pages_LoginPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../pages/LoginPage */ "./resources/src/pages/LoginPage/index.js");
-/* harmony import */ var _pages_MyFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/MyFunctions */ "./resources/src/pages/MyFunctions/index.js");
-/* harmony import */ var _pages_Page404__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../pages/Page404 */ "./resources/src/pages/Page404/index.js");
+/* harmony import */ var _pages_Page404__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/Page404 */ "./resources/src/pages/Page404/index.js");
+/* harmony import */ var _FunctionsRouter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../FunctionsRouter */ "./resources/src/routes/FunctionsRouter/index.js");
 /* harmony import */ var _LevelRoute__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../LevelRoute */ "./resources/src/routes/LevelRoute/index.js");
 /* harmony import */ var _PagesRouter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PagesRouter */ "./resources/src/routes/PagesRouter/index.js");
 /* harmony import */ var _PublicRoute__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../PublicRoute */ "./resources/src/routes/PublicRoute/index.js");
@@ -16656,13 +16899,12 @@ function AppRouter() {
         path: "/login",
         component: _pages_LoginPage__WEBPACK_IMPORTED_MODULE_1__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_4__.default, {
-        exact: true,
         path: "/functions",
-        component: _pages_MyFunctions__WEBPACK_IMPORTED_MODULE_2__.default
+        component: _FunctionsRouter__WEBPACK_IMPORTED_MODULE_3__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         exact: true,
         path: "/page404",
-        component: _pages_Page404__WEBPACK_IMPORTED_MODULE_3__.default
+        component: _pages_Page404__WEBPACK_IMPORTED_MODULE_2__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: "/",
         component: _PagesRouter__WEBPACK_IMPORTED_MODULE_5__.default
@@ -16690,6 +16932,156 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AppRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppRouter */ "./resources/src/routes/AppRouter/AppRouter.jsx");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_AppRouter__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
+/***/ "./resources/src/routes/FunctionsRouter/FunctionsRouter.jsx":
+/*!******************************************************************!*\
+  !*** ./resources/src/routes/FunctionsRouter/FunctionsRouter.jsx ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ FunctionsRouter)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _components_BarraLateral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/BarraLateral */ "./resources/src/components/BarraLateral/index.js");
+/* harmony import */ var _pages_MyFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/MyFunctions */ "./resources/src/pages/MyFunctions/index.js");
+/* harmony import */ var _pages_NotificationsPage_NotificationsPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../pages/NotificationsPage/NotificationsPage */ "./resources/src/pages/NotificationsPage/NotificationsPage.jsx");
+/* harmony import */ var _pages_PaymentsPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../pages/PaymentsPage */ "./resources/src/pages/PaymentsPage/index.js");
+/* harmony import */ var _pages_ProductsPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../pages/ProductsPage */ "./resources/src/pages/ProductsPage/index.js");
+/* harmony import */ var _pages_ReportPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../pages/ReportPage */ "./resources/src/pages/ReportPage/index.js");
+/* harmony import */ var _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../pages/SalesPage */ "./resources/src/pages/SalesPage/index.js");
+/* harmony import */ var _LevelRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../LevelRoute */ "./resources/src/routes/LevelRoute/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+function FunctionsRouter(props) {
+  var nivel = props.nivel;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_BarraLateral__WEBPACK_IMPORTED_MODULE_1__.default, {
+      nivel: nivel
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Switch, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+        exact: true,
+        path: "/functions",
+        component: _pages_MyFunctions__WEBPACK_IMPORTED_MODULE_2__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gerentegeneral/pagos",
+        component: _pages_PaymentsPage__WEBPACK_IMPORTED_MODULE_4__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gerentegeneral/productos",
+        component: _pages_ProductsPage__WEBPACK_IMPORTED_MODULE_5__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gerentegeneral/ventas",
+        component: _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gerentegeneral/reportes",
+        component: _pages_ReportPage__WEBPACK_IMPORTED_MODULE_6__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdAdminFinan/pagos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdAdminFinan/productos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdAdminFinan/ventas",
+        component: _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdAdminFinan/informes",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdchumano/pagos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdchumano/aumentos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdchumano/productos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/gdchumano/ventas",
+        component: _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/echuman/pagos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/echuman/productos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/echuman/ventas",
+        component: _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/eadfinanzas/productos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/eadfinanzas/pagos",
+        component: nivel
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/eadfinanzas/ventas",
+        component: _pages_SalesPage__WEBPACK_IMPORTED_MODULE_7__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_LevelRoute__WEBPACK_IMPORTED_MODULE_8__.default, {
+        exact: true,
+        path: "/functions/notificaciones",
+        component: _pages_NotificationsPage_NotificationsPage__WEBPACK_IMPORTED_MODULE_3__.default
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+        path: "*",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Redirect, {
+          to: "/page404"
+        })
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/src/routes/FunctionsRouter/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/src/routes/FunctionsRouter/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FunctionsRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FunctionsRouter */ "./resources/src/routes/FunctionsRouter/FunctionsRouter.jsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_FunctionsRouter__WEBPACK_IMPORTED_MODULE_0__.default);
 
 /***/ }),
 
@@ -16823,7 +17215,6 @@ function LevelRoute(_ref) {
   if (cargando) {
     spinner = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_SpinnerPage_SpinnerPage__WEBPACK_IMPORTED_MODULE_2__.default, {});
   } else {
-    ;
     spinner = '';
   }
 
@@ -16902,7 +17293,6 @@ function PagesRouter() {
         path: "/settings",
         component: _pages_MyFunctions__WEBPACK_IMPORTED_MODULE_3__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
-        exact: true,
         path: "*",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Redirect, {
           to: "/page404"
@@ -17327,9 +17717,13 @@ usuario.level = /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_rege
 
         case 4:
           res = _context3.sent;
-          return _context3.abrupt("return", res);
+          _context3.next = 7;
+          return res;
 
-        case 6:
+        case 7:
+          return _context3.abrupt("return", _context3.sent);
+
+        case 8:
         case "end":
           return _context3.stop();
       }
@@ -17404,26 +17798,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CN3": () => (/* binding */ CN3),
 /* harmony export */   "CN4": () => (/* binding */ CN4),
 /* harmony export */   "CN5": () => (/* binding */ CN5),
-/* harmony export */   "CN6": () => (/* binding */ CN6)
+/* harmony export */   "CN6": () => (/* binding */ CN6),
+/* harmony export */   "campo": () => (/* binding */ campo),
+/* harmony export */   "nube1": () => (/* binding */ nube1),
+/* harmony export */   "nube2": () => (/* binding */ nube2),
+/* harmony export */   "nube3": () => (/* binding */ nube3),
+/* harmony export */   "logo": () => (/* binding */ logo)
 /* harmony export */ });
-/* harmony import */ var _assets_img_CN1_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/img/CN1.png */ "./resources/src/assets/img/CN1.png");
-/* harmony import */ var _assets_img_CN2_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/CN2.png */ "./resources/src/assets/img/CN2.png");
-/* harmony import */ var _assets_img_CN3_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/img/CN3.png */ "./resources/src/assets/img/CN3.png");
-/* harmony import */ var _assets_img_CN4_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/img/CN4.png */ "./resources/src/assets/img/CN4.png");
-/* harmony import */ var _assets_img_CN5_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/img/CN5.png */ "./resources/src/assets/img/CN5.png");
-/* harmony import */ var _assets_img_CN6_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/img/CN6.png */ "./resources/src/assets/img/CN6.png");
+/* harmony import */ var _assets_img_Camposol_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/img/Camposol.png */ "./resources/src/assets/img/Camposol.png");
+/* harmony import */ var _assets_img_CN1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/CN1.png */ "./resources/src/assets/img/CN1.png");
+/* harmony import */ var _assets_img_CN2_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/img/CN2.png */ "./resources/src/assets/img/CN2.png");
+/* harmony import */ var _assets_img_CN3_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/img/CN3.png */ "./resources/src/assets/img/CN3.png");
+/* harmony import */ var _assets_img_CN4_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/img/CN4.png */ "./resources/src/assets/img/CN4.png");
+/* harmony import */ var _assets_img_CN5_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/img/CN5.png */ "./resources/src/assets/img/CN5.png");
+/* harmony import */ var _assets_img_CN6_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/img/CN6.png */ "./resources/src/assets/img/CN6.png");
+/* harmony import */ var _assets_img_campo_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/img/campo.png */ "./resources/src/assets/img/campo.png");
+/* harmony import */ var _assets_img_nube_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/img/nube.png */ "./resources/src/assets/img/nube.png");
+/* harmony import */ var _assets_img_nube2_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/img/nube2.png */ "./resources/src/assets/img/nube2.png");
+/* harmony import */ var _assets_img_nube3_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/img/nube3.png */ "./resources/src/assets/img/nube3.png");
 
 
 
 
 
 
-var CN1 = _assets_img_CN1_png__WEBPACK_IMPORTED_MODULE_0__.default;
-var CN2 = _assets_img_CN2_png__WEBPACK_IMPORTED_MODULE_1__.default;
-var CN3 = _assets_img_CN3_png__WEBPACK_IMPORTED_MODULE_2__.default;
-var CN4 = _assets_img_CN4_png__WEBPACK_IMPORTED_MODULE_3__.default;
-var CN5 = _assets_img_CN5_png__WEBPACK_IMPORTED_MODULE_4__.default;
-var CN6 = _assets_img_CN6_png__WEBPACK_IMPORTED_MODULE_5__.default;
+
+
+
+
+
+var CN1 = _assets_img_CN1_png__WEBPACK_IMPORTED_MODULE_1__.default;
+var CN2 = _assets_img_CN2_png__WEBPACK_IMPORTED_MODULE_2__.default;
+var CN3 = _assets_img_CN3_png__WEBPACK_IMPORTED_MODULE_3__.default;
+var CN4 = _assets_img_CN4_png__WEBPACK_IMPORTED_MODULE_4__.default;
+var CN5 = _assets_img_CN5_png__WEBPACK_IMPORTED_MODULE_5__.default;
+var CN6 = _assets_img_CN6_png__WEBPACK_IMPORTED_MODULE_6__.default;
+var campo = _assets_img_campo_png__WEBPACK_IMPORTED_MODULE_7__.default;
+var nube1 = _assets_img_nube_png__WEBPACK_IMPORTED_MODULE_8__.default;
+var nube2 = _assets_img_nube2_png__WEBPACK_IMPORTED_MODULE_9__.default;
+var nube3 = _assets_img_nube3_png__WEBPACK_IMPORTED_MODULE_10__.default;
+var logo = _assets_img_Camposol_png__WEBPACK_IMPORTED_MODULE_0__.default;
 
 /***/ }),
 
@@ -17637,8 +18051,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17661,8 +18076,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.clearfix {\n  float: none;\n  clear: both;\n}\n\n.btn-menu {\n  position: absolute;\n  background-color: #1C1C1C;\n  width: 85px;\n  height: 85px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  float: left;\n  transition: all 500ms ease;\n  border-radius: 0 0 300% 0%;\n  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;\n}\n.btn-menu:hover {\n  width: 125px;\n  height: 125px;\n}\n.btn-menu .icon-menu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  padding: 0 10px;\n  transition: all 500ms ease;\n}\n.btn-menu .icon-menu:hover {\n  padding: 0 20px;\n}\n.btn-menu .icon-menu:hover > img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.btn-menu .icon-menu img {\n  width: 45px;\n}\n\n#btn-menu {\n  display: none;\n}\n#btn-menu:checked ~ .container-menu {\n  opacity: 1;\n  visibility: visible;\n}\n#btn-menu:checked ~ .container-menu .cont-menu {\n  transform: translateX(0%);\n}\n\n.container-menu {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.5);\n  width: 100%;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  transition: all 500ms ease;\n  opacity: 0;\n  visibility: hidden;\n}\n\n.cont-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #1C1C1C;\n  height: 100vh;\n  position: relative;\n  transition: all 500ms ease;\n  transform: translateX(-100%);\n  overflow-y: scroll;\n  display: flex;\n  flex-direction: column;\n}\n.cont-menu::-webkit-scrollbar {\n  width: 5px;\n}\n.cont-menu::-webkit-scrollbar-thumb {\n  background-color: #65FA9E;\n  border-radius: 10px;\n  -webkit-transition: all 500ms ease;\n  transition: all 500ms ease;\n}\n.cont-menu::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n.cont-menu .logo-blateral {\n  width: 100%;\n  padding-top: 30px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.cont-menu .logo-blateral img {\n  width: 60px;\n}\n.cont-menu .logo-blateral h2 {\n  color: #C7C7C7;\n  margin-bottom: 30px;\n}\n.cont-menu nav a, .cont-menu nav .nav-link {\n  display: block;\n  padding: 20px;\n  color: #C7C7C7;\n  border-left: 5px solid transparent;\n  transition: all 400ms ease;\n}\n.cont-menu nav a svg, .cont-menu nav .nav-link svg {\n  margin-right: 15px;\n}\n.cont-menu nav a:hover, .cont-menu nav a .active, .cont-menu nav .nav-link:hover, .cont-menu nav .nav-link .active {\n  padding-left: 30px;\n  border-left: 5px solid #C7C7C7;\n  background-color: #1F1F1F;\n  text-decoration: none;\n}\n.cont-menu nav .dropdown-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #292929;\n}\n.cont-menu nav .nav-link-logout {\n  color: #FF3334 !important;\n  transition: all 400ms ease;\n  margin-top: 30px;\n}\n.cont-menu nav .nav-link-logout:hover {\n  color: #B40001;\n  border-left: 5px solid #B40001 !important;\n}\n.cont-menu .active {\n  color: #65FA9E;\n  padding-left: 30px;\n  border-left: 5px solid #65FA9E;\n}\n.cont-menu .equis {\n  position: absolute;\n  right: 12px;\n  top: 10px;\n  color: #fff;\n  cursor: pointer;\n  font-size: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.clearfix {\n  float: none;\n  clear: both;\n}\n\n.btn-menu {\n  position: absolute;\n  background-color: #1C1C1C;\n  width: 85px;\n  height: 85px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  float: left;\n  transition: all 500ms ease;\n  border-radius: 0 0 100% 0%;\n  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;\n}\n.btn-menu:hover {\n  width: 125px;\n  height: 125px;\n}\n.btn-menu .icon-menu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  padding: 0 10px;\n  transition: all 500ms ease;\n}\n.btn-menu .icon-menu:hover {\n  padding: 0 20px;\n}\n.btn-menu .icon-menu:hover > img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.btn-menu .icon-menu img {\n  width: 45px;\n}\n\n#btn-menu {\n  display: none;\n}\n#btn-menu:checked ~ .container-menu {\n  opacity: 1;\n  visibility: visible;\n}\n#btn-menu:checked ~ .container-menu .cont-menu {\n  transform: translateX(0%);\n}\n\n.container-menu {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.5);\n  width: 100%;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  transition: all 500ms ease;\n  opacity: 0;\n  visibility: hidden;\n}\n\n.cont-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #1C1C1C;\n  height: 100vh;\n  position: relative;\n  transition: all 500ms ease;\n  transform: translateX(-100%);\n  overflow-y: scroll;\n  display: flex;\n  flex-direction: column;\n}\n.cont-menu::-webkit-scrollbar {\n  width: 5px;\n}\n.cont-menu::-webkit-scrollbar-thumb {\n  background-color: #65FA9E;\n  border-radius: 10px;\n  -webkit-transition: all 500ms ease;\n  transition: all 500ms ease;\n}\n.cont-menu::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n.cont-menu .logo-blateral {\n  width: 100%;\n  padding-top: 30px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.cont-menu .logo-blateral img {\n  width: 60px;\n}\n.cont-menu .logo-blateral h2 {\n  color: #C7C7C7;\n  margin-bottom: 30px;\n}\n.cont-menu nav a, .cont-menu nav .nav-link {\n  display: block;\n  padding: 20px;\n  color: #C7C7C7;\n  border-left: 5px solid transparent;\n  transition: all 500ms ease;\n}\n.cont-menu nav a svg, .cont-menu nav .nav-link svg {\n  margin-right: 15px;\n}\n.cont-menu nav a:hover, .cont-menu nav a .active, .cont-menu nav .nav-link:hover, .cont-menu nav .nav-link .active {\n  padding-left: 30px;\n  border-left: 5px solid #C7C7C7;\n  background-color: #1F1F1F;\n  text-decoration: none;\n  font-size: 17px;\n}\n.cont-menu nav .dropdown-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #292929;\n}\n.cont-menu nav .nav-link-logout {\n  color: #FF3334 !important;\n  transition: all 400ms ease;\n  margin-top: 30px;\n}\n.cont-menu nav .nav-link-logout:hover {\n  color: #B40001;\n  border-left: 5px solid #B40001 !important;\n}\n.cont-menu .active {\n  color: #65FA9E;\n  padding-left: 30px;\n  border-left: 5px solid #65FA9E;\n}\n.cont-menu .equis {\n  position: absolute;\n  right: 12px;\n  top: 10px;\n  color: #fff;\n  cursor: pointer;\n  font-size: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17685,8 +18101,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n}\n\n.navbar-collapse {\n  flex-grow: 0 !important;\n}\n\n.nav-link {\n  color: #3F9047 !important;\n  transition: all 0.4s;\n}\n.nav-link:hover {\n  color: #ACCC7B !important;\n}\n.nav-link svg {\n  margin-right: 8px;\n}\n\n.dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n.dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.navbar-brand {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.navbar-brand a {\n  font-weight: 500;\n  font-size: 32px;\n  color: #3F9047 !important;\n}\n.navbar-brand a:hover {\n  text-decoration: none;\n}\n.navbar-brand a img {\n  margin-top: -6px;\n  margin-right: 4px;\n  width: 32px;\n}\n\n.navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n  height: 42px;\n}\n\n.navbar-collapse {\n  flex-grow: 0 !important;\n}\n\n.nav-link {\n  color: #3F9047 !important;\n  transition: all 0.4s;\n  font-size: 17px;\n  margin-top: 2px;\n}\n.nav-link:hover {\n  color: #ACCC7B !important;\n}\n.nav-link svg {\n  margin-right: 8px;\n}\n\n.dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n.dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17709,8 +18126,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.carousel-item {\n  height: 91vh;\n  overflow: hidden;\n}\n.carousel-item img {\n  margin-top: -115px;\n  width: 100%;\n}\n\n.carousel-caption {\n  width: 420px;\n  left: 64% !important;\n}\n.carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  min-height: 250px;\n  max-height: 260px;\n}\n.carousel-caption .jumbotron h2 {\n  font-size: 30px;\n}\n.carousel-caption .jumbotron p {\n  font-size: 16px;\n}\n.carousel-caption .jumbotron button {\n  width: 120px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.carousel-item {\n  height: 91vh;\n  overflow: hidden;\n}\n.carousel-item img {\n  margin-top: -115px;\n  width: 100%;\n}\n\n.carousel-caption {\n  width: 420px;\n  left: 64% !important;\n}\n.carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  min-height: 250px;\n  max-height: 260px;\n}\n.carousel-caption .jumbotron h2 {\n  font-size: 30px;\n}\n.carousel-caption .jumbotron p {\n  font-size: 16px;\n}\n.carousel-caption .jumbotron button {\n  width: 120px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17757,8 +18175,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home .container {\n  padding-top: 50px;\n}\n#home .halfCircle {\n  height: 75px;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 32px;\n  margin-top: -14px;\n  margin-right: 5px;\n}\n#home .halfCircle .logo p {\n  font-size: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home .container {\n  padding: 50px 0;\n}\n#home .container h1 {\n  font-size: 48px;\n  text-align: center;\n  margin-bottom: 50px;\n}\n#home .container .about {\n  margin-bottom: 40px;\n}\n#home .container .about h2 {\n  font-size: 36px;\n  margin-bottom: 35px;\n}\n#home .container .about > div {\n  margin-top: 20px;\n  display: flex;\n  justify-content: space-between;\n}\n#home .container .about > div #about-img img {\n  width: 430px;\n}\n#home .container .about > div #about-box {\n  margin-left: 45px;\n}\n#home .container .about > div #about-box .philosophy {\n  font-size: 17px;\n}\n#home .container .commitment > div {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img {\n  width: 450px;\n}\n#home .container .commitment > div #commiment-box {\n  width: 650px;\n  margin-right: 45px;\n}\n#home .halfCircle {\n  height: 75px;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 32px;\n  margin-top: -14px;\n  margin-right: 5px;\n}\n#home .halfCircle .logo p {\n  font-size: 18px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17781,8 +18200,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-der {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: column wrap;\n  background-color: #464646;\n  padding: 0 !important;\n}\n.login-der div {\n  width: 80%;\n  height: 70%;\n}\n.login-der div img {\n  width: 75px;\n  margin: 25px 0;\n}\n.login-der div h2 {\n  font-weight: bold;\n  font-size: 40px;\n  margin-bottom: 35px;\n}\n.login-der div button {\n  display: block;\n  width: 80%;\n  margin: 40px auto;\n  border-radius: 25px;\n  font-size: 20px;\n  font-weight: bold;\n  padding: 10px;\n}\n.login-der div .form-group {\n  width: 80%;\n  margin: 0 auto;\n}\n.login-der div .form-group input {\n  font-size: 18px;\n  margin-bottom: 30px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-der {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: column wrap;\n  background-color: #464646;\n  padding: 0 !important;\n}\n.login-der div {\n  width: 80%;\n  height: 70%;\n}\n.login-der div img {\n  width: 75px;\n  margin: 25px 0;\n}\n.login-der div h2 {\n  font-weight: bold;\n  font-size: 40px;\n  margin-bottom: 35px;\n}\n.login-der div button {\n  display: block;\n  width: 80%;\n  margin: 40px auto;\n  border-radius: 25px;\n  font-size: 20px;\n  font-weight: bold;\n  padding: 10px;\n}\n.login-der div .form-group {\n  width: 80%;\n  margin: 0 auto;\n}\n.login-der div .form-group input {\n  font-size: 18px;\n  margin-bottom: 30px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17805,8 +18225,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-izq {\n  overflow: hidden;\n  padding: 0 !important;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.login-izq .fondo {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.login-izq div {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  background-color: rgba(70, 70, 70, 0.35);\n  z-index: 1;\n}\n.login-izq div img {\n  width: 200px;\n  position: absolute;\n  bottom: 45px;\n  right: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-izq {\n  overflow: hidden;\n  padding: 0 !important;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.login-izq .fondo {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.login-izq div {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  background-color: rgba(70, 70, 70, 0.35);\n  z-index: 1;\n}\n.login-izq div img {\n  width: 200px;\n  position: absolute;\n  bottom: 45px;\n  right: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17829,8 +18250,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login {\n  color: #FFFFFF;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login {\n  color: #FFFFFF;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17841,6 +18263,31 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: V
 /*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/MyFunctions/MyFunctions.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#function-home {\n  width: 100%;\n  max-width: 1200px;\n  height: 100vh;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n}\n#function-home .text {\n  width: 464px;\n  margin-right: 25px;\n}\n#function-home .text h1 {\n  font-size: 44px;\n  margin-bottom: 25px;\n}\n#function-home .text p {\n  font-size: 18px;\n}\n#function-home .text button {\n  float: right;\n}\n#function-home .text .clearfix {\n  float: none;\n  clear: both;\n}\n#function-home .s_circle {\n  width: 220px;\n  height: 220px;\n  position: fixed;\n  background-color: #ACCC7B;\n  bottom: 0;\n  right: 0;\n  border-radius: 100% 0 0 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: white;\n  font-size: 38px;\n  padding-top: 45px;\n  padding-left: 28px;\n}\n#function-home #campo {\n  width: 500px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/NotificationsPage/NotificacionesPage.scss":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/NotificationsPage/NotificacionesPage.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17877,8 +18324,105 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n}\nbody header {\n  height: 85px;\n}\nbody header img {\n  margin: 20px;\n}\nbody #cont-404 {\n  display: flex;\n  justify-content: center;\n}\nbody #cont-404 .jumbotron {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: space-around;\n  color: white;\n  box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -webkit-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -moz-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  background-color: #ACCC7B !important;\n  border-radius: 15px;\n  margin-right: 580px;\n  margin-top: 8%;\n  width: 520px;\n  height: 400px;\n}\nbody #cont-404 .jumbotron a {\n  display: block;\n  align-self: flex-end;\n  text-align: center;\n  width: 150px;\n  padding: 10px 25px;\n  color: white;\n  background-color: #30391F;\n  border-radius: 7px;\n  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n}\nbody #cont-404 .jumbotron a:hover {\n  text-decoration: none;\n  background-color: #668A4C;\n}\nbody #cont-404 img {\n  position: absolute;\n  width: 450px;\n  top: 32%;\n  right: 12%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n}\nbody header {\n  height: 85px;\n}\nbody header img {\n  margin: 20px;\n}\nbody #cont-404 {\n  display: flex;\n  justify-content: center;\n}\nbody #cont-404 .jumbotron {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: space-around;\n  color: white;\n  box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -webkit-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -moz-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  background-color: #ACCC7B !important;\n  border-radius: 15px;\n  margin-right: 580px;\n  margin-top: 8%;\n  width: 520px;\n  height: 400px;\n}\nbody #cont-404 .jumbotron a {\n  display: block;\n  align-self: flex-end;\n  text-align: center;\n  width: 150px;\n  padding: 10px 25px;\n  color: white;\n  background-color: #30391F;\n  border-radius: 7px;\n  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n}\nbody #cont-404 .jumbotron a:hover {\n  text-decoration: none;\n  background-color: #668A4C;\n}\nbody #cont-404 img {\n  position: absolute;\n  width: 450px;\n  top: 32%;\n  right: 12%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/PaymentsPage/PaymentsPage.scss":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/PaymentsPage/PaymentsPage.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ProductsPage/ProductsPaga.scss":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ProductsPage/ProductsPaga.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ReportPage/ReportPage.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ReportPage/ReportPage.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/SalesPage/SalesPage.scss":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/SalesPage/SalesPage.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18656,14 +19200,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Compromiso.jpg?6b7fc834bdc7831d303a15ea7a315311");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Compromiso.jpg?58a975fefc6318f48666284176532a02");
 
 /***/ }),
 
-/***/ "./resources/src/assets/img/Filosofia.jpg":
-/*!************************************************!*\
-  !*** ./resources/src/assets/img/Filosofia.jpg ***!
-  \************************************************/
+/***/ "./resources/src/assets/img/Filosofia2.png":
+/*!*************************************************!*\
+  !*** ./resources/src/assets/img/Filosofia2.png ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -18671,7 +19215,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Filosofia.jpg?24ea70afe86e7676a4f75a060072193e");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Filosofia2.png?f4ff78a5b9abbb5b7be31787b53c7263");
+
+/***/ }),
+
+/***/ "./resources/src/assets/img/campo.png":
+/*!********************************************!*\
+  !*** ./resources/src/assets/img/campo.png ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/campo.png?c221d2ffe72a265754d4d99d8cb47c41");
 
 /***/ }),
 
@@ -18732,6 +19291,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logoCamposol.png?aabd9892b8d5711e8e3c97a923781009");
+
+/***/ }),
+
+/***/ "./resources/src/assets/img/nube.png":
+/*!*******************************************!*\
+  !*** ./resources/src/assets/img/nube.png ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/nube.png?903dda439015b6420c458d8431d72917");
+
+/***/ }),
+
+/***/ "./resources/src/assets/img/nube2.png":
+/*!********************************************!*\
+  !*** ./resources/src/assets/img/nube2.png ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/nube2.png?224d711c0c6230ffa235b539b6b436cc");
+
+/***/ }),
+
+/***/ "./resources/src/assets/img/nube3.png":
+/*!********************************************!*\
+  !*** ./resources/src/assets/img/nube3.png ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/nube3.png?db168d478f379897939be9af61048d57");
 
 /***/ }),
 
@@ -79698,6 +80302,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/src/pages/NotificationsPage/NotificacionesPage.scss":
+/*!***********************************************************************!*\
+  !*** ./resources/src/pages/NotificationsPage/NotificacionesPage.scss ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_NotificacionesPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./NotificacionesPage.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/NotificationsPage/NotificacionesPage.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_NotificacionesPage_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_NotificacionesPage_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./resources/src/pages/Page404/Page404.scss":
 /*!**************************************************!*\
   !*** ./resources/src/pages/Page404/Page404.scss ***!
@@ -79725,6 +80359,126 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_Page404_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/src/pages/PaymentsPage/PaymentsPage.scss":
+/*!************************************************************!*\
+  !*** ./resources/src/pages/PaymentsPage/PaymentsPage.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_PaymentsPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./PaymentsPage.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/PaymentsPage/PaymentsPage.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_PaymentsPage_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_PaymentsPage_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/src/pages/ProductsPage/ProductsPaga.scss":
+/*!************************************************************!*\
+  !*** ./resources/src/pages/ProductsPage/ProductsPaga.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ProductsPaga_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./ProductsPaga.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ProductsPage/ProductsPaga.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ProductsPaga_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ProductsPaga_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/src/pages/ReportPage/ReportPage.scss":
+/*!********************************************************!*\
+  !*** ./resources/src/pages/ReportPage/ReportPage.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ReportPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./ReportPage.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/ReportPage/ReportPage.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ReportPage_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ReportPage_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/src/pages/SalesPage/SalesPage.scss":
+/*!******************************************************!*\
+  !*** ./resources/src/pages/SalesPage/SalesPage.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SalesPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./SalesPage.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/src/pages/SalesPage/SalesPage.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SalesPage_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SalesPage_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 

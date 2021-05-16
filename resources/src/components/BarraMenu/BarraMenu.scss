@@ -1,8 +1,30 @@
 @import '../../../sass/index.scss';
 
+.navbar-brand{    
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    a{
+        font-weight: 500;
+        font-size: 32px;
+        color: $dark-green !important;
+
+        &:hover{
+            text-decoration: none;
+        }
+
+        img{
+            margin-top: -6px;
+            margin-right: 4px;
+            width: 32px;
+        }
+    }
+}
+
 .navbar-nav {
     margin-left: auto !important;
     margin-right: 0 !important;
+    height: 42px;
 }
 
 .navbar-collapse {
@@ -12,6 +34,8 @@
 .nav-link{
     color: $dark-green !important;
     transition: all .4s;
+    font-size: 17px;
+    margin-top: 2px;
 
     &:hover {
         color: $c-secundary-color !important;

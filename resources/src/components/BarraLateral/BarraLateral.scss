@@ -37,7 +37,7 @@
     justify-content: flex-start;
     float: left;
     transition: all 500ms ease;
-    border-radius: 0 0 300% 0%;
+    border-radius: 0 0 100% 0%;
     box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
     
     &:hover{
@@ -145,8 +145,8 @@
             padding: 20px;
             color: #C7C7C7;
             border-left: 5px solid transparent;
-            transition: all 400ms ease;
-            
+            transition: all 500ms ease;
+
             svg{
                 margin-right: 15px;
             }
@@ -156,6 +156,7 @@
                 border-left: 5px solid #C7C7C7;
                 background-color: #1F1F1F;
                 text-decoration: none;
+                font-size: 17px;
             }
         }
         

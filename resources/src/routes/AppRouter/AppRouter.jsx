@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import LoginPage from '../../pages/LoginPage';
-import MyFunctions from '../../pages/MyFunctions';
 import Page404 from '../../pages/Page404';
+import FunctionsRouter from '../FunctionsRouter';
 import LevelRoute from '../LevelRoute';
 import PagesRouter from '../PagesRouter';
 import PublicRoute from '../PublicRoute';
@@ -19,7 +19,7 @@ export default function AppRouter() {
             <Switch>
                 {/* Route y PrivateRoute: Componentes que definen a que ruta se va a redirir la pagina */}
                 <PublicRoute exact path='/login' component={LoginPage} />
-                <LevelRoute exact path='/functions' component={MyFunctions} />
+                <LevelRoute path='/functions' component={FunctionsRouter} />
                 <Route exact path='/page404' component={Page404} />
                 <Route path='/' component={PagesRouter} />
                 {/* Redirect: Componente que redirige la ruta indicada, en este caso *, a una ruta indicada como '/page404' */}

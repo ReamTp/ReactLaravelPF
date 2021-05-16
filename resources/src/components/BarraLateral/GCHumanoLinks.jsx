@@ -6,22 +6,22 @@ import { NavLink } from 'react-router-dom'
 export default function GCHumanoLinks() {
     return (
         <>
-            <NavLink exact to={'/gerentegeneral/pagos'} activeClassName='active'>
+            <NavLink exact to={'/gdchumano/pagos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
             </NavLink>
 
-            <NavLink exact to={'/gerentegeneral/aumentos'} activeClassName='active'>
+            <NavLink exact to={'/gdchumano/aumentos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faSortAmountUp} />
                 Ver Aumentos
             </NavLink>
             
-            <NavLink exact to={'/gerentegeneral/productos'} activeClassName='active'>
+            <NavLink exact to={'/gdchumano/productos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faUserClock} />
                 Definir Horarios
             </NavLink>
             
-            <NavLink exact to={'/gerentegeneral/ventas'} activeClassName='active'>
+            <NavLink exact to={'/gdchumano/ventas'} activeClassName='active'>
                 <FontAwesomeIcon icon={faChalkboardTeacher} />
                 Capacitaciones
             </NavLink>

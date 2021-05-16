@@ -6,17 +6,17 @@ import { NavLink } from 'react-router-dom'
 export default function ECHumanoLinks() {
     return (
         <>
-            <NavLink exact to={'/gerentegeneral/pagos'} activeClassName='active'>
+            <NavLink exact to={'/echuman/pagos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
             </NavLink>
             
-            <NavLink exact to={'/gerentegeneral/productos'} activeClassName='active'>
+            <NavLink exact to={'/echuman/productos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faUserClock} />
                 Definir Horarios
             </NavLink>
             
-            <NavLink exact to={'/gerentegeneral/ventas'} activeClassName='active'>
+            <NavLink exact to={'/echuman/ventas'} activeClassName='active'>
                 <FontAwesomeIcon icon={faChalkboardTeacher} />
                 Capacitaciones
             </NavLink>

@@ -16,7 +16,7 @@ class CreateComisionesTable extends Migration
         Schema::create('comisiones', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->double('cantidad_%');
+            $table->double('cantidad');
         });
     }
 

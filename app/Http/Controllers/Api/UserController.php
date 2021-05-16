@@ -31,6 +31,18 @@ class UserController extends Controller
             $insert['sueldo_bruto'] = $request['sueldo_bruto'];
             $insert['estado'] = $request['estado'];
 
+            // $insert['nombre'] = 'Elias';
+            // $insert['apellido'] = 'Arriaga';
+            // $insert['correo'] = 'ream_tp@outlook.com';
+            // $insert['password'] = Crypt::encrypt('12345678');
+            // $insert['dni'] = 74027083;
+            // $insert['celular'] = 956271174;
+            // $insert['telefono'] = 23564157;
+            // $insert['tipo_usuario'] = 1;
+            // $insert['departamento'] = null;
+            // $insert['sueldo_bruto'] = 25000;
+            // $insert['estado'] = 1;
+
             User::insert($insert);
 
             $response['message'] = 'Usuario Registrado';

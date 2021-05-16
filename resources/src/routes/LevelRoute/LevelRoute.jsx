@@ -36,8 +36,8 @@ export default function LevelRoute({component: Component, ...rest}) {
     }
     
     if (cargando) {
-        spinner = <SpinnerPage/>
-    } else {;
+        spinner = <SpinnerPage/>;
+    } else {
         spinner = '';
     }
 

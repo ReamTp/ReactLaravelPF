@@ -15,7 +15,7 @@ export default function PagesRouter() {
                 <PrivateRoute exact path='/' component={HomePage} />
                 <UserRoute exact path='/myprofile' component={MyFunctions} />
                 <UserRoute exact path='/settings' component={MyFunctions} />
-                <Route exact path='*'>
+                <Route path='*'>
                     <Redirect to='/page404'/>
                 </Route>
             </Switch>

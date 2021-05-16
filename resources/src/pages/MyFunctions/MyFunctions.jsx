@@ -1,13 +1,23 @@
 import React from 'react';
-import BarraLateral from '../../components/BarraLateral/BarraLateral';
+import { Button } from 'react-bootstrap';
+import { campo } from '../../utils/img';
 import './MyFunctions.scss';
 
-export default function MyFunctions(props) {
-    const {nivel} = props;
-    
+export default function MyFunctions() {
     return (
         <>
-            <BarraLateral nivel={nivel} />
+            <div id="function-home">
+                <div className="text">
+                    <h1>Bienvenido a tus Funciones</h1>
+                    <p>Acá es donde podras desempeñar todas tus funciones asignadas por tus jefes.</p>
+                    <Button variant='outline-success'>Aprender más</Button>
+                    <div className="clearfix"></div>
+                </div>
+                <div className="s_circle">
+                    Camposol&reg;
+                </div>
+                <img id='campo' src={campo} />
+            </div>
         </>
     )
 }

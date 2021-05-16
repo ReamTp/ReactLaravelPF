@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/img/Camposol.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,6 +13,15 @@ import ECHumanoLinks from './ECHumanoLinks';
 export default function BarraLateral(props) {
     const {nivel} = props;
     const [closeSession, setCloseSession] = useState(false);
+    const [level, setLevel] = useState(nivel);
+
+    useEffect(() => {
+        if(isNaN(nivel)){
+            setLevel(nivel);
+            console.log('Use State '+level)
+        }
+
+    }, [level])
 
     const clearSession = () => {
         localStorage.clear();
@@ -49,9 +58,9 @@ export default function BarraLateral(props) {
                         
                         {nivel === 1 ? <GGeneralLinks/> : ''}
                         {nivel === 2 ? <GDAdminFinanLinks/> : ''}
-                        {nivel === 3 ? <EAdminFinanLinks/> : ''}
-                        {nivel === 4 ? <GCHumanoLinks/> : ''}
-                        {/* <ECHumanoLinks /> */}
+                        {nivel === 3 ? <GCHumanoLinks/> : ''}
+                        {nivel === 4 ? <EAdminFinanLinks/> : ''}
+                        {nivel === 5 ? <ECHumanoLinks/> : ''}
 
                         <Link to='/' onClick={clearSession} className='nav-link-logout'>
                             <FontAwesomeIcon icon={faSignInAlt} />

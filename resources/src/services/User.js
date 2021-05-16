@@ -33,7 +33,7 @@ usuario.level = async () => {
             return tipo_usuario
         })
         .catch(() => { return null; })
-    return res;
+    return await res;
 }
 
 usuario.auth = async () => {

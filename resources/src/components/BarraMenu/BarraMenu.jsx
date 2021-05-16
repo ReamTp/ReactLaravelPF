@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBriefcase, faUser, faCog, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../assets/img/logoCamposol.png';
+import {logo} from '../../utils/img';
 import './BarraMenu.scss';
 
 export default function BarraMenu() {
@@ -24,7 +24,7 @@ export default function BarraMenu() {
             <Container>
                 <Navbar.Brand>
                     <Link to='/'>
-                        <img src={logo} />
+                        <img src={logo} /> Camposol&reg;
                     </Link>
                 </Navbar.Brand>
                 

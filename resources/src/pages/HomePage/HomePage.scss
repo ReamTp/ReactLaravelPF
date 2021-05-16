@@ -1,9 +1,61 @@
 @import '../../../sass/index.scss';
 
 #home{
-
     .container{
-        padding-top: 50px;
+        padding: 50px 0;
+
+        h1{
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        
+        .about{
+            margin-bottom: 40px;
+            
+            h2{
+                font-size: 36px;
+                margin-bottom: 35px;
+            }
+
+            & > div{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                #about-img{
+                    img{
+                        width: 430px;
+                    }
+                }
+
+                #about-box{
+                    margin-left: 45px;
+                    
+                    .philosophy{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .commitment{
+            & > div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                #commiment-img{
+                    width: 450px;
+                }
+
+                #commiment-box{
+                    width: 650px;
+                    margin-right: 45px;
+                }
+            }
+        }
     }
 
     .halfCircle{
