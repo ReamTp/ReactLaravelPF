@@ -1,62 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://www.camposol.com.pe/" target="_blank">
+        <img src="./resources/src/assets/img/Camposol.png" width="120">
+    </a>
 </p>
+<h1 align="center">Sistema Administrativo</h1>
 
-## About Laravel
+## Sobre el Sistema Administrativo
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto es un sistema administrativo, el cual esta desarrollado en React y Laravel, con el fin de brinda una una administración a una empresa con las siguientes opciones:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Login.
+- Configuración de Usuario.
+- Niveles de Acceso.
+- Opciones dependiendo al nivel de acceso.
+- Manipulación de Datos (productos, empleados, etc.).
+- Reportes de datos.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+El proyecto es una demo técnica que permite mostrar el funcionamiento del sistema administrativo al manipular información.
 
-## Learning Laravel
+## Pre Requisitos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para poder instalar y iniciar el proyecto usted debe tener ya instalado en su las siguientes herramientas y lenguajes.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Una [Base de Datos MySQL](https://www.mysql.com/) y [PHP 8](https://www.php.net/) (Puede obtener estos 2 lenguajes instalando y otras herramientas solamente [XAMPP](https://www.apachefriends.org/es/download.html) aunque debe verificar que la version de XAMPP que esta descargando tenga PHP 8 como minimo).
+- PHP debe ser reconocido como mando en la consola de comandos o CMD.
+- Debe tener los siguientes gestores de paquetes:
+  - [Composer](https://getcomposer.org/) para poder instalar las dependecias de [Laravel](https://laravel.com/).
+  - [Node.Js](https://nodejs.org/es/) para poder instalar las dependecias y iniciar la apliacación de [React.js](https://es.reactjs.org/) con su gestor de paquetes que es [npm](https://www.npmjs.com/).
+- En MySQL ustede ya debe tener generada una base de datos.
 
-## Laravel Sponsors
+## Instalación del proyecto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Una vez que tenga todas las herramientas necesarias usted puede proseguir con los siguientes pasos:
 
-### Premium Partners
+- Primero abrir una consola de comandos (CMD) como administrador para poder ejecutar los comandos necesarios.
+- Ejecutar **composer install** para poder instalar los archivos necesarios para Laravel.
+- Ejecutar **php artisan key:generate** para generar una nueva key que pueda usar Laravel.
+- Luego Ejecutar **npm install** para pasar a instalar todas las dependecias necesarias para React.
+- Copiar el archivo **.env.example** y cambiar el nombre de la copia por **.env**.
+  - En el archivo **.env** recién creado debemos configurar el nombre y la configuración necesarias de nuestra base de datos, la cual, es en donde se generarán todas nuestras tablas que guardarán nuestros datos.
+- Ya con la configuración anterior realizada puede ejecutar los siguientes comandos:
+  - Ejecutar el comando **php artisan migrate** para crear las tablas en la base de datos.
+  - Ejecutar el comadno **php artisan db:seed** para insertar datos a la base de datos.
+    - En caso de no funcionar el comando anterior pero si se crearon las tablas, usar **php artisan migrate:fresh --seed**.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+Con toda esta configuración realizada usted puede iniciar la aplicación en su computadora de escritorio.
 
-## Contributing
+## Ejecutar Aplicación
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Recuerde que para no tener problemas al iniciar la aplicación debio de haber realizado la configuración indicada anteriormente, de ser así usted puede ejecutar los siguientes comandos para iniciar la aplicación.
 
-## Code of Conduct
+### Iniciar Laravel Mix
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Para iniciar el mix de Laravel usted solo debe ejecutar el siguiente comando en una consola de comandos o CMD.
 
-## Security Vulnerabilities
+    - npm run watch
+  
+Este comando nos permitira ejecutar el Laravel Mix, el cual, nos permitira compilar los archivos de React para que Laravel lo interprete.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Iniciar Servidor de Laravel
 
-## License
+Inicie otra consola y ejecute el siguiente comando para iniciar el servidor de Laravel:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    - php artisan serve
+
+Este comando le generará un servidor de laravel en el **http://localhost:8000** este links debera escribirlo en su navegador.
+
+Con esto usted ya podrá ejecutar y probar la aplicación sin problemas.
