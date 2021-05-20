@@ -23,6 +23,18 @@ usuario.datos = async () => {
     return res;
 }
 
+usuario.actualizar = async (user) => {
+    const idData = JSON.parse(localStorage.getItem('token'));
+    const urlUpdate = baseUrl+'/update';
+    
+    user = {id: idData.id, ...user, celular: user.celular, telefono: user.telefono};
+
+    const res = await axios.put(urlUpdate, user)
+        .then(response => { return response.data})
+        .catch(response => { return response.data})
+    return res;
+}
+
 usuario.register = async (user) => {
     const urlRegister = baseUrl+'/registrar';
     const res = await axios.post(urlRegister, user)

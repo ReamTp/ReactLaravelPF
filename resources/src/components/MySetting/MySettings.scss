@@ -1,0 +1,37 @@
+#mysettings{
+    height: 600px;
+    padding: 40px 20px;
+
+    .container{
+        height: 100%;
+
+        #titulo{
+            height: 12%;
+            h2{}
+        }
+
+        form{
+            height: 88%;
+
+            & .form-data{
+                height: 70%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+            }
+
+            & .f-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30%;
+                
+                button{
+                    width: 50%;
+                    height: 30%;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}

@@ -14,6 +14,7 @@ class UserController extends Controller
         $id = $request['id'];
         $usuario = DB::select("SELECT u.*, d.nombre AS depart_name, tu.titulo AS titulo FROM users u INNER JOIN departamentos d ON u.departamento = d.id INNER JOIN tipo_user tu ON u.tipo_usuario = tu.id WHERE u.id = '".$id."';");
         $response['data'] = $usuario[0];
+        $response['data']->password = Crypt::decrypt($response['data']->password);
         return $response;
     }
 
@@ -88,14 +89,36 @@ class UserController extends Controller
         $id = $request['id'];
         $password = $request['password'];
         
-        // $data = DB::select("SELECT tipo_usuario FROM users WHERE id = '".$id."' AND correo = '".$correo."'");
-        // $response['data'] = $data[0];
         $data = DB::select("SELECT tipo_usuario, password FROM users WHERE id = '".$id."' AND correo = '".$correo."'");
+        
         if(Crypt::decrypt($data[0]->password) == $password){
             $response['level'] = $data[0]->tipo_usuario;
         } else {
             $response['level'] = null;
         }
+        return $response;
+    }
+
+    public function updateUser(Request $request){
+        $user = User::find($request['id']);
+        $user->nombre = $request['nombre'];
+        $user->apellido = $request['apellido'];
+        $user->correo = $request['correo'];
+        $user->password = Crypt::encrypt($request['password']);
+        $user->celular = $request['celular'];
+        $user->telefono = $request['telefono'];
+        
+        $result = $user->save();
+
+        if($result){
+            $response['datos'] = $result;
+            $response['message'] = 'Datos Actualizados';
+            $response['success'] = true;
+        } else {
+            $response['message'] = 'Error';
+            $response['success'] = false;
+        }
+
         return $response;
     }
 

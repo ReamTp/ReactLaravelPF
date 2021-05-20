@@ -29,7 +29,9 @@
         "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@fortawesome/react-fontawesome": "^0.1.14",
         "md5": "^2.3.0",
+        "path-to-regexp": "^6.2.0",
         "react-bootstrap": "^1.5.2",
+        "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
         "react-toastify": "^7.0.4",
         "spinners-react": "^1.0.4"
