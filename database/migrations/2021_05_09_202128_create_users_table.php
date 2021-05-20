@@ -28,6 +28,8 @@ class CreateUsersTable extends Migration
             $table->foreign('tipo_usuario')->references('id')->on('tipo_user');
             $table->foreign('departamento')->references('id')->on('departamentos');
             $table->double('sueldo_bruto');
+            $table->date('fecha');
+            $table->string('avatar')->nullable(true);
             $table->boolean('estado')->default(true);
             $table->timestamps();
         });

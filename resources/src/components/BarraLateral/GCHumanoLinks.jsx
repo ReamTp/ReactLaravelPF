@@ -1,11 +1,16 @@
 import React from 'react'
-import { faMoneyCheckAlt, faSortAmountUp, faUserClock, faChalkboardTeacher, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faMoneyCheckAlt, faSortAmountUp, faUserClock, faChalkboardTeacher, faBell, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 
 export default function GCHumanoLinks() {
     return (
         <>
+            <NavLink exact to={'/echuman/users'} activeClassName='active'>
+                <FontAwesomeIcon icon={faUser} />
+                Usuarios
+            </NavLink>
+            
             <NavLink exact to={'/gdchumano/pagos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
@@ -21,7 +26,7 @@ export default function GCHumanoLinks() {
                 Definir Horarios
             </NavLink>
             
-            <NavLink exact to={'/gdchumano/ventas'} activeClassName='active'>
+            <NavLink exact to={'/gdchumano/capacitaciones'} activeClassName='active'>
                 <FontAwesomeIcon icon={faChalkboardTeacher} />
                 Capacitaciones
             </NavLink>

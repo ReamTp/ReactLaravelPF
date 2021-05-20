@@ -7,7 +7,7 @@
 
 ## Sobre el Sistema Administrativo
 
-Este proyecto es un sistema administrativo, el cual esta desarrollado en React y Laravel, con el fin de brinda una una administración a una empresa con las siguientes opciones:
+Este proyecto es un sistema administrativo basado en la estructura jerárquica de la empresa [Camposol](https://www.camposol.com.pe/), el cual esta desarrollado en React y Laravel, con el fin de brinda una una administración a una empresa con las siguientes opciones:
 
 - Login.
 - Configuración de Usuario.
@@ -54,7 +54,7 @@ Recuerde que para no tener problemas al iniciar la aplicación debio de haber re
 
 Para iniciar el mix de Laravel usted solo debe ejecutar el siguiente comando en una consola de comandos o CMD.
 
-    - npm run watch
+    npm run watch
   
 Este comando nos permitira ejecutar el Laravel Mix, el cual, nos permitira compilar los archivos de React para que Laravel lo interprete.
 
@@ -62,7 +62,7 @@ Este comando nos permitira ejecutar el Laravel Mix, el cual, nos permitira compi
 
 Inicie otra consola y ejecute el siguiente comando para iniciar el servidor de Laravel:
 
-    - php artisan serve
+    php artisan serve
 
 Este comando le generará un servidor de laravel en el **http://localhost:8000** este links debera escribirlo en su navegador.
 

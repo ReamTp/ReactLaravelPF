@@ -3,7 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faUser, faCog, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faUser, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import {logo} from '../../utils/img';
 import './BarraMenu.scss';
 
@@ -42,11 +42,7 @@ export default function BarraMenu() {
                         <NavDropdown title='Mi cuenta'>
                             <Link to='/myprofile' className='nav-link'>
                                 <FontAwesomeIcon icon={faUser} />
-                                Mi Perfil
-                            </Link>
-                            <Link to='/settings' className='nav-link'>
-                                <FontAwesomeIcon icon={faCog} />
-                                Ajustes
+                                Mi Cuenta
                             </Link>
                             <Link to='/' onClick={clearSession} className='nav-link'>
                                 <FontAwesomeIcon icon={faSignInAlt} />

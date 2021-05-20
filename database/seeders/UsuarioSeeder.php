@@ -24,8 +24,10 @@ class UsuarioSeeder extends Seeder
         $user->celular = 987415421;
         $user->telefono = 5412354;
         $user->tipo_usuario = 1;
-        $user->departamento = null;
+        $user->departamento = 1;
         $user->sueldo_bruto = 25000;
+        $user->fecha = '1995/05/23';
+        $user->avatar = null;
         $user->save();
 
         $user2 = new User();
@@ -37,8 +39,10 @@ class UsuarioSeeder extends Seeder
         $user2->celular = 954175421;
         $user2->telefono = 2314354;
         $user2->tipo_usuario = 2;
-        $user2->departamento = 1;
+        $user2->departamento = 2;
         $user2->sueldo_bruto = 7000;
+        $user2->fecha = '2002/06/16';
+        $user2->avatar = null;
         $user2->save();
 
         $user3 = new User();
@@ -50,8 +54,10 @@ class UsuarioSeeder extends Seeder
         $user3->celular = 956271174;
         $user3->telefono = 2541475;
         $user3->tipo_usuario = 3;
-        $user3->departamento = 2;
+        $user3->departamento = 3;
         $user3->sueldo_bruto = 5000;
+        $user3->fecha = '2003/04/10';
+        $user3->avatar = null;
         $user3->save();
 
         $user4 = new User();
@@ -63,8 +69,10 @@ class UsuarioSeeder extends Seeder
         $user4->celular = 98744714;
         $user4->telefono = 3564178;
         $user4->tipo_usuario = 4;
-        $user4->departamento = 1;
+        $user4->departamento = 2;
         $user4->sueldo_bruto = 3000;
+        $user4->fecha = '2003/09/12';
+        $user4->avatar = null;
         $user4->save();
 
         $user5 = new User();
@@ -76,8 +84,10 @@ class UsuarioSeeder extends Seeder
         $user5->celular = 95624141;
         $user5->telefono = 2556415;
         $user5->tipo_usuario = 5;
-        $user5->departamento = 2;
+        $user5->departamento = 3;
         $user5->sueldo_bruto = 3000;
+        $user5->fecha = '2001/03/25';
+        $user5->avatar = null;
         $user5->save();
     }
 }

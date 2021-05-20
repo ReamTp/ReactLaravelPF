@@ -1,12 +1,13 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import BarraLateral from '../../components/BarraLateral'
-import MyFunctions from '../../pages/MyFunctions'
+import MyFunctionsPage from '../../pages/MyFunctionsPage';
 import NotificationsPage from '../../pages/NotificationsPage/NotificationsPage';
 import PaymentsPage from '../../pages/PaymentsPage';
 import ProductsPage from '../../pages/ProductsPage';
 import ReportPage from '../../pages/ReportPage';
 import SalesPage from '../../pages/SalesPage'
+import UserPage from '../../pages/UserPage/UserPage';
 import LevelRoute from '../LevelRoute'
 
 export default function FunctionsRouter(props) {
@@ -16,7 +17,7 @@ export default function FunctionsRouter(props) {
         <>
             <BarraLateral nivel={nivel} />
             <Switch>
-                <Route exact path='/functions' component={MyFunctions}/>
+                <Route exact path='/functions' component={MyFunctionsPage}/>
                 <LevelRoute exact path='/functions/gerentegeneral/pagos' component ={PaymentsPage}/>
                 <LevelRoute exact path='/functions/gerentegeneral/productos' component ={ProductsPage}/>
                 <LevelRoute exact path='/functions/gerentegeneral/ventas' component ={SalesPage}/>
@@ -25,20 +26,22 @@ export default function FunctionsRouter(props) {
                 <LevelRoute exact path='/functions/gdAdminFinan/pagos' component ={nivel}/>
                 <LevelRoute exact path='/functions/gdAdminFinan/productos' component ={nivel}/>
                 <LevelRoute exact path='/functions/gdAdminFinan/ventas' component ={SalesPage}/>
-                <LevelRoute exact path='/functions/gdAdminFinan/informes' component ={nivel}/>
+                <LevelRoute exact path='/functions/gdAdminFinan/reportes' component ={nivel}/>
 
+                <LevelRoute exact path='/functions/gdchumano/users' component ={UserPage}/>
                 <LevelRoute exact path='/functions/gdchumano/pagos' component ={nivel}/>
                 <LevelRoute exact path='/functions/gdchumano/aumentos' component ={nivel}/>
-                <LevelRoute exact path='/functions/gdchumano/productos' component ={nivel}/>
-                <LevelRoute exact path='/functions/gdchumano/ventas' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/gdchumano/horarios' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/gdchumano/capacitaciones' component ={nivel}/>
                 
+                <LevelRoute exact path='/functions/echuman/users' component ={UserPage}/>
                 <LevelRoute exact path='/functions/echuman/pagos' component ={nivel}/>
-                <LevelRoute exact path='/functions/echuman/productos' component ={nivel}/>
-                <LevelRoute exact path='/functions/echuman/ventas' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/echuman/horarios' component ={nivel}/>
+                <LevelRoute exact path='/functions/echuman/capacitaciones' component ={nivel}/>
 
                 <LevelRoute exact path='/functions/eadfinanzas/productos' component ={nivel}/>
-                <LevelRoute exact path='/functions/eadfinanzas/pagos' component ={nivel}/>
-                <LevelRoute exact path='/functions/eadfinanzas/ventas' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/eadfinanzas/tproductos' component ={nivel}/>
+                <LevelRoute exact path='/functions/eadfinanzas/marcas' component ={nivel}/>
 
                 <LevelRoute exact path='/functions/notificaciones' component ={NotificationsPage}/>
                 

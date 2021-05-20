@@ -1,0 +1,62 @@
+@import '../../../sass/index.scss';
+
+#profile{
+    margin-top: 50px;
+
+    .col-sm-3{
+        height: 540px;
+
+        .flex-column{
+            .nav-item{
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0px;
+                color: $dark-green !important;
+                margin-bottom: 15px;
+
+                &:hover{
+                    color: $dark-green !important;
+                    border-radius: 9px;
+                    box-shadow:  20px 20px 60px #cccccc,
+                        -20px -20px 60px #f0f0f0;
+                }
+            }
+            
+        }
+    }
+
+    .nav-link {
+        color: $c-secundary-color !important;
+        transition: all 500ms ease-in-out;
+
+        &:hover{
+            color: $dark-green !important;
+        }
+    }
+
+
+    .tab-content{
+        width: 780px;
+        height: 600px;
+        overflow: hidden;
+        margin-left: 40px;
+        border-radius: 10px;
+        box-shadow:  20px 20px 60px #cccccc,
+        -20px -20px 60px #ffffff;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+        background-color: $dark-green !important;
+        color: white !important;
+    }
+
+    .nav-renuncia .nav-link{
+        color: $ligth-red !important;
+
+        &.active{
+            color: white !important;
+            background-color: $red !important;
+        }
+    }
+
+}

@@ -12,6 +12,7 @@ export default function LevelRoute({component: Component, ...rest}) {
     
     const usarApi = async () => {
         const res = await userServices.level();
+        
         if(res){
             setVerificado(true);
             setCargando(false);

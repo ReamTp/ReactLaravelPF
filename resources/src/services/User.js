@@ -13,6 +13,16 @@ usuario.login = async (user) => {
     return res;
 }
 
+usuario.datos = async () => {
+    const dato = JSON.parse(localStorage.getItem('token'));
+
+    const urlDatos = baseUrl+'/datos';
+    const res = await axios.post(urlDatos, dato)
+        .then(response => { return response.data})
+        .catch(response => { return response.data})
+    return res;
+}
+
 usuario.register = async (user) => {
     const urlRegister = baseUrl+'/registrar';
     const res = await axios.post(urlRegister, user)

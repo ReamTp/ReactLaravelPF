@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { campo } from '../../utils/img';
-import './MyFunctions.scss';
+import './MyFunctionsPage.scss';
 
 export default function MyFunctions() {
     return (

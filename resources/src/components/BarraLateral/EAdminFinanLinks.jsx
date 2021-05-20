@@ -11,12 +11,12 @@ export default function EAdminFinanLinks() {
                 Productos
             </NavLink>
             
-            <NavLink exact to={'/eadfinanzas/pagos'} activeClassName='active'>
+            <NavLink exact to={'/eadfinanzas/tproductos'} activeClassName='active'>
                 <FontAwesomeIcon icon={faDolly} />
                 Tipos de Productos
             </NavLink>
             
-            <NavLink exact to={'/eadfinanzas/ventas'} activeClassName='active'>
+            <NavLink exact to={'/eadfinanzas/marcas'} activeClassName='active'>
                 <FontAwesomeIcon icon={faSortAlphaDown} />
                 Marcas
             </NavLink>

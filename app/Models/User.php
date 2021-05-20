@@ -21,6 +21,7 @@ class User extends Model
         'tipo_usuario',
         'departamento',
         'sueldo_bruto',
+        'fecha',
         'estado'
     ];
 

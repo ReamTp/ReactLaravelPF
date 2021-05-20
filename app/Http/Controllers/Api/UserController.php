@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
+    public function getUser(Request $request){
+        $id = $request['id'];
+        $usuario = DB::select("SELECT u.*, d.nombre AS depart_name, tu.titulo AS titulo FROM users u INNER JOIN departamentos d ON u.departamento = d.id INNER JOIN tipo_user tu ON u.tipo_usuario = tu.id WHERE u.id = '".$id."';");
+        $response['data'] = $usuario[0];
+        return $response;
+    }
+
     public function loginUser(Request $request){
         $correo = strtolower($request['email']);
         $password = $request['password'];
@@ -29,19 +36,14 @@ class UserController extends Controller
             $insert['tipo_usuario'] = $request['tipo_usuario'];
             $insert['departamento'] = $request['departamento'];
             $insert['sueldo_bruto'] = $request['sueldo_bruto'];
-            $insert['estado'] = $request['estado'];
-
-            // $insert['nombre'] = 'Elias';
-            // $insert['apellido'] = 'Arriaga';
-            // $insert['correo'] = 'ream_tp@outlook.com';
-            // $insert['password'] = Crypt::encrypt('12345678');
-            // $insert['dni'] = 74027083;
-            // $insert['celular'] = 956271174;
-            // $insert['telefono'] = 23564157;
-            // $insert['tipo_usuario'] = 1;
-            // $insert['departamento'] = null;
-            // $insert['sueldo_bruto'] = 25000;
-            // $insert['estado'] = 1;
+            
+            if ($request->hasFile('avatar')){
+                $file = $request->file('avatar');
+                $path = 'uploads/';
+                $filename = time().'-'.$file->getClientOriginalName();
+                $subidaExitosa = $request->file('avatar')->move($path, $filename);
+                $insert['avatar'] = $path.$filename;
+            }
 
             User::insert($insert);
 

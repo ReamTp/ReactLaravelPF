@@ -24,6 +24,8 @@ Route::get('/user/listar', [UserController::class, 'listar']);
 
 Route::post('/user/login', [UserController::class, 'loginUser']);
 
+Route::post('/user/datos', [UserController::class, 'getUser']);
+
 Route::post('/user/comprobar', [UserController::class, 'comprobarUser']);
 
 Route::post('/user/registrar', [UserController::class, 'registrarUser']);

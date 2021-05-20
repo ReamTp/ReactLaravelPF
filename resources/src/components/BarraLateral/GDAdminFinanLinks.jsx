@@ -21,7 +21,7 @@ export default function GDAdminFinanLinks() {
                 Ver Ventas
             </NavLink>
             
-            <NavLink exact to={'/gdAdminFinan/informes'} activeClassName='active'>
+            <NavLink exact to={'/gdAdminFinan/reportes'} activeClassName='active'>
                 <FontAwesomeIcon icon={faChartPie} />
                 Ver Reportes
             </NavLink>

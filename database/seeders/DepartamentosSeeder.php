@@ -15,13 +15,18 @@ class DepartamentosSeeder extends Seeder
     public function run()
     {
         $departamentos = new Departamentos();
-        $departamentos->nombre = 'Administracion y Finanzas';
-        $departamentos->descripcion = 'Departamento de que se encarga de la Administración y las Finanzas de la empresa';
+        $departamentos->nombre = 'Global';
+        $departamentos->descripcion = 'Gerente General de la empresa';
         $departamentos->save();
 
         $departamentos2 = new Departamentos();
-        $departamentos2->nombre = 'Capital Humano';
-        $departamentos2->descripcion = 'Departamento que se encarga los contratos de los empleados y obreros de la empresa';
+        $departamentos2->nombre = 'Administracion y Finanzas';
+        $departamentos2->descripcion = 'Departamento de que se encarga de la Administración y las Finanzas de la empresa';
         $departamentos2->save();
+
+        $departamentos3 = new Departamentos();
+        $departamentos3->nombre = 'Capital Humano';
+        $departamentos3->descripcion = 'Departamento que se encarga los contratos de los empleados y obreros de la empresa';
+        $departamentos3->save();
     }
 }
