@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">Sistema Administrativo</h1>
 
-## Sobre el Sistema Administrativo
+## Sobre el Sistema Administrativo v0.1 beta
 
 Este proyecto es un sistema administrativo basado en la estructura jerárquica de la empresa [Camposol](https://www.camposol.com.pe/), el cual esta desarrollado en React y Laravel, con el fin de brinda una una administración a una empresa con las siguientes opciones:
 
@@ -35,10 +35,10 @@ Una vez que tenga todas las herramientas necesarias usted puede proseguir con lo
 
 - Primero abrir una consola de comandos (CMD) como administrador para poder ejecutar los comandos necesarios.
 - Ejecutar **composer install** para poder instalar los archivos necesarios para Laravel.
-- Ejecutar **php artisan key:generate** para generar una nueva key que pueda usar Laravel.
-- Luego Ejecutar **npm install** para pasar a instalar todas las dependecias necesarias para React.
 - Copiar el archivo **.env.example** y cambiar el nombre de la copia por **.env**.
   - En el archivo **.env** recién creado debemos configurar el nombre y la configuración necesarias de nuestra base de datos, la cual, es en donde se generarán todas nuestras tablas que guardarán nuestros datos.
+- Ejecutar **php artisan key:generate** para generar una nueva key que pueda usar Laravel.
+- Luego Ejecutar **npm install** para pasar a instalar todas las dependecias necesarias para React.
 - Ya con la configuración anterior realizada puede ejecutar los siguientes comandos:
   - Ejecutar el comando **php artisan migrate** para crear las tablas en la base de datos.
   - Ejecutar el comadno **php artisan db:seed** para insertar datos a la base de datos.
