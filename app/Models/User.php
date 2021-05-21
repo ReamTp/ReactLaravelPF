@@ -22,7 +22,6 @@ class User extends Model
         'departamento',
         'sueldo_bruto',
         'fecha',
-        'avatar',
         'estado'
     ];
 
