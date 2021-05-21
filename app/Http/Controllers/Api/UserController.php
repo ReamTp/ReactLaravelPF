@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -100,15 +101,10 @@ class UserController extends Controller
     }
 
     public function updateUser(Request $request){
+        $request['password'] = Crypt::encrypt($request['password']);
+
         $user = User::find($request['id']);
-        $user->nombre = $request['nombre'];
-        $user->apellido = $request['apellido'];
-        $user->correo = $request['correo'];
-        $user->password = Crypt::encrypt($request['password']);
-        $user->celular = $request['celular'];
-        $user->telefono = $request['telefono'];
-        
-        $result = $user->save();
+        $result = $user->fill($request->all())->save();
 
         if($result){
             $response['datos'] = $result;

@@ -34,7 +34,7 @@ export default function MyProfilePage() {
     
     return (
         <Container id='profile'>
-            <Tab.Container id='left-tabs-example'>
+            <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
                 <Row>
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
