@@ -2,7 +2,7 @@ import React from "react";
 import {faMoneyCheckAlt, faDollyFlatbed, faHandHoldingUsd, faChartPie, faFileAlt, faBell, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
-import {controles} from '../../utils/funciones.js';
+import {checkbox} from '../../utils/funciones.js';
 
 export default function GGeneralLinks() {
     return (
@@ -11,7 +11,7 @@ export default function GGeneralLinks() {
                 exact
                 to={"/functions/gerentegeneral/pagos"}
                 activeClassName="active"
-                onClick={controles}
+                onClick={checkbox}
             >
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
@@ -21,7 +21,7 @@ export default function GGeneralLinks() {
                 exact
                 to={"/functions/gerentegeneral/productos"}
                 activeClassName="active"
-                onClick={controles}
+                onClick={checkbox}
             >
                 <FontAwesomeIcon icon={faDollyFlatbed} />
                 Ver Productos
@@ -31,7 +31,7 @@ export default function GGeneralLinks() {
                 exact
                 to={"/functions/gerentegeneral/ventas"}
                 activeClassName="active"
-                onClick={controles}
+                onClick={checkbox}
             >
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
                 Ver Ventas
@@ -41,7 +41,7 @@ export default function GGeneralLinks() {
                 exact
                 to={"/functions/gerentegeneral/reportes"}
                 activeClassName="active"
-                onClick={controles}
+                onClick={checkbox}
             >
                 <FontAwesomeIcon icon={faChartPie} />
                 Ver Reportes
@@ -51,7 +51,7 @@ export default function GGeneralLinks() {
                 exact
                 to={"/functions/notificaciones"}
                 activeClassName="active"
-                onClick={controles}
+                onClick={checkbox}
             >
                 <FontAwesomeIcon icon={faBell} />
                 Notificaciones

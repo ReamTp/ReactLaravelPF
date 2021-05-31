@@ -15449,7 +15449,7 @@ function BarraLateral(props) {
             exact: true,
             to: "/functions",
             activeClassName: "active",
-            onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_9__.controles,
+            onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_9__.checkbox,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faBriefcase
             }), "Mis Funciones"]
@@ -15510,7 +15510,7 @@ function EAdminFinanLinks() {
       exact: true,
       to: '/functions/eadfinanzas/productos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faDollyFlatbed
       }), "Productos"]
@@ -15518,7 +15518,7 @@ function EAdminFinanLinks() {
       exact: true,
       to: '/functions/eadfinanzas/tproductos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faDolly
       }), "Tipos de Productos"]
@@ -15526,7 +15526,7 @@ function EAdminFinanLinks() {
       exact: true,
       to: '/functions/eadfinanzas/marcas',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faSortAlphaDown
       }), "Marcas"]
@@ -15534,7 +15534,7 @@ function EAdminFinanLinks() {
       exact: true,
       to: '/functions/notificaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faBell
       }), "Notificaciones"]
@@ -15575,7 +15575,7 @@ function ECHumanoLinks() {
       exact: true,
       to: '/functions/echuman/users',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faUser
       }), "Usuarios"]
@@ -15583,7 +15583,7 @@ function ECHumanoLinks() {
       exact: true,
       to: '/functions/echuman/pagos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faMoneyCheckAlt
       }), "Ver Pagos"]
@@ -15591,7 +15591,7 @@ function ECHumanoLinks() {
       exact: true,
       to: '/functions/echuman/horarios',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faUserClock
       }), "Definir Horarios"]
@@ -15599,7 +15599,7 @@ function ECHumanoLinks() {
       exact: true,
       to: '/functions/echuman/capacitaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faChalkboardTeacher
       }), "Capacitaciones"]
@@ -15607,7 +15607,7 @@ function ECHumanoLinks() {
       exact: true,
       to: '/functions/notificaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faBell
       }), "Notificaciones"]
@@ -15648,7 +15648,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/echuman/users',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faUser
       }), "Usuarios"]
@@ -15656,7 +15656,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/gdchumano/pagos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faMoneyCheckAlt
       }), "Ver Pagos"]
@@ -15664,7 +15664,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/gdchumano/aumentos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faSortAmountUp
       }), "Ver Aumentos"]
@@ -15672,7 +15672,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/gdchumano/horarios',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faUserClock
       }), "Definir Horarios"]
@@ -15680,7 +15680,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/gdchumano/capacitaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faChalkboardTeacher
       }), "Capacitaciones"]
@@ -15688,7 +15688,7 @@ function GCHumanoLinks() {
       exact: true,
       to: '/functions/notificaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faBell
       }), "Notificaciones"]
@@ -15729,7 +15729,7 @@ function GDAdminFinanLinks() {
       exact: true,
       to: '/functions/gdAdminFinan/pagos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faMoneyCheckAlt
       }), "Ver Pagos"]
@@ -15737,7 +15737,7 @@ function GDAdminFinanLinks() {
       exact: true,
       to: '/functions/gdAdminFinan/productos',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faDollyFlatbed
       }), "Ver Productos"]
@@ -15745,7 +15745,7 @@ function GDAdminFinanLinks() {
       exact: true,
       to: '/functions/gdAdminFinan/ventas',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faHandHoldingUsd
       }), "Ver Ventas"]
@@ -15753,7 +15753,7 @@ function GDAdminFinanLinks() {
       exact: true,
       to: '/functions/gdAdminFinan/reportes',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faChartPie
       }), "Ver Reportes"]
@@ -15761,7 +15761,7 @@ function GDAdminFinanLinks() {
       exact: true,
       to: '/functions/notificaciones',
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faBell
       }), "Notificaciones"]
@@ -15802,7 +15802,7 @@ function GGeneralLinks() {
       exact: true,
       to: "/functions/gerentegeneral/pagos",
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faMoneyCheckAlt
       }), "Ver Pagos"]
@@ -15810,7 +15810,7 @@ function GGeneralLinks() {
       exact: true,
       to: "/functions/gerentegeneral/productos",
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faDollyFlatbed
       }), "Ver Productos"]
@@ -15818,7 +15818,7 @@ function GGeneralLinks() {
       exact: true,
       to: "/functions/gerentegeneral/ventas",
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faHandHoldingUsd
       }), "Ver Ventas"]
@@ -15826,7 +15826,7 @@ function GGeneralLinks() {
       exact: true,
       to: "/functions/gerentegeneral/reportes",
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faChartPie
       }), "Ver Reportes"]
@@ -15834,7 +15834,7 @@ function GGeneralLinks() {
       exact: true,
       to: "/functions/notificaciones",
       activeClassName: "active",
-      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.controles,
+      onClick: _utils_funciones_js__WEBPACK_IMPORTED_MODULE_2__.checkbox,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faBell
       }), "Notificaciones"]
@@ -16864,11 +16864,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
-/* harmony import */ var spinners_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! spinners-react */ "./node_modules/spinners-react/lib/esm/SpinnerDotted.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var spinners_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! spinners-react */ "./node_modules/spinners-react/lib/esm/SpinnerDotted.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
@@ -17002,42 +17001,42 @@ function ComponenteDer() {
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
-      className: "login-der",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      id: "loginCDer",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
           src: _assets_img_favicon_png__WEBPACK_IMPORTED_MODULE_4__.default,
           alt: "Logo Camposol"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
           children: "Camposol cuidando de la granja a la familia"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
           onSubmit: onSubmit,
           onChange: onChange,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Group, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Control, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Group, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Control, {
               type: "email",
               name: "email",
               placeholder: "Correo Electronico",
               defaultValue: formData.email
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Group, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Control, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Group, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Control, {
               type: "password",
               name: "password",
               placeholder: "Contrase\xF1a",
               defaultValue: formData.password
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
             variant: "success",
             type: "submit",
-            children: !cargando ? "Iniciar Sesión" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(spinners_react__WEBPACK_IMPORTED_MODULE_11__.SpinnerDotted, {
+            children: !cargando ? "Iniciar Sesión" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(spinners_react__WEBPACK_IMPORTED_MODULE_10__.SpinnerDotted, {
               size: "30",
               color: "#FFFFFF"
             })
           })]
         })]
       })
-    }), redireccionar ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Redirect, {
+    }), redireccionar ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Redirect, {
       to: "/"
     }) : '']
   });
@@ -17081,7 +17080,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ ComponenteIzq)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _assets_img_loginBackground_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/img/loginBackground.jpg */ "./resources/src/assets/img/loginBackground.jpg");
 /* harmony import */ var _assets_img_logoCamposol_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/img/logoCamposol.png */ "./resources/src/assets/img/logoCamposol.png");
 /* harmony import */ var _ComponenteIzq_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ComponenteIzq.scss */ "./resources/src/pages/LoginPage/ComponenteIzq/ComponenteIzq.scss");
@@ -17094,8 +17092,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ComponenteIzq() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
-    className: "login-izq",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    id: "loginCIzq",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
       src: _assets_img_loginBackground_jpg__WEBPACK_IMPORTED_MODULE_1__.default,
       alt: "Camposol Empleados",
@@ -17142,6 +17140,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _ComponenteDer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ComponenteDer */ "./resources/src/pages/LoginPage/ComponenteDer/index.js");
 /* harmony import */ var _ComponenteIzq__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ComponenteIzq */ "./resources/src/pages/LoginPage/ComponenteIzq/index.js");
 /* harmony import */ var _LoginPage_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LoginPage.scss */ "./resources/src/pages/LoginPage/LoginPage.scss");
@@ -17158,7 +17157,13 @@ function LoginPage() {
     fluid: true,
     className: "login",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ComponenteIzq__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ComponenteDer__WEBPACK_IMPORTED_MODULE_1__.default, {})]
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+        className: "login-izq",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ComponenteIzq__WEBPACK_IMPORTED_MODULE_2__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+        className: "login-der",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ComponenteDer__WEBPACK_IMPORTED_MODULE_1__.default, {})
+      })]
     })
   });
 }
@@ -19358,9 +19363,9 @@ var API_HOST = 'http://localhost:8000/api';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "controles": () => (/* binding */ controles)
+/* harmony export */   "checkbox": () => (/* binding */ checkbox)
 /* harmony export */ });
-function controles() {
+function checkbox() {
   var checkbox = document.getElementById('btn-menu');
   checkbox.checked = false;
 }
@@ -19656,7 +19661,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19681,7 +19686,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.clearfix {\n  float: none;\n  clear: both;\n}\n\n.btn-menu {\n  position: absolute;\n  background-color: #1C1C1C;\n  width: 85px;\n  height: 85px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  float: left;\n  transition: all 500ms ease;\n  border-radius: 0 0 100% 0%;\n  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;\n}\n.btn-menu:hover {\n  width: 125px;\n  height: 125px;\n}\n.btn-menu .icon-menu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  padding: 0 10px;\n  transition: all 500ms ease;\n}\n.btn-menu .icon-menu:hover {\n  padding: 0 20px;\n}\n.btn-menu .icon-menu:hover > img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.btn-menu .icon-menu img {\n  width: 45px;\n}\n\n#btn-menu {\n  display: none;\n}\n#btn-menu:checked ~ .container-menu {\n  opacity: 1;\n  visibility: visible;\n}\n#btn-menu:checked ~ .container-menu .cont-menu {\n  transform: translateX(0%);\n}\n\n.container-menu {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.5);\n  width: 100%;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  transition: all 500ms ease;\n  opacity: 0;\n  visibility: hidden;\n  z-index: 1000;\n}\n\n.cont-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #1C1C1C;\n  height: 100vh;\n  position: relative;\n  transition: all 500ms ease;\n  transform: translateX(-100%);\n  overflow-y: scroll;\n  display: flex;\n  flex-direction: column;\n}\n.cont-menu::-webkit-scrollbar {\n  width: 5px;\n}\n.cont-menu::-webkit-scrollbar-thumb {\n  background-color: #65FA9E;\n  border-radius: 10px;\n  -webkit-transition: all 500ms ease;\n  transition: all 500ms ease;\n}\n.cont-menu::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n.cont-menu .logo-blateral {\n  width: 100%;\n  padding-top: 30px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.cont-menu .logo-blateral img {\n  width: 60px;\n}\n.cont-menu .logo-blateral h2 {\n  color: #C7C7C7;\n  margin-bottom: 30px;\n}\n.cont-menu nav a,\n.cont-menu nav .nav-link {\n  display: block;\n  padding: 20px;\n  color: #C7C7C7;\n  border-left: 5px solid transparent;\n  transition: all 500ms ease;\n}\n.cont-menu nav a svg,\n.cont-menu nav .nav-link svg {\n  margin-right: 15px;\n}\n.cont-menu nav a:hover,\n.cont-menu nav a .active,\n.cont-menu nav .nav-link:hover,\n.cont-menu nav .nav-link .active {\n  padding-left: 30px;\n  border-left: 5px solid #C7C7C7;\n  background-color: #1F1F1F;\n  text-decoration: none;\n  font-size: 17px;\n}\n.cont-menu nav .dropdown-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #292929;\n}\n.cont-menu nav .nav-link-logout {\n  color: #FF3334 !important;\n  transition: all 400ms ease;\n  margin-top: 30px;\n}\n.cont-menu nav .nav-link-logout:hover {\n  color: #B40001;\n  border-left: 5px solid #B40001 !important;\n}\n.cont-menu .active {\n  color: #65FA9E;\n  padding-left: 30px;\n  border-left: 5px solid #65FA9E;\n}\n.cont-menu .equis {\n  position: absolute;\n  right: 12px;\n  top: 10px;\n  color: #fff;\n  cursor: pointer;\n  font-size: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.clearfix {\n  float: none;\n  clear: both;\n}\n\n.btn-menu {\n  position: absolute;\n  background-color: #1C1C1C;\n  width: 85px;\n  height: 85px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  float: left;\n  transition: all 500ms ease;\n  border-radius: 0 0 100% 0%;\n  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;\n}\n.btn-menu:hover {\n  width: 125px;\n  height: 125px;\n}\n.btn-menu .icon-menu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  padding: 0 10px;\n  transition: all 500ms ease;\n}\n.btn-menu .icon-menu:hover {\n  padding: 0 20px;\n}\n.btn-menu .icon-menu:hover > img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.btn-menu .icon-menu img {\n  width: 45px;\n}\n\n#btn-menu {\n  display: none;\n}\n#btn-menu:checked ~ .container-menu {\n  opacity: 1;\n  visibility: visible;\n}\n#btn-menu:checked ~ .container-menu .cont-menu {\n  transform: translateX(0%);\n}\n\n.container-menu {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.5);\n  width: 100%;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  transition: all 500ms ease;\n  opacity: 0;\n  visibility: hidden;\n  z-index: 1000;\n}\n\n.cont-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #1C1C1C;\n  height: 100vh;\n  position: relative;\n  transition: all 500ms ease;\n  transform: translateX(-100%);\n  overflow-y: scroll;\n  display: flex;\n  flex-direction: column;\n}\n.cont-menu::-webkit-scrollbar {\n  width: 5px;\n}\n.cont-menu::-webkit-scrollbar-thumb {\n  background-color: #65FA9E;\n  border-radius: 10px;\n  -webkit-transition: all 500ms ease;\n  transition: all 500ms ease;\n}\n.cont-menu::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n.cont-menu .logo-blateral {\n  width: 100%;\n  padding-top: 30px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.cont-menu .logo-blateral img {\n  width: 60px;\n}\n.cont-menu .logo-blateral h2 {\n  color: #C7C7C7;\n  margin-bottom: 30px;\n}\n.cont-menu nav a,\n.cont-menu nav .nav-link {\n  display: block;\n  padding: 20px;\n  color: #C7C7C7;\n  border-left: 5px solid transparent;\n  transition: all 500ms ease;\n}\n.cont-menu nav a svg,\n.cont-menu nav .nav-link svg {\n  margin-right: 15px;\n}\n.cont-menu nav a:hover,\n.cont-menu nav a .active,\n.cont-menu nav .nav-link:hover,\n.cont-menu nav .nav-link .active {\n  padding-left: 30px;\n  border-left: 5px solid #C7C7C7;\n  background-color: #1F1F1F;\n  text-decoration: none;\n  font-size: 17px;\n}\n.cont-menu nav .dropdown-menu {\n  width: 100%;\n  max-width: 250px;\n  background: #292929;\n}\n.cont-menu nav .nav-link-logout {\n  color: #FF3334 !important;\n  transition: all 400ms ease;\n  margin-top: 30px;\n}\n.cont-menu nav .nav-link-logout:hover {\n  color: #B40001;\n  border-left: 5px solid #B40001 !important;\n}\n.cont-menu .active {\n  color: #65FA9E;\n  padding-left: 30px;\n  border-left: 5px solid #65FA9E;\n}\n.cont-menu .equis {\n  position: absolute;\n  right: 12px;\n  top: 10px;\n  color: #fff;\n  cursor: pointer;\n  font-size: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19706,7 +19711,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.navbar-brand {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.navbar-brand a {\n  font-weight: 500;\n  font-size: 32px;\n  color: #3F9047 !important;\n}\n.navbar-brand a:hover {\n  text-decoration: none;\n}\n.navbar-brand a:hover img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.navbar-brand a img {\n  margin-top: -6px;\n  margin-right: 4px;\n  width: 32px;\n}\n\n.navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n  height: 42px;\n}\n\n.navbar-collapse {\n  flex-grow: 0 !important;\n}\n\n.nav-link {\n  color: #3F9047 !important;\n  transition: all 0.4s;\n  font-size: 17px;\n  margin-top: 2px;\n}\n.nav-link:hover {\n  color: #ACCC7B !important;\n}\n.nav-link svg {\n  margin-right: 8px;\n}\n\n.dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n.dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.navbar-brand {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.navbar-brand a {\n  font-weight: 500;\n  font-size: 32px;\n  color: #3F9047 !important;\n}\n.navbar-brand a:hover {\n  text-decoration: none;\n}\n.navbar-brand a:hover img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.navbar-brand a img {\n  margin-top: -6px;\n  margin-right: 4px;\n  width: 32px;\n}\n\n.navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n  height: 42px;\n}\n\n.navbar-collapse {\n  flex-grow: 0 !important;\n}\n\n.nav-link {\n  color: #3F9047 !important;\n  transition: all 0.4s;\n  font-size: 17px;\n  margin-top: 2px;\n}\n.nav-link:hover {\n  color: #ACCC7B !important;\n}\n.nav-link svg {\n  margin-right: 8px;\n}\n\n.dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n.dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19731,7 +19736,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#bTabla label {\n  font-size: 1.125rem;\n  margin-right: 1.5625rem;\n}\n#bTabla #buscador {\n  border: 1px solid #668A4C;\n  outline: none;\n}\n#bTabla #buscador:focus {\n  border: 1px solid #ACCC7B;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#bTabla label {\n  font-size: 1.125rem;\n  margin-right: 1.5625rem;\n}\n#bTabla #buscador {\n  border: 1px solid #668A4C;\n  outline: none;\n}\n#bTabla #buscador:focus {\n  border: 1px solid #ACCC7B;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19756,7 +19761,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.carousel-item {\n  height: 91vh;\n  overflow: hidden;\n}\n.carousel-item img {\n  margin-top: -115px;\n  width: 100%;\n}\n\n.carousel-caption {\n  width: 420px;\n  left: 64% !important;\n}\n.carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  min-height: 250px;\n  max-height: 260px;\n}\n.carousel-caption .jumbotron h2 {\n  font-size: 30px;\n}\n.carousel-caption .jumbotron p {\n  font-size: 16px;\n}\n.carousel-caption .jumbotron button {\n  width: 120px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.carousel-item {\n  height: 91vh;\n  overflow: hidden;\n}\n.carousel-item img {\n  margin-top: -115px;\n  width: 100%;\n}\n\n.carousel-caption {\n  width: 420px;\n  left: 64% !important;\n}\n.carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  min-height: 250px;\n  max-height: 260px;\n}\n.carousel-caption .jumbotron h2 {\n  font-size: 30px;\n}\n.carousel-caption .jumbotron p {\n  font-size: 16px;\n}\n.carousel-caption .jumbotron button {\n  width: 120px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19781,7 +19786,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#myprofile {\n  color: white;\n}\n#myprofile #profilemedia {\n  background-image: linear-gradient(to right top, #051937, #003759, #005768, #007560, #3f9047);\n  max-width: 100%;\n  height: 300px;\n  display: flex;\n  flex-flow: column wrap;\n  align-items: center;\n  justify-content: center;\n}\n#myprofile #profilemedia #profileimage {\n  width: 125px;\n  height: 125px;\n}\n#myprofile #profilemedia #profileimage img {\n  background: white;\n  max-width: 100%;\n  max-height: 100%;\n  border: 3px solid white;\n  border-radius: 50%;\n}\n#myprofile #profilemedia h2 {\n  font-size: 24px;\n  margin-top: 10px;\n}\n#myprofile #profilemedia #profilemdata {\n  display: flex;\n}\n#myprofile #profilemedia #profilemdata p {\n  font-size: 16px;\n  margin: 0 8px;\n}\n#myprofile .container {\n  height: 300px;\n  padding: 25px 40px;\n  overflow-y: scroll;\n}\n#myprofile .container::-webkit-scrollbar {\n  width: 5px;\n}\n#myprofile .container::-webkit-scrollbar-thumb {\n  background-color: #042241;\n  border-radius: 10px;\n}\n#myprofile .container .row {\n  margin-bottom: 20px;\n}\n#myprofile .container .row h2 {\n  color: #042241;\n  width: 100%;\n}\n#myprofile .container .row .col {\n  color: #022D4E;\n  padding-top: 10px;\n}\n#myprofile .container .row .col .info-data {\n  margin-bottom: 15px;\n}\n#myprofile .container .row .col .info-data div {\n  margin-top: -15px;\n}\n#myprofile .container .row .col .info-data div svg {\n  margin-right: 8px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#myprofile {\n  color: white;\n}\n#myprofile #profilemedia {\n  background-image: linear-gradient(to right top, #051937, #003759, #005768, #007560, #3f9047);\n  max-width: 100%;\n  height: 300px;\n  display: flex;\n  flex-flow: column wrap;\n  align-items: center;\n  justify-content: center;\n}\n#myprofile #profilemedia #profileimage {\n  width: 125px;\n  height: 125px;\n}\n#myprofile #profilemedia #profileimage img {\n  background: white;\n  max-width: 100%;\n  max-height: 100%;\n  border: 3px solid white;\n  border-radius: 50%;\n}\n#myprofile #profilemedia h2 {\n  font-size: 24px;\n  margin-top: 10px;\n}\n#myprofile #profilemedia #profilemdata {\n  display: flex;\n}\n#myprofile #profilemedia #profilemdata p {\n  font-size: 16px;\n  margin: 0 8px;\n}\n#myprofile .container {\n  height: 300px;\n  padding: 25px 40px;\n  overflow-y: scroll;\n}\n#myprofile .container::-webkit-scrollbar {\n  width: 5px;\n}\n#myprofile .container::-webkit-scrollbar-thumb {\n  background-color: #042241;\n  border-radius: 10px;\n}\n#myprofile .container .row {\n  margin-bottom: 20px;\n}\n#myprofile .container .row h2 {\n  color: #042241;\n  width: 100%;\n}\n#myprofile .container .row .col {\n  color: #022D4E;\n  padding-top: 10px;\n}\n#myprofile .container .row .col .info-data {\n  margin-bottom: 15px;\n}\n#myprofile .container .row .col .info-data div {\n  margin-top: -15px;\n}\n#myprofile .container .row .col .info-data div svg {\n  margin-right: 8px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19902,7 +19907,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home .container {\n  padding: 50px 0;\n}\n#home .container h1 {\n  font-size: 48px;\n  text-align: center;\n  margin-bottom: 50px;\n}\n#home .container .about {\n  margin-bottom: 40px;\n}\n#home .container .about h2 {\n  font-size: 36px;\n  margin-bottom: 35px;\n}\n#home .container .about > div {\n  margin-top: 20px;\n  display: flex;\n  justify-content: space-between;\n}\n#home .container .about > div #about-img img {\n  width: 430px;\n}\n#home .container .about > div #about-box {\n  margin-left: 45px;\n}\n#home .container .about > div #about-box .philosophy {\n  font-size: 17px;\n}\n#home .container .commitment > div {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img {\n  width: 450px;\n}\n#home .container .commitment > div #commiment-box {\n  width: 650px;\n  margin-right: 45px;\n}\n#home .halfCircle {\n  height: 75px;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 32px;\n  margin-top: -14px;\n  margin-right: 5px;\n}\n#home .halfCircle .logo p {\n  font-size: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home .container {\n  padding: 50px 0;\n}\n#home .container h1 {\n  font-size: 48px;\n  text-align: center;\n  margin-bottom: 50px;\n}\n#home .container .about {\n  margin-bottom: 40px;\n}\n#home .container .about h2 {\n  font-size: 36px;\n  margin-bottom: 35px;\n}\n#home .container .about > div {\n  margin-top: 20px;\n  display: flex;\n  justify-content: space-between;\n}\n#home .container .about > div #about-img img {\n  width: 430px;\n}\n#home .container .about > div #about-box {\n  margin-left: 45px;\n}\n#home .container .about > div #about-box .philosophy {\n  font-size: 17px;\n}\n#home .container .commitment > div {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img {\n  width: 450px;\n}\n#home .container .commitment > div #commiment-box {\n  width: 650px;\n  margin-right: 45px;\n}\n#home .halfCircle {\n  height: 75px;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 32px;\n  margin-top: -14px;\n  margin-right: 5px;\n}\n#home .halfCircle .logo p {\n  font-size: 18px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19951,7 +19956,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-der {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: column wrap;\n  background-color: #464646;\n  padding: 0 !important;\n}\n.login-der div {\n  width: 80%;\n  height: 70%;\n}\n.login-der div img {\n  width: 75px;\n  margin: 25px 0;\n}\n.login-der div h2 {\n  font-weight: bold;\n  font-size: 40px;\n  margin-bottom: 35px;\n}\n.login-der div button {\n  display: block;\n  width: 80%;\n  margin: 40px auto;\n  border-radius: 25px;\n  font-size: 20px;\n  font-weight: bold;\n  padding: 10px;\n}\n.login-der div .form-group {\n  width: 80%;\n  margin: 0 auto;\n}\n.login-der div .form-group input {\n  font-size: 18px;\n  margin-bottom: 30px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#loginCDer {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-flow: column wrap;\n}\n#loginCDer div {\n  width: 80%;\n  height: 70%;\n}\n#loginCDer div img {\n  width: 4.6875rem;\n  margin: 1.5625rem 0;\n}\n#loginCDer div h2 {\n  font-weight: bold;\n  font-size: 2.5rem;\n  margin-bottom: 2.1875rem;\n}\n#loginCDer div button {\n  display: block;\n  width: 80%;\n  margin: 2.5rem auto;\n  border-radius: 1.5625rem;\n  font-size: 1.25rem;\n  font-weight: bold;\n  padding: 0.625rem;\n}\n#loginCDer div .form-group {\n  width: 80%;\n  margin: 0 auto;\n}\n#loginCDer div .form-group input {\n  font-size: 1.125rem;\n  margin-bottom: 1.875rem;\n}\n\n@media all and (max-width: 720px) {\n  #loginCDer div img {\n    width: 4.0625rem;\n  }\n  #loginCDer div h2 {\n    font-size: 2.25rem;\n  }\n  #loginCDer div button {\n    width: 90%;\n    font-size: 1rem;\n  }\n  #loginCDer div .form-group {\n    width: 90%;\n  }\n  #loginCDer div .form-group input {\n    font-size: 1rem;\n  }\n}\n@media all and (max-width: 390px) {\n  #loginCDer div img {\n    width: 3.4375rem;\n  }\n  #loginCDer div h2 {\n    font-size: 1.75rem;\n  }\n  #loginCDer div button {\n    width: 100%;\n    font-size: 0.875rem;\n  }\n  #loginCDer div .form-group {\n    width: 100%;\n  }\n  #loginCDer div .form-group input {\n    font-size: 0.875rem;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19976,7 +19981,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login-izq {\n  overflow: hidden;\n  padding: 0 !important;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.login-izq .fondo {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.login-izq div {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  background-color: rgba(70, 70, 70, 0.35);\n  z-index: 1;\n}\n.login-izq div img {\n  width: 200px;\n  position: absolute;\n  bottom: 45px;\n  right: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#loginCIzq {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n#loginCIzq .fondo {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n#loginCIzq div {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  background-color: rgba(70, 70, 70, 0.35);\n  z-index: 1;\n}\n#loginCIzq div img {\n  width: 12.5rem;\n  position: absolute;\n  bottom: 2.8125rem;\n  right: 1.25rem;\n}\n\n@media all and (max-width: 720px) {\n  #loginCIzq div img {\n    width: 11.25rem;\n    right: 0.625rem;\n  }\n}\n@media all and (max-width: 390px) {\n  #loginCIzq div img {\n    width: 10rem;\n    right: 0.5rem;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20001,7 +20006,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login {\n  color: #FFFFFF;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.login {\n  color: #FFFFFF;\n}\n.login .row .login-izq {\n  overflow: hidden;\n  padding: 0 !important;\n  min-height: 100vh;\n}\n.login .row .login-der {\n  background-color: #464646;\n  padding: 0 !important;\n}\n\n@media all and (max-width: 720px) {\n  .login .row .col {\n    height: 100%;\n    min-height: 100vh;\n    flex-basis: auto;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  .login .row .col:nth-of-type(1) {\n    height: auto;\n  }\n  .login .row .login-izq {\n    order: 2;\n  }\n  .login .row .login-der {\n    order: 1;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20026,7 +20031,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#function-home {\n  width: 100%;\n  max-width: 1200px;\n  height: 100vh;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n}\n#function-home .text {\n  width: 464px;\n  margin-right: 25px;\n}\n#function-home .text h1 {\n  font-size: 44px;\n  margin-bottom: 25px;\n}\n#function-home .text p {\n  font-size: 18px;\n}\n#function-home .text button {\n  float: right;\n}\n#function-home .text .clearfix {\n  float: none;\n  clear: both;\n}\n#function-home .s_circle {\n  width: 220px;\n  height: 220px;\n  position: fixed;\n  background-color: #ACCC7B;\n  bottom: 0;\n  right: 0;\n  border-radius: 100% 0 0 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: white;\n  font-size: 38px;\n  padding-top: 45px;\n  padding-left: 28px;\n}\n#function-home #campo {\n  width: 500px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#function-home {\n  width: 100%;\n  max-width: 1200px;\n  height: 100vh;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n}\n#function-home .text {\n  width: 464px;\n  margin-right: 25px;\n}\n#function-home .text h1 {\n  font-size: 44px;\n  margin-bottom: 25px;\n}\n#function-home .text p {\n  font-size: 18px;\n}\n#function-home .text button {\n  float: right;\n}\n#function-home .text .clearfix {\n  float: none;\n  clear: both;\n}\n#function-home .s_circle {\n  width: 220px;\n  height: 220px;\n  position: fixed;\n  background-color: #ACCC7B;\n  bottom: 0;\n  right: 0;\n  border-radius: 100% 0 0 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: white;\n  font-size: 38px;\n  padding-top: 45px;\n  padding-left: 28px;\n}\n#function-home #campo {\n  width: 500px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20051,7 +20056,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#profile {\n  margin-top: 50px;\n}\n#profile .col-sm-3 {\n  height: 540px;\n}\n#profile .col-sm-3 .flex-column .nav-item {\n  font-size: 16px;\n  font-weight: 600;\n  padding: 0px;\n  color: #3F9047 !important;\n  margin-bottom: 15px;\n}\n#profile .col-sm-3 .flex-column .nav-item:hover {\n  color: #3F9047 !important;\n  border-radius: 9px;\n  box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #f0f0f0;\n}\n#profile .nav-link {\n  color: #ACCC7B !important;\n  transition: all 500ms ease-in-out;\n}\n#profile .nav-link:hover {\n  color: #3F9047 !important;\n}\n#profile .tab-content {\n  width: 780px;\n  height: 600px;\n  overflow: hidden;\n  margin-left: 40px;\n  border-radius: 10px;\n  box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;\n}\n#profile .nav-pills .nav-link.active, #profile .nav-pills .show > .nav-link {\n  background-color: #3F9047 !important;\n  color: white !important;\n}\n#profile .nav-renuncia .nav-link {\n  color: #FF3334 !important;\n}\n#profile .nav-renuncia .nav-link.active {\n  color: white !important;\n  background-color: #B40001 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#profile {\n  margin-top: 50px;\n}\n#profile .col-sm-3 {\n  height: 540px;\n}\n#profile .col-sm-3 .flex-column .nav-item {\n  font-size: 16px;\n  font-weight: 600;\n  padding: 0px;\n  color: #3F9047 !important;\n  margin-bottom: 15px;\n}\n#profile .col-sm-3 .flex-column .nav-item:hover {\n  color: #3F9047 !important;\n  border-radius: 9px;\n  box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #f0f0f0;\n}\n#profile .nav-link {\n  color: #ACCC7B !important;\n  transition: all 500ms ease-in-out;\n}\n#profile .nav-link:hover {\n  color: #3F9047 !important;\n}\n#profile .tab-content {\n  width: 780px;\n  height: 600px;\n  overflow: hidden;\n  margin-left: 40px;\n  border-radius: 10px;\n  box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;\n}\n#profile .nav-pills .nav-link.active, #profile .nav-pills .show > .nav-link {\n  background-color: #3F9047 !important;\n  color: white !important;\n}\n#profile .nav-renuncia .nav-link {\n  color: #FF3334 !important;\n}\n#profile .nav-renuncia .nav-link.active {\n  color: white !important;\n  background-color: #B40001 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20100,7 +20105,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n}\nbody header {\n  height: 85px;\n}\nbody header img {\n  margin: 20px;\n}\nbody #cont-404 {\n  display: flex;\n  justify-content: center;\n}\nbody #cont-404 .jumbotron {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: space-around;\n  color: white;\n  box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -webkit-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -moz-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  background-color: #ACCC7B !important;\n  border-radius: 15px;\n  margin-right: 580px;\n  margin-top: 8%;\n  width: 520px;\n  height: 400px;\n}\nbody #cont-404 .jumbotron a {\n  display: block;\n  align-self: flex-end;\n  text-align: center;\n  width: 150px;\n  padding: 10px 25px;\n  color: white;\n  background-color: #30391F;\n  border-radius: 7px;\n  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n}\nbody #cont-404 .jumbotron a:hover {\n  text-decoration: none;\n  background-color: #668A4C;\n}\nbody #cont-404 img {\n  position: absolute;\n  width: 450px;\n  top: 32%;\n  right: 12%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n}\nbody header {\n  height: 85px;\n}\nbody header img {\n  margin: 20px;\n}\nbody #cont-404 {\n  display: flex;\n  justify-content: center;\n}\nbody #cont-404 .jumbotron {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: space-around;\n  color: white;\n  box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -webkit-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  -moz-box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.54);\n  background-color: #ACCC7B !important;\n  border-radius: 15px;\n  margin-right: 580px;\n  margin-top: 8%;\n  width: 520px;\n  height: 400px;\n}\nbody #cont-404 .jumbotron a {\n  display: block;\n  align-self: flex-end;\n  text-align: center;\n  width: 150px;\n  padding: 10px 25px;\n  color: white;\n  background-color: #30391F;\n  border-radius: 7px;\n  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n  -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.45);\n}\nbody #cont-404 .jumbotron a:hover {\n  text-decoration: none;\n  background-color: #668A4C;\n}\nbody #cont-404 img {\n  position: absolute;\n  width: 450px;\n  top: 32%;\n  right: 12%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -28,15 +28,15 @@ export default function ComponenteDer() {
             setCargando(true);
             // Iniciar variable dataToken
             let dataToken = null;
-            
+
             // Realizar consulta asyncrona
             const res = await usuario.login(formData);
-            
+
             // Verificar si hay informacion (Login correcto)
             if (res && res.data != null) {
                 toast.success("Inicio de Sesión Correcto");
                 dataToken = JSON.stringify(res.data);
-    
+
                 if (dataToken !== null) {
                     if (typeof Storage !== "undefined") {
                         localStorage.setItem("token", dataToken);
@@ -60,7 +60,7 @@ export default function ComponenteDer() {
 
     return (
         <>
-            <Col className="login-der">
+            <div id="loginCDer">
                 <div>
                     <img src={logo2} alt="Logo Camposol" />
                     <h2>Camposol cuidando de la granja a la familia</h2>
@@ -94,7 +94,7 @@ export default function ComponenteDer() {
                         </Button>
                     </Form>
                 </div>
-            </Col>
+            </div>
             {redireccionar ? <Redirect to='/' /> : ''}
         </>
     );

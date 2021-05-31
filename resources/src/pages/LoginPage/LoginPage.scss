@@ -2,4 +2,44 @@
 
 .login {
     color: $light-color;
+
+    .row{
+        .login-izq{
+            overflow: hidden;
+            padding: 0 !important;
+            min-height: 100vh;
+        }
+
+        .login-der{
+            background-color: $dark-color;
+            padding: 0 !important;
+        }
+    }
+}
+
+@media all and (max-width: 720px){
+    .login{
+        .row {
+            .col{
+                height: 100%;
+                min-height: 100vh;
+                flex-basis: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:nth-of-type(1){
+                    height: auto;
+                }
+            }
+
+            .login-izq{
+                order: 2;
+            }
+
+            .login-der{
+                order: 1;
+            }
+        }
+    }
 }

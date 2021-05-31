@@ -10,13 +10,13 @@ export default function Home() {
     return (
         <div id='home'>
             <Carrusel />
-            
+
             <Container>
                 <h1>Camposol cuidando de la granja a la familia</h1>
-                
+
                 <div className='about'>
                     <h2>Nuestra Filosofia</h2>
-                    
+
                     <div>
                         <div id='about-img'>
                             <img src={filosofia} />
@@ -34,7 +34,7 @@ export default function Home() {
 
                 <div className='commitment'>
                     <h2>Nuestro Compromiso</h2>
-                    
+
                     <div>
                         <div id='commiment-box'>
                             <p>Camposol cree firmemente que para garantizar su sostenibilidad futura, el respeto a los principios éticos, a los empleados y al medio ambiente es un requisito indispensable. Por lo tanto, operamos de acuerdo con nuestras directrices de responsabilidad social, los Objetivos del Milenio y los Principios del Pacto Mundial de las Naciones Unidas, de los cuales hemos sido miembros activos desde 2008.</p>

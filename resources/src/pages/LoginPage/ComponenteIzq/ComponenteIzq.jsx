@@ -8,11 +8,11 @@ import './ComponenteIzq.scss';
 
 export default function ComponenteIzq(){
     return(
-        <Col className='login-izq'>
+        <div id='loginCIzq'>
             <img src={camposol} alt='Camposol Empleados' className='fondo' />
             <div>
                 <img src={logo} alt='Camposol logo' />
             </div>
-        </Col>
+        </div>
     );
 }

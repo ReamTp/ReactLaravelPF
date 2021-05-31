@@ -9,7 +9,7 @@ import GDAdminFinanLinks from './GDAdminFinanLinks';
 import EAdminFinanLinks from './EAdminFinanLinks';
 import GCHumanoLinks from './GCHumanoLinks';
 import ECHumanoLinks from './ECHumanoLinks';
-import {controles} from '../../utils/funciones.js';
+import {checkbox} from '../../utils/funciones.js';
 
 export default function BarraLateral(props) {
     const {nivel} = props;
@@ -48,7 +48,7 @@ export default function BarraLateral(props) {
                             Inicio
                         </Link>
 
-                        <NavLink exact to='/functions' activeClassName='active' onClick={controles}>
+                        <NavLink exact to='/functions' activeClassName='active' onClick={checkbox}>
                             <FontAwesomeIcon icon={faBriefcase} />
                             Mis Funciones
                         </NavLink>

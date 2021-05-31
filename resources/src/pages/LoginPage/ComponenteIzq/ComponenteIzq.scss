@@ -1,31 +1,53 @@
 @import '../../../../sass/index.scss';
 
-.login-izq{
-    overflow: hidden;
-    padding: 0 !important;
-    min-height: 100vh;
+#loginCIzq{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .fondo{
         position: absolute;
         width: 100%;
         height: 100%;
     }
-    
+
     div{
         width: 100%;
         height: 100%;
-        position: absolute;
+        position: relative;
         background-color: rgba($dark-color, $alpha: .35);
         z-index: 1;
-        
+
         img{
-            width: 200px;
+            width: 12.5rem;
             position: absolute;
-            bottom: 45px;
-            right: 20px;
+            bottom: 2.8125rem;
+            right: 1.25rem;
+        }
+    }
+}
+
+
+@media all and (max-width: 720px) {
+    #loginCIzq {
+        div {
+            img {
+                width: 11.25rem;
+                right: 0.625rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 390px) {
+    #loginCIzq {
+        div {
+            img {
+                width: 10rem;
+                right: 0.5rem;
+            }
         }
     }
 }
