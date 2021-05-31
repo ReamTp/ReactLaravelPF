@@ -1,64 +1,85 @@
 @import '../../../sass/index.scss';
 
 #home{
+    padding-top: 4rem;
+
     .container{
-        padding: 50px 0;
+        padding: 3.125rem 0;
 
         h1{
-            font-size: 48px;
+            font-size: 3rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 3.125rem;
         }
 
         .about{
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
 
             h2{
-                font-size: 36px;
-                margin-bottom: 35px;
+                font-size: 2.25rem;
+                margin-bottom: 2.25rem;
             }
 
             & > div{
-                margin-top: 20px;
+                margin-top: 1.25rem;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
 
                 #about-img{
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     img{
-                        width: 430px;
+                        width: 100%;
                     }
                 }
 
                 #about-box{
-                    margin-left: 45px;
+                    width: 50%;
+                    margin-left: 2.8125rem;
 
                     .philosophy{
-                        font-size: 17px;
+                        font-size: 1.0625rem;
                     }
                 }
             }
         }
 
         .commitment{
+            h2{
+                font-size: 2.25rem;
+                margin-bottom: 2.25rem;
+            }
+
             & > div{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
 
                 #commiment-img{
-                    width: 450px;
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 #commiment-box{
-                    width: 650px;
-                    margin-right: 45px;
+                    width: 60%;
+                    margin-right: 2.8125rem;
                 }
             }
         }
     }
 
     .halfCircle{
-        height: 75px;
+        height: 4.6875rem;
         width: 100%;
         border-radius: 50% 50% 0 0;
         -moz-border-radius: 50% 50% 0 0;
@@ -70,20 +91,187 @@
 
         .logo{
             color: #eee;
-            padding-top: 15px;
+            padding-top: 0.9375rem;
             display: flex;
             justify-content: center;
             align-items: center;
 
             img {
-                width: 32px;
-                margin-top: -14px;
-                margin-right: 5px;
+                width: 2rem;
+                margin-top: -0.875rem;
+                margin-right: 0.3125rem;
             }
 
             p {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
         }
    }
+}
+
+@media all and (max-width:870px){
+    #home {
+        .container{
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .about {
+                h2 {
+                    text-align: center;
+                    font-size: 2rem;
+                }
+
+                & > div {
+                    flex-flow: column wrap;
+
+                    #about-img {
+                        width: 100%;
+                        margin: 2.1875rem 0;
+
+                        img {
+                            width: auto;
+                        }
+                    }
+
+                    #about-box {
+                        width: 92%;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .commitment {
+                h2{
+                    text-align: center;
+                    font-size: 2rem;
+                }
+
+                & > div {
+                    flex-flow: column wrap;
+
+                    #commiment-box {
+                        width: 92%;
+                        margin-right: 0;
+                        order: 2;
+                    }
+
+                    #commiment-img {
+                        width: 100%;
+                        margin: 2.1875rem  0;
+                        order: 1;
+
+                        img {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 670px) {
+    #home {
+        .container{
+            .about {
+                & > div {
+                    #about-img {
+                        img {
+                            max-width: 90%;
+                        }
+                    }
+
+                    #about-box {
+                        p {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+
+            .commitment {
+                & > div {
+                    #commiment-img {
+                        img {
+                            max-width: 90%;
+                        }
+                    }
+
+                    #commiment-box {
+                        p {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (max-width: 470px){
+    #home{
+        .container{
+            h1 {
+                font-size: 2rem;
+                padding: 0 0.5rem;
+            }
+
+            .about {
+                h2 {
+                    text-align: center;
+                    font-size: 1.75rem;
+                }
+
+                & div {
+                    #about-box {
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+
+            .commitment {
+                h2 {
+                    text-align: center;
+                    font-size: 1.75rem;
+                }
+
+                & div {
+                    #commiment-box {
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:302px){
+    #home {
+        .container{
+            h1 {
+                font-size: 1.625rem;
+                padding: 0 0.5rem;
+            }
+
+            .about {
+                h2 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .commitment {
+                h2 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }

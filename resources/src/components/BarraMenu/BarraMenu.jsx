@@ -20,39 +20,43 @@ export default function BarraMenu() {
     }, [closeSession])
 
     return (
-        <Navbar expand='md'>
-            <Container>
-                <Navbar.Brand>
-                    <Link to='/'>
-                        <img src={logo} /> Camposol&reg;
-                    </Link>
-                </Navbar.Brand>
+        <>
+            <div id="barraMenu">
+                <Navbar expand='md'>
+                    <Container>
+                        <Navbar.Brand>
+                            <Link to='/'>
+                                <img src={logo} /> <span>Camposol&reg;</span>
+                            </Link>
+                        </Navbar.Brand>
 
-                <Navbar.Toggle aria-controls='basic-navbar-nav' />
-                <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav className='mr-auto'>
-                        <Link to='/' className='nav-link'>
-                            <FontAwesomeIcon icon={faHome} />
-                            Inicio
-                        </Link>
-                        <Link to='/functions' className='nav-link'>
-                            <FontAwesomeIcon icon={faBriefcase} />
-                            Mis Funciones
-                        </Link>
-                        <NavDropdown title='Mi cuenta'>
-                            <Link to='/myprofile' className='nav-link'>
-                                <FontAwesomeIcon icon={faUser} />
-                                Mi Cuenta
-                            </Link>
-                            <Link to='/' onClick={clearSession} className='nav-link'>
-                                <FontAwesomeIcon icon={faSignInAlt} />
-                                Cerrar session
-                            </Link>
-                        </NavDropdown>
-                    </Nav>
-                </Navbar.Collapse>
-                {closeSession ? <Redirect to='/login'/> : ''}
-            </Container>
-        </Navbar>
+                        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                        <Navbar.Collapse id='basic-navbar-nav'>
+                            <Nav className='mr-auto'>
+                                <Link to='/' className='nav-link'>
+                                    <FontAwesomeIcon icon={faHome} />
+                                    Inicio
+                                </Link>
+                                <Link to='/functions' className='nav-link'>
+                                    <FontAwesomeIcon icon={faBriefcase} />
+                                    Mis Funciones
+                                </Link>
+                                <NavDropdown title='Mi cuenta'>
+                                    <Link to='/myprofile' className='nav-link'>
+                                        <FontAwesomeIcon icon={faUser} />
+                                        Mi Cuenta
+                                    </Link>
+                                    <Link to='/' onClick={clearSession} className='nav-link'>
+                                        <FontAwesomeIcon icon={faSignInAlt} />
+                                        Cerrar session
+                                    </Link>
+                                </NavDropdown>
+                            </Nav>
+                        </Navbar.Collapse>
+                        {closeSession ? <Redirect to='/login'/> : ''}
+                    </Container>
+                </Navbar>
+            </div>
+        </>
     )
 }

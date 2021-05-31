@@ -15907,6 +15907,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function BarraMenu() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -15921,55 +15922,62 @@ function BarraMenu() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     closeSession ? react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Sesion Cerrada') : '';
   }, [closeSession]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
-    expand: "md",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Brand, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
-          to: "/",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-            src: _utils_img__WEBPACK_IMPORTED_MODULE_2__.logo
-          }), " Camposol\xAE"]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Toggle, {
-        "aria-controls": "basic-navbar-nav"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Collapse, {
-        id: "basic-navbar-nav",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
-          className: "mr-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
-            to: "/",
-            className: "nav-link",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHome
-            }), "Inicio"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
-            to: "/functions",
-            className: "nav-link",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faBriefcase
-            }), "Mis Funciones"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
-            title: "Mi cuenta",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
-              to: "/myprofile",
-              className: "nav-link",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faUser
-              }), "Mi Cuenta"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      id: "barraMenu",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        expand: "md",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Brand, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
               to: "/",
-              onClick: clearSession,
-              className: "nav-link",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faSignInAlt
-              }), "Cerrar session"]
-            })]
-          })]
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                src: _utils_img__WEBPACK_IMPORTED_MODULE_2__.logo
+              }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                children: "Camposol\xAE"
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Toggle, {
+            "aria-controls": "basic-navbar-nav"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Collapse, {
+            id: "basic-navbar-nav",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+              className: "mr-auto",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+                to: "/",
+                className: "nav-link",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHome
+                }), "Inicio"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+                to: "/functions",
+                className: "nav-link",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faBriefcase
+                }), "Mis Funciones"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+                title: "Mi cuenta",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+                  to: "/myprofile",
+                  className: "nav-link",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faUser
+                  }), "Mi Cuenta"]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+                  to: "/",
+                  onClick: clearSession,
+                  className: "nav-link",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faSignInAlt
+                  }), "Cerrar session"]
+                })]
+              })]
+            })
+          }), closeSession ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Redirect, {
+            to: "/login"
+          }) : '']
         })
-      }), closeSession ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Redirect, {
-        to: "/login"
-      }) : '']
+      })
     })
   });
 }
@@ -16097,6 +16105,7 @@ function Carrusel() {
   var time = 7000;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
     fade: true,
+    id: "carruselHome",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Item, {
       interval: time,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
@@ -19711,7 +19720,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.navbar-brand {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.navbar-brand a {\n  font-weight: 500;\n  font-size: 32px;\n  color: #3F9047 !important;\n}\n.navbar-brand a:hover {\n  text-decoration: none;\n}\n.navbar-brand a:hover img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n.navbar-brand a img {\n  margin-top: -6px;\n  margin-right: 4px;\n  width: 32px;\n}\n\n.navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n  height: 42px;\n}\n\n.navbar-collapse {\n  flex-grow: 0 !important;\n}\n\n.nav-link {\n  color: #3F9047 !important;\n  transition: all 0.4s;\n  font-size: 17px;\n  margin-top: 2px;\n}\n.nav-link:hover {\n  color: #ACCC7B !important;\n}\n.nav-link svg {\n  margin-right: 8px;\n}\n\n.dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n.dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#barraMenu {\n  position: fixed;\n  z-index: 1000;\n  background-color: #FFFFFF;\n  width: 100%;\n}\n#barraMenu .navbar-brand {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n#barraMenu .navbar-brand a {\n  font-weight: 500;\n  font-size: 2rem;\n  color: #3F9047 !important;\n}\n#barraMenu .navbar-brand a:hover {\n  text-decoration: none;\n}\n#barraMenu .navbar-brand a:hover img {\n  -webkit-animation: rotate-center 0.6s ease-in-out both;\n  animation: rotate-center 0.6s ease-in-out both;\n}\n#barraMenu .navbar-brand a img {\n  margin-top: -0.375rem;\n  margin-right: 0.25rem;\n  width: 2rem;\n}\n#barraMenu .navbar-nav {\n  margin-left: auto !important;\n  margin-right: 0 !important;\n  height: 2.625rem;\n}\n#barraMenu .navbar-collapse {\n  flex-grow: 0 !important;\n}\n#barraMenu .nav-link {\n  background-color: #FFFFFF;\n  color: #3F9047 !important;\n  transition: all 0.4s;\n  font-size: 1.0625rem;\n  margin-top: 0.125rem;\n}\n#barraMenu .nav-link:hover {\n  color: #ACCC7B !important;\n}\n#barraMenu .nav-link svg {\n  margin-right: 0.5rem;\n}\n#barraMenu .nav-item {\n  background-color: #FFFFFF;\n}\n#barraMenu .dropdown-menu .nav-link:nth-last-of-type(1) {\n  color: #B40001 !important;\n}\n#barraMenu .dropdown-menu .nav-link:nth-last-of-type(1):hover {\n  color: #FF3334 !important;\n}\n\n@media all and (max-width: 720px) {\n  #barraMenu .navbar-brand a {\n    font-size: 1.75rem;\n  }\n  #barraMenu .navbar-brand a img {\n    width: 1.75rem;\n  }\n}\n@media all and (max-width: 390px) {\n  #barraMenu .navbar-brand a {\n    font-size: 1.375rem;\n  }\n  #barraMenu .navbar-brand a img {\n    width: 1.375rem;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19761,7 +19770,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n.carousel-item {\n  height: 91vh;\n  overflow: hidden;\n}\n.carousel-item img {\n  margin-top: -115px;\n  width: 100%;\n}\n\n.carousel-caption {\n  width: 420px;\n  left: 64% !important;\n}\n.carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  min-height: 250px;\n  max-height: 260px;\n}\n.carousel-caption .jumbotron h2 {\n  font-size: 30px;\n}\n.carousel-caption .jumbotron p {\n  font-size: 16px;\n}\n.carousel-caption .jumbotron button {\n  width: 120px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#carruselHome .carousel-item {\n  max-height: 92vh;\n  overflow: hidden;\n}\n#carruselHome .carousel-item img {\n  margin-top: -7.1875rem;\n  width: 100%;\n}\n#carruselHome .carousel-caption {\n  width: 27.5%;\n  min-height: 36%;\n  max-height: 37.4%;\n  left: 4% !important;\n  bottom: 8% !important;\n}\n#carruselHome .carousel-caption .jumbotron {\n  background-color: rgba(48, 57, 31, 0.7);\n  padding: 10% 5.5%;\n}\n#carruselHome .carousel-caption .jumbotron h2 {\n  font-size: 1.875rem;\n}\n#carruselHome .carousel-caption .jumbotron p {\n  font-size: 1rem;\n}\n#carruselHome .carousel-caption .jumbotron button {\n  width: 7.5rem;\n}\n\n@media all and (max-width: 1294px) {\n  #carruselHome .carousel-caption {\n    bottom: 12% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 1.625rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.875rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 6.25rem;\n    font-size: 0.875rem;\n  }\n}\n@media all and (max-width: 1082px) {\n  #carruselHome .carousel-caption {\n    bottom: 12% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 1.375rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.75rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 6.25rem;\n    font-size: 0.75rem;\n  }\n}\n@media all and (max-width: 958px) {\n  #carruselHome .carousel-item img {\n    margin-top: 0;\n    width: 100%;\n  }\n  #carruselHome .carousel-caption {\n    width: 34.5%;\n  }\n}\n@media all and (max-width: 750px) {\n  #carruselHome .carousel-item {\n    width: 100%;\n    max-height: 56vh;\n  }\n  #carruselHome .carousel-caption {\n    bottom: 18% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 1rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.6875rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 5.625rem;\n    font-size: 0.6875rem;\n  }\n}\n@media all and (max-width: 650px) {\n  #carruselHome .carousel-item {\n    width: 100%;\n    max-height: 56vh;\n  }\n  #carruselHome .carousel-caption {\n    width: 40.5%;\n    bottom: 24% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 1rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.625rem;\n    margin-bottom: 0.5rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 5rem;\n    font-size: 0.625rem;\n    padding: 0.25rem 0.5rem;\n  }\n}\n@media all and (max-width: 525px) {\n  #carruselHome .carousel-caption {\n    width: 40.5%;\n    bottom: 24% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron {\n    padding: 8% 4%;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 0.75rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.5rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 4.375rem;\n    font-size: 0.5rem;\n  }\n}\n@media all and (max-width: 425px) {\n  #carruselHome .carousel-caption {\n    width: 40.5%;\n    bottom: 24% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron {\n    padding: 8% 4%;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 0.625rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.375rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 3.625rem;\n    font-size: 0.375rem;\n  }\n}\n@media all and (max-width: 365px) {\n  #carruselHome .carousel-item {\n    width: 100%;\n    max-height: 56vh;\n  }\n  #carruselHome .carousel-caption {\n    width: 40.5%;\n    bottom: 32% !important;\n  }\n  #carruselHome .carousel-caption .jumbotron h2 {\n    font-size: 0.5rem;\n  }\n  #carruselHome .carousel-caption .jumbotron p {\n    font-size: 0.375rem;\n    margin-bottom: 0.25rem;\n  }\n  #carruselHome .carousel-caption .jumbotron button {\n    width: 4.375rem;\n    padding: 0.125rem 0.25rem;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19907,7 +19916,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home .container {\n  padding: 50px 0;\n}\n#home .container h1 {\n  font-size: 48px;\n  text-align: center;\n  margin-bottom: 50px;\n}\n#home .container .about {\n  margin-bottom: 40px;\n}\n#home .container .about h2 {\n  font-size: 36px;\n  margin-bottom: 35px;\n}\n#home .container .about > div {\n  margin-top: 20px;\n  display: flex;\n  justify-content: space-between;\n}\n#home .container .about > div #about-img img {\n  width: 430px;\n}\n#home .container .about > div #about-box {\n  margin-left: 45px;\n}\n#home .container .about > div #about-box .philosophy {\n  font-size: 17px;\n}\n#home .container .commitment > div {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img {\n  width: 450px;\n}\n#home .container .commitment > div #commiment-box {\n  width: 650px;\n  margin-right: 45px;\n}\n#home .halfCircle {\n  height: 75px;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 32px;\n  margin-top: -14px;\n  margin-right: 5px;\n}\n#home .halfCircle .logo p {\n  font-size: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@-webkit-keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes rotate-center {\n  0% {\n    transform: rotate(0);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nbody {\n  font-size: 16px;\n  margin: 0;\n  font-family: \"Alegreya Sans\", sans-serif;\n}\nbody::-webkit-scrollbar {\n  width: 8px;\n  background-color: #D0FFCB;\n}\nbody::-webkit-scrollbar-thumb {\n  background-color: #5DC460;\n  border-radius: 10px;\n}\nbody::-webkit-scrollbar-thumb:hover {\n  background-color: #42AB49;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\n\n#home {\n  padding-top: 4rem;\n}\n#home .container {\n  padding: 3.125rem 0;\n}\n#home .container h1 {\n  font-size: 3rem;\n  text-align: center;\n  margin-bottom: 3.125rem;\n}\n#home .container .about {\n  margin-bottom: 2.5rem;\n}\n#home .container .about h2 {\n  font-size: 2.25rem;\n  margin-bottom: 2.25rem;\n}\n#home .container .about > div {\n  margin-top: 1.25rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .about > div #about-img {\n  width: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .container .about > div #about-img img {\n  width: 100%;\n}\n#home .container .about > div #about-box {\n  width: 50%;\n  margin-left: 2.8125rem;\n}\n#home .container .about > div #about-box .philosophy {\n  font-size: 1.0625rem;\n}\n#home .container .commitment h2 {\n  font-size: 2.25rem;\n  margin-bottom: 2.25rem;\n}\n#home .container .commitment > div {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img {\n  width: 40%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .container .commitment > div #commiment-img img {\n  width: 100%;\n}\n#home .container .commitment > div #commiment-box {\n  width: 60%;\n  margin-right: 2.8125rem;\n}\n#home .halfCircle {\n  height: 4.6875rem;\n  width: 100%;\n  border-radius: 50% 50% 0 0;\n  -moz-border-radius: 50% 50% 0 0;\n  -webkit-border-radius: 50% 50% 0 0;\n  background: #3F9047;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo {\n  color: #eee;\n  padding-top: 0.9375rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#home .halfCircle .logo img {\n  width: 2rem;\n  margin-top: -0.875rem;\n  margin-right: 0.3125rem;\n}\n#home .halfCircle .logo p {\n  font-size: 1.125rem;\n}\n\n@media all and (max-width: 870px) {\n  #home .container h1 {\n    font-size: 2.25rem;\n  }\n  #home .container .about h2 {\n    text-align: center;\n    font-size: 2rem;\n  }\n  #home .container .about > div {\n    flex-flow: column wrap;\n  }\n  #home .container .about > div #about-img {\n    width: 100%;\n    margin: 2.1875rem 0;\n  }\n  #home .container .about > div #about-img img {\n    width: auto;\n  }\n  #home .container .about > div #about-box {\n    width: 92%;\n    margin-left: 0;\n  }\n  #home .container .commitment h2 {\n    text-align: center;\n    font-size: 2rem;\n  }\n  #home .container .commitment > div {\n    flex-flow: column wrap;\n  }\n  #home .container .commitment > div #commiment-box {\n    width: 92%;\n    margin-right: 0;\n    order: 2;\n  }\n  #home .container .commitment > div #commiment-img {\n    width: 100%;\n    margin: 2.1875rem 0;\n    order: 1;\n  }\n  #home .container .commitment > div #commiment-img img {\n    width: auto;\n  }\n}\n@media all and (max-width: 670px) {\n  #home .container .about > div #about-img img {\n    max-width: 90%;\n  }\n  #home .container .about > div #about-box p {\n    font-size: 0.875rem;\n  }\n  #home .container .commitment > div #commiment-img img {\n    max-width: 90%;\n  }\n  #home .container .commitment > div #commiment-box p {\n    font-size: 0.875rem;\n  }\n}\n@media all and (max-width: 470px) {\n  #home .container h1 {\n    font-size: 2rem;\n    padding: 0 0.5rem;\n  }\n  #home .container .about h2 {\n    text-align: center;\n    font-size: 1.75rem;\n  }\n  #home .container .about div #about-box p {\n    font-size: 0.75rem;\n  }\n  #home .container .commitment h2 {\n    text-align: center;\n    font-size: 1.75rem;\n  }\n  #home .container .commitment div #commiment-box p {\n    font-size: 0.75rem;\n  }\n}\n@media all and (max-width: 302px) {\n  #home .container h1 {\n    font-size: 1.625rem;\n    padding: 0 0.5rem;\n  }\n  #home .container .about h2 {\n    text-align: center;\n    font-size: 1.5rem;\n  }\n  #home .container .commitment h2 {\n    text-align: center;\n    font-size: 1.5rem;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

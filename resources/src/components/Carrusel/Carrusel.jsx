@@ -7,10 +7,10 @@ export default function Carrusel() {
     const time = 7000;
 
     return (
-        <Carousel fade>
+        <Carousel fade id="carruselHome">
             <Carousel.Item interval={time}>
                 <img src={CN6} />
-                
+
                 <Carousel.Caption>
                     <Jumbotron>
                         <h2>Bienvenido a Camposol</h2>
@@ -19,9 +19,10 @@ export default function Carrusel() {
                     </Jumbotron>
                 </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item interval={time}>
                 <img src={CN4} />
-                
+
                 <Carousel.Caption>
                     <Jumbotron>
                         <h2>Nuevas Campañas pronto</h2>
@@ -30,9 +31,10 @@ export default function Carrusel() {
                     </Jumbotron>
                 </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item interval={time}>
                 <img src={CN3} />
-                
+
                 <Carousel.Caption>
                     <Jumbotron>
                         <h2>Nuevo control de calidad</h2>
