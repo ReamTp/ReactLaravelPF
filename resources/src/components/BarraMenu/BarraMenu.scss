@@ -35,7 +35,7 @@
     .navbar-nav {
         margin-left: auto !important;
         margin-right: 0 !important;
-        height: 2.625rem;
+        min-height: 2.625rem;
     }
 
     .navbar-collapse {
@@ -43,7 +43,6 @@
     }
 
     .nav-link{
-        background-color: $light-color;
         color: $dark-green !important;
         transition: all .4s;
         font-size: 1.0625rem;
@@ -56,10 +55,6 @@
         svg {
             margin-right: 0.5rem;
         }
-    }
-
-    .nav-item {
-        background-color: $light-color;
     }
 
     .dropdown-menu{
