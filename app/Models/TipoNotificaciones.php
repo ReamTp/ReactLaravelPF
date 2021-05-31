@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NotificacionesReceptores extends Model
+class TipoNotificaciones extends Model
 {
     use HasFactory;
-    protected $table = 'notificaciones_receptores';
+    protected $table = 'tipo_notificaciones';
+    protected $id = 'id';
     protected $fillable = [
-        'notificacion',
-        'receptor'
+        'nombre',
+        'mensaje'
     ];
 
     // Llave foranea

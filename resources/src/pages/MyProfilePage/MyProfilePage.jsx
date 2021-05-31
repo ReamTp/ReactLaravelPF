@@ -19,19 +19,19 @@ export default function MyProfilePage() {
             setCargando(false);
         }
     }
-    
+
     function iniciarDatos(){
         if (cargando){
             consulta();
         }
     }
-    
+
     iniciarDatos();
     if(datos){
         let title = datos.titulo.split(' ')
         datos ? tUser = title[0] : '';
     }
-    
+
     return (
         <Container id='profile'>
             <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
@@ -41,11 +41,11 @@ export default function MyProfilePage() {
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Mi Perfil</Nav.Link>
                             </Nav.Item>
-                            
+
                             <Nav.Item>
                                 <Nav.Link eventKey="second">Mis Ajustes</Nav.Link>
                             </Nav.Item>
-                            
+
                             <Nav.Item className="nav-renuncia">
                                 <Nav.Link eventKey="third">Renuncia</Nav.Link>
                             </Nav.Item>
@@ -57,7 +57,7 @@ export default function MyProfilePage() {
                             <Tab.Pane eventKey="first">
                                 <MyProfile datos={datos} tUser={tUser}/>
                             </Tab.Pane>
-                            
+
                             <Tab.Pane eventKey="second">
                                 <MySettings datos={datos}/>
                             </Tab.Pane>

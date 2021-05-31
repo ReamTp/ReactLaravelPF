@@ -1,0 +1,17 @@
+@import '../../../sass/index.scss';
+
+#bTabla {
+    label {
+        font-size: 1.125rem;
+        margin-right: 1.5625rem;
+    }
+
+    #buscador {
+        border: 1px solid $c-primary-color;
+        outline: none;
+
+        &:focus {
+            border: 1px solid $c-secundary-color;
+        }
+    }
+}

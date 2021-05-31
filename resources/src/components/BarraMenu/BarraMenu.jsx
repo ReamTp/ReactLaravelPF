@@ -14,7 +14,7 @@ export default function BarraMenu() {
         localStorage.clear();
         setCloseSession(true);
     }
-    
+
     useEffect(() => {
         closeSession ? toast.info('Sesion Cerrada') : '';
     }, [closeSession])
@@ -27,7 +27,7 @@ export default function BarraMenu() {
                         <img src={logo} /> Camposol&reg;
                     </Link>
                 </Navbar.Brand>
-                
+
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='mr-auto'>

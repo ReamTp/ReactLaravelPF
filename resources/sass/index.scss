@@ -8,17 +8,19 @@
         -webkit-transform: rotate(0);
         transform: rotate(0);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
 
-  @keyframes rotate-center {
+@keyframes rotate-center {
     0% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -28,15 +30,15 @@
 body {
     margin: 0;
     font-family: 'Alegreya Sans', sans-serif;
-    
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         width: 8px;
         background-color: #D0FFCB;
-        
-        &-thumb{
+
+        &-thumb {
             background-color: #5DC460;
             border-radius: 10px;
-            
+
             &:hover {
                 background-color: #42AB49;
             }

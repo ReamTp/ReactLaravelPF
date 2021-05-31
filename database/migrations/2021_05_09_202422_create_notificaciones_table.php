@@ -15,13 +15,11 @@ class CreateNotificacionesTable extends Migration
     {
         Schema::create('notificaciones', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('documento');
-            $table->foreign('documento')->references('id')->on('documentos');
             $table->unsignedBigInteger('emisor');
             $table->foreign('emisor')->references('id')->on('users');
-            $table->date('fecha');
-            $table->time('hora');
-            $table->boolean('leido')->default(false);
+            $table->unsignedBigInteger('tipo');
+            $table->foreign('tipo')->references('id')->on('tipo_notificaciones');
+            $table->dateTime('fecha');
             $table->timestamps();
         });
     }

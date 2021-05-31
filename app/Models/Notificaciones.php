@@ -12,21 +12,19 @@ class Notificaciones extends Model
     protected $table = 'notificaciones';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'documento',
         'emisor',
-        'fecha',
-        'hora',
-        'leido'
+        'tipo',
+        'fecha'
     ];
 
     // Llave foranea
-    public function documento()
-    {
-        return $this->belongsTo("App\Models\Documentos", 'documento');
-    }
-
     public function emisor()
     {
         return $this->belongsTo("App\Models\User", 'emisor');
+    }
+
+    public function tNotificaciones()
+    {
+        return $this->belongsTo("App\Models\TipoNotificaciones", 'tipo');
     }
 }

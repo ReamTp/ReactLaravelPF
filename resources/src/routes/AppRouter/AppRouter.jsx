@@ -13,7 +13,6 @@ import PublicRoute from '../PublicRoute';
 export default function AppRouter() {
     return (
         <Router>
-            
             {/* Switch: Busca la ruta es la solicitada por el usuario y la primera que coincida se elije */}
             {/* Nota: El Switch no es necesario poner pero si no se coloca se van a mostrar todas las rutas que coincidan */}
             <Switch>
