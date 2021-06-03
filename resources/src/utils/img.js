@@ -6,9 +6,10 @@ import img4 from '../assets/img/CN4.png';
 import img5 from '../assets/img/CN5.png';
 import img6 from '../assets/img/CN6.png';
 import img7 from '../assets/img/campo.png';
-import img8 from '../assets/img/nube.png'
-import img9 from '../assets/img/nube2.png'
-import img10 from '../assets/img/nube3.png'
+import img8 from '../assets/img/nube.png';
+import img9 from '../assets/img/nube2.png';
+import img10 from '../assets/img/nube3.png';
+import img11 from '../assets/img/img404.jpg';
 
 export const CN1 = img1;
 export const CN2 = img2;
@@ -21,3 +22,4 @@ export const nube1 = img8;
 export const nube2 = img9;
 export const nube3 = img10;
 export const logo = img0;
+export const img404 = img11;

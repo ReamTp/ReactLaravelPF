@@ -124,7 +124,7 @@ export default function PaymentsPage() {
                         sheet="Pagina 1"
                         buttonText="Exportar a Excel"
                     />
-                    <Link to="/functions/gerentegeneral/reportes" className="btn btn-warning">Ver Reporte</Link>
+                    <Link to="/functions/reportes" className="btn btn-warning">Ver Reporte</Link>
                 </div>
 
             </Container>

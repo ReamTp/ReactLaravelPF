@@ -7,29 +7,24 @@ import {checkbox} from '../../utils/funciones.js';
 export default function GDAdminFinanLinks() {
     return (
         <>
-            <NavLink exact to={'/functions/gdAdminFinan/pagos'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/pagos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
             </NavLink>
 
-            <NavLink exact to={'/functions/gdAdminFinan/productos'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/productos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faDollyFlatbed} />
                 Ver Productos
             </NavLink>
 
-            <NavLink exact to={'/functions/gdAdminFinan/ventas'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/ventas'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
                 Ver Ventas
             </NavLink>
 
-            <NavLink exact to={'/functions/gdAdminFinan/reportes'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/reportes'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faChartPie} />
                 Ver Reportes
-            </NavLink>
-
-            <NavLink exact to={'/functions/notificaciones'} activeClassName='active' onClick={checkbox}>
-                <FontAwesomeIcon icon={faBell} />
-                Notificaciones
             </NavLink>
         </>
     )

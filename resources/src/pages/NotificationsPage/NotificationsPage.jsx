@@ -28,7 +28,7 @@ export default function NotificationsPage() {
                                         <span>10/11/20</span>
                                         <p>Ha realizado un pago a Juan Diego</p>
                                     </div>
-                                    <Button>Revisar Pagos</Button>
+                                    <Button to='/pagos'>Revisar Pagos</Button>
                                 </div>
                                 <div className='notEstado'></div>
                             </div>
@@ -43,7 +43,7 @@ export default function NotificationsPage() {
                                         <span>10/11/20</span>
                                         <p>Ha realizado un pago a Juan Diego</p>
                                     </div>
-                                    <Button>Revisar Pagos</Button>
+                                    <Button to='/pagos'>Revisar Pagos</Button>
                                 </div>
                                 <div className='notEstado'></div>
                             </div>
@@ -58,7 +58,7 @@ export default function NotificationsPage() {
                                         <span>10/11/20</span>
                                         <p>Ha realizado un pago a Juan Diego</p>
                                     </div>
-                                    <Button>Revisar Pagos</Button>
+                                    <Button to='/pagos'>Revisar Pagos</Button>
                                 </div>
                                 <div className='notEstado'></div>
                             </div>
@@ -73,7 +73,22 @@ export default function NotificationsPage() {
                                         <span>10/11/20</span>
                                         <p>Ha realizado un pago a Juan Diego</p>
                                     </div>
-                                    <Button>Revisar Pagos</Button>
+                                    <Button to='/pagos'>Revisar Pagos</Button>
+                                </div>
+                                <div className='notEstado'></div>
+                            </div>
+
+                            <div className='notificacion'>
+                                <div className='notifImg'>
+                                    <img src={logo} />
+                                </div>
+                                <div className='notiInfo'>
+                                    <div>
+                                        <h3>Elias Arriaga</h3>
+                                        <span>10/11/20</span>
+                                        <p>Ha realizado un pago a Juan Diego</p>
+                                    </div>
+                                    <Button to='/pagos'>Revisar Pagos</Button>
                                 </div>
                                 <div className='notEstado'></div>
                             </div>

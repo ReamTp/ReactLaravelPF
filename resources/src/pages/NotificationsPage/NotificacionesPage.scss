@@ -1,24 +1,24 @@
-#notTitle{
+#notTitle {
     text-align: center;
     padding-top: 1.5rem;
 }
 
-#notificaciones{
+#notificaciones {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 
-    #NotDatos{
+    #NotDatos {
         width: 66%;
 
-        .NotContenedor{
+        .NotContenedor {
             height: 100%;
             margin-top: 1.5625rem;
             width: 100%;
             height: 38.75rem;
-            box-shadow:  20px 20px 60px #bebebe,
-            -20px -20px 60px #ffffff;
+            box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
             border-radius: 1rem;
 
             #ntcHead {
@@ -32,24 +32,25 @@
             #ntcBody {
                 padding: 1.25rem;
                 height: 82%;
-                overflow: hidden;
                 overflow-y: scroll;
+                overflow-x: scroll;
 
                 &::-webkit-scrollbar {
                     width: 5px;
+                    overflow: hidden;
 
                     &-thumb {
                         background-color: #042241;
                         border-radius: 10px;
-                        transition: all 500ms ease;
                     }
                 }
 
-                .notificacion{
+                .notificacion {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 7.5rem;
+                    height: 5.375rem;
+                    margin: 1.75rem 0;
 
                     .notifImg {
                         display: flex;
@@ -63,12 +64,21 @@
                         }
                     }
 
-                    .notiInfo{
+                    .notiInfo {
                         width: 85%;
-                        padding: 0.5rem 1.5rem;
+                        height: 100%;
+                        padding: 0 1.5rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+
+                        div{
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-items: flex-start;
+                            justify-content: center;
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -82,16 +92,16 @@
         }
     }
 
-    #notMenu{
+    #notMenu {
         width: 28%;
-        height: 21.875rem;
+        height: 16.875rem;
         padding: 1rem;
         margin-top: 1.5625rem;
-        box-shadow:  20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
+        box-shadow: 20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
         border-radius: 1rem;
 
-        .notMenuHead{
+        .notMenuHead {
             height: 15%;
             display: flex;
             align-items: center;
@@ -114,6 +124,261 @@
         .notMenuFooter {
             height: 5%;
             text-align: center;
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    #notificaciones {
+        flex-flow: column wrap;
+
+        #NotDatos {
+            width: 90%;
+            margin: 0 auto;
+            padding: 1.25rem 0.8375rem;
+
+            .NotContenedor {
+                #ntcBody {
+                    .notificacion {
+                        margin: 1.25rem 0;
+
+                        .notifImg {
+                            img {
+                                width: 3.125rem;
+                            }
+                        }
+
+                        .notiInfo {
+                            div {
+                                h3 {
+                                    font-size: 1rem;
+                                }
+
+                                span, p {
+                                    font-size: 0.75rem;
+                                }
+                            }
+
+                            button {
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #notMenu {
+            width: 90%;
+            margin: 3.5rem auto;
+        }
+    }
+}
+
+@media all and (max-width: 545px) {
+    #notTitle {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    #notificaciones {
+        #NotDatos {
+            width: 100%;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .NotContenedor {
+                #ntcBody {
+                    .notificacion {
+                        margin: 1.125rem 0;
+
+                        .notifImg {
+                            img {
+                                width: 2.5rem;
+                            }
+                        }
+
+                        .notiInfo {
+                            div {
+                                h3 {
+                                    font-size: 1rem;
+                                }
+
+                                span, p {
+                                    font-size: 0.75rem;
+                                }
+                            }
+
+                            button {
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #notMenu {
+            height: 14.1875rem;
+
+            .notMenuHead {
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .notMenuBody {
+                .btn {
+                    margin: 0.625rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    #notificaciones {
+        #NotDatos {
+            .NotContenedor {
+                height: 29.75rem;
+
+                #ntcBody{
+                    padding: 0 1.125rem;
+
+                    .notificacion {
+                        margin: 0.125rem 0;
+
+                        .notifImg {
+                            width: 10%;
+
+                            img {
+                                width: 2.25rem;
+                            }
+                        }
+
+                        .notiInfo {
+                            div {
+                                h3 {
+                                    font-size: 0.875rem;
+                                }
+
+                                span, p {
+                                    font-size: 0.625rem;
+                                }
+                            }
+
+                            button {
+                                font-size: 0.625rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 405px) {
+    #notTitle {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    #notificaciones {
+        #NotDatos {
+            h2 {
+                font-size: 1rem;
+            }
+
+            .NotContenedor {
+                height: 29.75rem;
+
+                #ntcBody{
+                    padding: 0 1.125rem;
+
+                    .notificacion {
+                        margin: 0.125rem 0;
+
+                        .notifImg {
+                            width: 10%;
+
+                            img {
+                                width: 1.875rem;
+                            }
+                        }
+
+                        .notiInfo {
+                            padding: 0;
+                            padding-left: 1rem;
+
+                            div {
+                                h3 {
+                                    font-size: 0.75rem;
+                                }
+
+                                span, p {
+                                    font-size: 0.5rem;
+                                }
+                            }
+
+                            button {
+                                font-size: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #notMenu {
+            width: 90%;
+            margin: 2rem auto;
+
+            .notMenuHead {
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+
+            .notMenuBody {
+                .btn {
+                    margin: 0.625rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 300px) {
+    #notTitle {
+        h1 {
+            font-size: 1.125rem;
+        }
+    }
+
+    #notificaciones {
+        #NotDatos {
+            h2 {
+                font-size: 0.865rem;
+            }
+        }
+
+        #notMenu {
+            .notMenuHead {
+                h2 {
+                    font-size: 0.865rem;
+                }
+            }
+
+            .notMenuBody {
+                .btn {
+                    margin: 0.5rem 0;
+                }
+            }
         }
     }
 }

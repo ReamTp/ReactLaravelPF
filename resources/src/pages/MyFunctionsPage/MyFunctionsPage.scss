@@ -1,41 +1,48 @@
 @import '../../../sass/index.scss';
 
-#function-home{
-    width: 100%;
-    max-width: 1200px;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+#myFunctionsPage {
+    #function-home {
+        width: 100%;
+        max-width: 75rem;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
 
-    .text{
-        width: 464px;
-        margin-right: 25px;
+        .text {
+            width: 40%;
+            margin-right: 1.5625rem;
 
-        h1{
-            font-size: 44px;
-            margin-bottom: 25px;
+            h1 {
+                font-size: 2.75rem;
+                margin-bottom: 1.5625rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+
+            button {
+                float: right;
+            }
+
+            .clearfix {
+                float: none;
+                clear: both;
+            }
+
         }
 
-        p{
-            font-size: 18px;
+        #campo {
+            width: 40%;
         }
-
-        button {
-            float: right;
-        }
-
-        .clearfix{
-            float: none;
-            clear: both;
-        }
-
     }
-    .s_circle{
-        width: 220px;
-        height: 220px;
+
+    .s_circle {
+        width: 14.34vw;
+        height: 14.34vw;
         position: fixed;
         background-color: $c-secundary-color;
         bottom: 0;
@@ -45,12 +52,93 @@
         justify-content: center;
         align-items: center;
         color: white;
-        font-size: 38px;
-        padding-top: 45px;
-        padding-left: 28px;
+        font-size: 2.48vw;
+        padding-top: 2.93vw;
+        padding-left: 1.8241vw;
     }
+}
 
-    #campo{
-        width: 500px;
+@media all and (max-width: 1048px) {
+    #myFunctionsPage {
+        #function-home {
+            flex-flow: column wrap;
+
+            .text {
+                width: 60%;
+                text-align: center;
+                height: 35vh;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column wrap;
+                margin: 0;
+            }
+
+            #campo {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 655px) {
+    #myFunctionsPage {
+        .s_circle {
+            width: 22.34vw;
+            height: 22.34vw;
+            padding-top: 4.93vw;
+            padding-left: 3.8241vw;
+        }
+    }
+}
+
+@media all and (max-width: 475px) {
+    #myFunctionsPage {
+        #function-home {
+            .text {
+                h1 {
+                    font-size: 2.375rem;
+                    margin-bottom: 1.375rem;
+                }
+
+                p {
+                    font-size: 0.875rem;
+                }
+
+                button {
+                    font-size: 0.875rem;
+                }
+            }
+
+            #campo {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 337px) {
+    #myFunctionsPage {
+        #function-home {
+            .text {
+                h1 {
+                    font-size: 1.875rem;
+                    margin-bottom: 1.125rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                button {
+                    font-size: 0.75rem;
+                }
+            }
+
+            #campo {
+                width: 60%;
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ import './MyProfile.scss';
 export default function MyProfile(props) {
     if(props.datos && props.tUser){
         const { datos, tUser } = props;
-        
+
         return (
             <div id='myprofile'>
                 <div id='profilemedia'>

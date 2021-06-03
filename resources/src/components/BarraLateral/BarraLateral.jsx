@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/img/Camposol.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faSignInAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faSignInAlt, faTimesCircle, faBell } from '@fortawesome/free-solid-svg-icons';
 import './BarraLateral.scss';
 import GGeneralLinks from './GGeneralLinks';
 import GDAdminFinanLinks from './GDAdminFinanLinks';
@@ -58,6 +58,12 @@ export default function BarraLateral(props) {
                         {nivel === 3 ? <GCHumanoLinks/> : ''}
                         {nivel === 4 ? <EAdminFinanLinks/> : ''}
                         {nivel === 5 ? <ECHumanoLinks/> : ''}
+
+
+                        <NavLink exact to={"/functions/notificaciones"} activeClassName="active" onClick={checkbox}>
+                            <FontAwesomeIcon icon={faBell} />
+                            Notificaciones
+                        </NavLink>
 
                         <Link to='/' onClick={clearSession} className='nav-link-logout'>
                             <FontAwesomeIcon icon={faSignInAlt} />

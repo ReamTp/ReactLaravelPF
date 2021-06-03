@@ -1,34 +1,66 @@
-#mysettings{
+#mysettings {
     height: 600px;
     padding: 40px 20px;
 
-    .container{
+    .container {
         height: 100%;
+        overflow-y: scroll;
 
-        #titulo{
+        &::-webkit-scrollbar {
+            width: 5px;
+
+            &-thumb {
+                background-color: #042241;
+                border-radius: 10px;
+            }
+        }
+
+        #titulo {
             height: 12%;
         }
 
-        form{
+        form {
             height: 88%;
 
-            & .form-data{
+            & .form-data {
                 height: 70%;
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: space-between;
             }
 
-            & .f-button{
+            & .f-button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 30%;
-                
-                button{
+
+                button {
                     width: 50%;
                     height: 30%;
                     border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    form>div .row {
+        flex-flow: column wrap;
+    }
+}
+
+@media all and (max-width: 376px) {
+    #mysettings {
+        .container {
+            form {
+                .f-button {
+                    button {
+                        width: 80%;
+                        height: 30%;
+                        border-radius: 8px;
+                    }
                 }
             }
         }

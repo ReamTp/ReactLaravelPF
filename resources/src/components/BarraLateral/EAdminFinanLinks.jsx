@@ -7,24 +7,19 @@ import {checkbox} from '../../utils/funciones.js';
 export default function EAdminFinanLinks() {
     return (
         <>
-            <NavLink exact to={'/functions/eadfinanzas/productos'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/productos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faDollyFlatbed} />
                 Productos
             </NavLink>
 
-            <NavLink exact to={'/functions/eadfinanzas/tproductos'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/tproductos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faDolly} />
                 Tipos de Productos
             </NavLink>
 
-            <NavLink exact to={'/functions/eadfinanzas/marcas'} activeClassName='active' onClick={checkbox}>
+            <NavLink exact to={'/functions/marcas'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faSortAlphaDown} />
                 Marcas
-            </NavLink>
-
-            <NavLink exact to={'/functions/notificaciones'} activeClassName='active' onClick={checkbox}>
-                <FontAwesomeIcon icon={faBell} />
-                Notificaciones
             </NavLink>
         </>
     )

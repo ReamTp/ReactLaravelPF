@@ -8,8 +8,8 @@
 .btn-menu {
     position: absolute;
     background-color: #1C1C1C;
-    width: 85px;
-    height: 85px;
+    width: 5.3125rem;
+    height: 5.3125rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -19,8 +19,8 @@
     box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 
     &:hover {
-        width: 125px;
-        height: 125px;
+        width: 7.8125rem;
+        height: 7.8125rem;
     }
 
     .icon-menu {
@@ -30,11 +30,11 @@
         justify-content: flex-start;
         align-items: center;
         cursor: pointer;
-        padding: 0 10px;
+        padding: 0 0.625rem;
         transition: all 500ms ease;
 
         &:hover {
-            padding: 0 20px;
+            padding: 0 1.25rem;
 
             &>img {
                 -webkit-animation: rotate-center 0.6s ease-in-out both;
@@ -43,7 +43,7 @@
         }
 
         img {
-            width: 45px;
+            width: 2.8125rem;
         }
     }
 }
@@ -173,5 +173,30 @@
         color: #fff;
         cursor: pointer;
         font-size: 20px;
+    }
+}
+
+@media all and (max-width: 545px){
+    .btn-menu {
+        width: 3.75rem;
+        height: 3.75rem;
+        box-shadow: -10px -10px 30px #bebebe, 10px 10px 30px #ffffff;
+
+        &:hover {
+            width: 5.3125rem;
+            height: 5.3125rem;
+        }
+
+        .icon-menu {
+            padding: 0 10px;
+
+            &:hover {
+                padding: 0 20px;
+            }
+
+            img {
+                width: 1.75rem;
+            }
+        }
     }
 }

@@ -24,31 +24,16 @@ export default function FunctionsRouter(props) {
 
             <Switch>
                 <Route exact path='/functions' component={MyFunctionsPage}/>
-                <LevelRoute exact path='/functions/gerentegeneral/pagos' component ={PaymentsPage}/>
-                <LevelRoute exact path='/functions/gerentegeneral/productos' component ={ProductsPage}/>
-                <LevelRoute exact path='/functions/gerentegeneral/ventas' component ={SalesPage}/>
-                <LevelRoute exact path='/functions/gerentegeneral/reportes' component ={ReportPage}/>
-
-                <LevelRoute exact path='/functions/gdAdminFinan/pagos' component ={PaymentsPage}/>
-                <LevelRoute exact path='/functions/gdAdminFinan/productos' component ={ProductsPage}/>
-                <LevelRoute exact path='/functions/gdAdminFinan/ventas' component ={SalesPage}/>
-                <LevelRoute exact path='/functions/gdAdminFinan/reportes' component ={ReportPage}/>
-
-                <LevelRoute exact path='/functions/gdchumano/users' component ={UserPage}/>
-                <LevelRoute exact path='/functions/gdchumano/pagos' component ={PaymentsPage}/>
-                <LevelRoute exact path='/functions/gdchumano/aumentos' component ={IncreasesPage}/>
-                <LevelRoute exact path='/functions/gdchumano/horarios' component ={SalesPage}/>
-                <LevelRoute exact path='/functions/gdchumano/capacitaciones' component ={TrainingsPage}/>
-
-                <LevelRoute exact path='/functions/echuman/users' component ={UserPage}/>
-                <LevelRoute exact path='/functions/echuman/pagos' component ={PaymentsPage}/>
-                <LevelRoute exact path='/functions/echuman/horarios' component ={SchedulesPage}/>
-                <LevelRoute exact path='/functions/echuman/capacitaciones' component ={TrainingsPage}/>
-
-                <LevelRoute exact path='/functions/eadfinanzas/productos' component ={ProductsPage}/>
-                <LevelRoute exact path='/functions/eadfinanzas/tproductos' component ={TypeProductsPage}/>
-                <LevelRoute exact path='/functions/eadfinanzas/marcas' component ={BrandsPage}/>
-
+                <LevelRoute exact path='/functions/pagos' component ={PaymentsPage}/>
+                <LevelRoute exact path='/functions/productos' component ={ProductsPage}/>
+                <LevelRoute exact path='/functions/ventas' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/users' component ={UserPage}/>
+                <LevelRoute exact path='/functions/aumentos' component ={IncreasesPage}/>
+                <LevelRoute exact path='/functions/horarios' component ={SalesPage}/>
+                <LevelRoute exact path='/functions/capacitaciones' component ={TrainingsPage}/>
+                <LevelRoute exact path='/functions/tproductos' component ={TypeProductsPage}/>
+                <LevelRoute exact path='/functions/marcas' component ={BrandsPage}/>
+                <LevelRoute exact path='/functions/reportes' component ={ReportPage}/>
                 <LevelRoute exact path='/functions/notificaciones' component ={NotificationsPage}/>
 
                 <Route path='*'>
