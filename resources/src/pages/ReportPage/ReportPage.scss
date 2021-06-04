@@ -1,0 +1,15 @@
+#reports {
+    & > div{
+        #ac-chart-container {
+            display: flex;
+
+            > div {
+                position: static !important;
+
+                .anychart-credits {
+                    display: none;
+                }
+            }
+        }
+    }
+}

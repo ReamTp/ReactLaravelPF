@@ -7,10 +7,10 @@ import {checkbox} from '../../utils/funciones.js';
 export default function GDAdminFinanLinks() {
     return (
         <>
-            <NavLink exact to={'/functions/pagos'} activeClassName='active' onClick={checkbox}>
+            {/* <NavLink exact to={'/functions/pagos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
-            </NavLink>
+            </NavLink> */}
 
             <NavLink exact to={'/functions/productos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faDollyFlatbed} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { faDolly, faDollyFlatbed, faSortAlphaDown, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faDolly, faDollyFlatbed, faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom';
 import {checkbox} from '../../utils/funciones.js';
@@ -14,12 +14,12 @@ export default function EAdminFinanLinks() {
 
             <NavLink exact to={'/functions/tproductos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faDolly} />
-                Tipos de Productos
+                Sobre Productos
             </NavLink>
 
-            <NavLink exact to={'/functions/marcas'} activeClassName='active' onClick={checkbox}>
-                <FontAwesomeIcon icon={faSortAlphaDown} />
-                Marcas
+            <NavLink exact to={'/functions/ventas'} activeClassName='active' onClick={checkbox}>
+                <FontAwesomeIcon icon={faHandHoldingUsd} />
+                Ver Ventas
             </NavLink>
         </>
     )

@@ -16,16 +16,16 @@ export default function GCHumanoLinks() {
                 <FontAwesomeIcon icon={faMoneyCheckAlt} />
                 Ver Pagos
             </NavLink>
-
+{/*
             <NavLink exact to={'/functions/aumentos'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faSortAmountUp} />
                 Ver Aumentos
-            </NavLink>
-
+            </NavLink> */}
+{/* 
             <NavLink exact to={'/functions/horarios'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faUserClock} />
                 Definir Horarios
-            </NavLink>
+            </NavLink> */}
 
             <NavLink exact to={'/functions/capacitaciones'} activeClassName='active' onClick={checkbox}>
                 <FontAwesomeIcon icon={faChalkboardTeacher} />
