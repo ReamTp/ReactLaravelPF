@@ -18,6 +18,7 @@ class CreateCapacitacionesUsersTable extends Migration
             $table->foreign('capacitacion')->references('id')->on('capacitaciones');
             $table->unsignedBigInteger('usuario');
             $table->foreign('usuario')->references('id')->on('users');
+            $table->timestamps();
         });
     }
 

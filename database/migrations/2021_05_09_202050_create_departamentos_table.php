@@ -18,6 +18,7 @@ class CreateDepartamentosTable extends Migration
             $table->string('nombre');
             $table->string('descripcion')->nullable(true);
             $table->boolean('estado')->default(true);
+            $table->timestamps();
         });
     }
 

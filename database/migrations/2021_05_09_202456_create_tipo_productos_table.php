@@ -17,6 +17,7 @@ class CreateTipoProductosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->boolean('estado')->default(true);
+            $table->timestamps();
         });
     }
 

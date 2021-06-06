@@ -17,6 +17,7 @@ class CreateTipoReporteTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion')->nullable(true);
+            $table->timestamps();
         });
     }
 

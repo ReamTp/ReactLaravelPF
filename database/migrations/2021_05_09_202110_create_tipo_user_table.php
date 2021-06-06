@@ -17,6 +17,7 @@ class CreateTipoUserTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('descripcion')->nullable(true);
+            $table->timestamps();
         });
     }
 

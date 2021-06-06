@@ -17,6 +17,7 @@ class CreateComisionesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->double('cantidad');
+            $table->timestamps();
         });
     }
 

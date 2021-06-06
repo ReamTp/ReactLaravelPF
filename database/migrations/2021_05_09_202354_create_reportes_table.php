@@ -18,6 +18,7 @@ class CreateReportesTable extends Migration
             $table->foreign('reporte')->references('id')->on('documentos');
             $table->unsignedBigInteger('tipo_reporte');
             $table->foreign('tipo_reporte')->references('id')->on('tipo_reporte');
+            $table->timestamps();
         });
     }
 
