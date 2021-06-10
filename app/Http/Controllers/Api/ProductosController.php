@@ -32,7 +32,7 @@ class ProductosController extends Controller
 
     function get(Request $request){
         try {
-            $product = Productos::find($request['id']);
+            $product = Productos::with('marca', 'tipoProducto')->find($request['id']);
 
             $response['data'] = $product;
             $response['success'] = true;
@@ -46,7 +46,7 @@ class ProductosController extends Controller
 
     function listar(){
         try{
-            $data = Productos::all();
+            $data = Productos::with('marca', 'tipoProducto')->get();
 
             $response['data'] = $data;
             $response['success'] = true;
@@ -60,7 +60,7 @@ class ProductosController extends Controller
 
     function listarA(){
         try {
-            $data = Productos::where('estado', true)->get();
+            $data = Productos::with('marca', 'tipoProducto')->where('estado', true)->get();
 
             $response['data'] = $data;
             $response['success'] = true;
@@ -74,7 +74,7 @@ class ProductosController extends Controller
 
     function listarD(){
         try {
-            $data = Productos::where('estado', false)->get();
+            $data = Productos::with('marca', 'tipoProducto')->where('estado', false)->get();
 
             $response['data'] = $data;
             $response['success'] = true;
@@ -110,7 +110,7 @@ class ProductosController extends Controller
 
             $result = $product->fill($request->all())->save();
 
-            $response['message'] = 'Producto Activar';
+            $response['message'] = 'Producto Activado';
             $response['success'] = $result;
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();

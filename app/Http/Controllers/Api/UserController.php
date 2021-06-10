@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function getUser(Request $request){
-        $id = $request['id'];
-        $usuario = DB::select("SELECT u.*, d.nombre AS depart_name, tu.titulo AS titulo FROM users u INNER JOIN departamentos d ON u.departamento = d.id INNER JOIN tipo_user tu ON u.tipo_usuario = tu.id WHERE u.id = '".$id."';");
-        $response['data'] = $usuario[0];
+        $user = User::with('tipoUsuario', 'departamento')->find($request['id']);
+
+        $response['data'] = $user;
         $response['data']->password = Crypt::decrypt($response['data']->password);
         return $response;
     }

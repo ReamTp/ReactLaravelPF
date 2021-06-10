@@ -26,7 +26,7 @@ usuario.datos = async () => {
 usuario.actualizar = async (user) => {
     const idData = JSON.parse(localStorage.getItem('token'));
     const urlUpdate = baseUrl+'/update';
-    
+
     user = {id: idData.id, ...user, celular: user.celular, telefono: user.telefono};
 
     const res = await axios.put(urlUpdate, user)
@@ -45,10 +45,10 @@ usuario.register = async (user) => {
 
 usuario.level = async () => {
     const dato = JSON.parse(localStorage.getItem('token'));
-    
+
     // Definir URL de la api a seleccionar
     const urlLevel = baseUrl+'/level';
-    
+
     const res = await axios.post(urlLevel, dato)
         .then(response => {
             let tipo_usuario = response.data.level;

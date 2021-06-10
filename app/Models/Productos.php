@@ -24,7 +24,7 @@ class Productos extends Model
     // Llave foranea
     public function marca()
     {
-        return $this->belongsTo("App\Models\Marca", 'marca');
+        return $this->belongsTo("App\Models\Marcas", 'marca');
     }
 
     public function tipoProducto()

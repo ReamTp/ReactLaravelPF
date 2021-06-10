@@ -1,31 +1,60 @@
-import React, { useState } from 'react';
-import { Button, Container, Table } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Badge, Button, Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import BuscadorTabla from '../../components/BuscadorTabla';
 import ReactHTMLTableExcel from 'react-html-table-to-excel';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import CreateModalProducts from '../../components/Modals/CreateModalProducts';
 import EditModalProducts from '../../components/Modals/EditModalProducts';
 import DeleteModalProducts from '../../components/Modals/DeleteModalProducts';
+import ActiveModalProducts from '../../components/Modals/ActiveModalProducts';
 import './ProductsPaga.scss';
 
 export default function ProductsPage() {
+    const [lista, setLista] = useState([]);
     const [show, setShow] = useState(false);
     const [showE, setShowE] = useState(false);
     const [codeE, setCodeE] = useState(null);
     const [showD, setShowD] = useState(false);
+    const [showA, setShowA] = useState(false);
     const [codeD, setCodeD] = useState(null);
+    const [state, setState] = useState(false);
+    const [form, setForm] = useState({});
 
     const handleShow = () => setShow(true);
-    const handleShowDelete = (cod) => {
+
+    const handleShowDeactive = (cod) => {
         setShowD(true);
         setCodeD(cod)
+        setState(false);
     }
+
+    const handleShowActive = (cod) => {
+        setShowA(true);
+        setCodeD(cod)
+        setState(false);
+    }
+
     const handleShowEdit = (cod) => {
         setShowE(true);
         setCodeE(cod)
+        setForm({})
     }
+
+    useEffect(() => {
+        peticionGet();
+    }, []);
+
+    const peticionGet = async() => {
+        const urlListar = 'http://localhost:8000/api/products/listar';
+        const resp = await fetch(urlListar);
+        const pro = await resp.json();
+        setLista(pro.data);
+        setState(false);
+    }
+
+    state ? peticionGet() : '';
 
     return (
         <>
@@ -51,126 +80,46 @@ export default function ProductsPage() {
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Esparragos enlatados blancos</td>
-                                    <td>Esparragos</td>
-                                    <td>7000</td>
-                                    <td>S/. 4,5</td>
-                                    <td>
-                                        <div className='estado-a'>
-                                            <p>Activo</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>
-                                            <FontAwesomeIcon icon={faEdit}/>
-                                        </Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }}variant='danger'>
-                                            <FontAwesomeIcon icon={faMinusCircle}/>
-                                        </Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Esparragos enlatados blancos</td>
-                                    <td>Esparragos</td>
-                                    <td>7000</td>
-                                    <td>S/. 4,5</td>
-                                    <td>
-                                        <div className='estado-a'>
-                                            <p>Activo</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>
-                                            <FontAwesomeIcon icon={faEdit}/>
-                                        </Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }}variant='danger'>
-                                            <FontAwesomeIcon icon={faMinusCircle}/>
-                                        </Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Esparragos enlatados blancos</td>
-                                    <td>Esparragos</td>
-                                    <td>7000</td>
-                                    <td>S/. 4,5</td>
-                                    <td>
-                                        <div className='estado-a'>
-                                            <p>Activo</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>
-                                            <FontAwesomeIcon icon={faEdit}/>
-                                        </Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }}variant='danger'>
-                                            <FontAwesomeIcon icon={faMinusCircle}/>
-                                        </Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Esparragos enlatados blancos</td>
-                                    <td>Esparragos</td>
-                                    <td>7000</td>
-                                    <td>S/. 4,5</td>
-                                    <td>
-                                        <div className='estado-a'>
-                                            <p>Activo</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>
-                                            <FontAwesomeIcon icon={faEdit}/>
-                                        </Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }}variant='danger'>
-                                            <FontAwesomeIcon icon={faMinusCircle}/>
-                                        </Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Esparragos enlatados blancos</td>
-                                    <td>Esparragos</td>
-                                    <td>7000</td>
-                                    <td>S/. 4,5</td>
-                                    <td>
-                                        <div className='estado-a'>
-                                            <p>Activo</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>
-                                            <FontAwesomeIcon icon={faEdit}/>
-                                        </Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }}variant='danger'>
-                                            <FontAwesomeIcon icon={faMinusCircle}/>
-                                        </Button>
-                                    </td>
-                                </tr>
+                                {
+                                    lista.map(product => (
+                                        <tr key={product.id}>
+                                            <td>{product.id}</td>
+                                            <td>{product.nombre}</td>
+                                            <td>{product.tipo_producto.nombre}</td>
+                                            <td>{product.stock}</td>
+                                            <td>S/. {product.precio_unit}</td>
+                                            <td>
+                                                <div className='estado-a'>
+                                                    {
+                                                        product.estado ? <p><Badge variant="success">Activo</Badge></p> : <p><Badge variant="danger">Desactivado</Badge></p>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <Button onClick={() => {
+                                                    handleShowEdit(product.id)
+                                                }} variant='warning'>
+                                                    <FontAwesomeIcon icon={faEdit}/>
+                                                </Button>
+
+                                                {
+                                                    product.estado ?
+                                                        <Button onClick={() => {
+                                                            handleShowDeactive(product.id)
+                                                        }}variant='danger'>
+                                                            <FontAwesomeIcon icon={faMinusCircle}/>
+                                                        </Button>
+                                                    :
+                                                        <Button onClick={() => {
+                                                            handleShowActive(product.id)
+                                                        }}variant='success'>
+                                                            <FontAwesomeIcon icon={faPlusCircle}/>
+                                                        </Button>
+                                                }
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
                             </tbody>
                         </Table>
                     </div>
@@ -192,13 +141,10 @@ export default function ProductsPage() {
                 </div>
 
             </Container>
-            <CreateModalProducts show={show} setShow={setShow}>
-                <h2>Crear Carousel</h2>
-            </CreateModalProducts>
-            <EditModalProducts show={showE} setShow={setShowE} code={codeE}>
-                <h2>Crear Carousel</h2>
-            </EditModalProducts>
-            <DeleteModalProducts show={showD} setShow={setShowD} code={codeD}/>
+            <CreateModalProducts show={show} setShow={setShow} setState={setState}/>
+            <EditModalProducts show={showE} setShow={setShowE} code={codeE} formData={form} setFormData={setForm} setState={setState}/>
+            <DeleteModalProducts show={showD} setShow={setShowD} code={codeD} setState={setState}/>
+            <ActiveModalProducts show={showA} setShow={setShowA} code={codeD} setState={setState}/>
         </>
     )
 }
