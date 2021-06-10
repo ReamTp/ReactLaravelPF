@@ -9,7 +9,7 @@ export default function TypeProductsPage() {
         <>
             <Container id="tProductos">
                 <div id="tPTitle">
-                    <h1>Tipo de Productos de la Empresa</h1>
+                    <h1>Sobre los Productos de la Empresa</h1>
                 </div>
                 <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
                     <Row>

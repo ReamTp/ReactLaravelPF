@@ -3,13 +3,13 @@ import { Badge, Button, Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import BuscadorTabla from '../../components/BuscadorTabla';
 import ReactHTMLTableExcel from 'react-html-table-to-excel';
 import CreateModalProducts from '../../components/Modals/CreateModalProducts';
 import EditModalProducts from '../../components/Modals/EditModalProducts';
 import DeleteModalProducts from '../../components/Modals/DeleteModalProducts';
 import ActiveModalProducts from '../../components/Modals/ActiveModalProducts';
 import './ProductsPaga.scss';
+import { toast } from 'react-toastify';
 
 export default function ProductsPage() {
     const [lista, setLista] = useState([]);
@@ -21,6 +21,8 @@ export default function ProductsPage() {
     const [codeD, setCodeD] = useState(null);
     const [state, setState] = useState(false);
     const [form, setForm] = useState({});
+    const [currentPage, setCurrentPage] = useState(0);
+    const [search, setSearch] = useState('');
 
     const handleShow = () => setShow(true);
 
@@ -46,12 +48,68 @@ export default function ProductsPage() {
         peticionGet();
     }, []);
 
-    const peticionGet = async() => {
+    const peticionGet = async(reset = false) => {
         const urlListar = 'http://localhost:8000/api/products/listar';
         const resp = await fetch(urlListar);
         const pro = await resp.json();
         setLista(pro.data);
         setState(false);
+
+        if (reset) {
+            setCurrentPage(0);
+        }
+    }
+
+    const peticionGetA = async(reset = false) => {
+        const urlListar = 'http://localhost:8000/api/products/listara';
+        const resp = await fetch(urlListar);
+        const pro = await resp.json();
+        setLista(pro.data);
+
+        if(reset){
+            setCurrentPage(0)
+        }
+    }
+
+    const peticionGetD = async(reset = false) => {
+        const urlListar = 'http://localhost:8000/api/products/listard';
+        const resp = await fetch(urlListar);
+        const pro = await resp.json();
+        setLista(pro.data);
+
+        if(reset) {
+            setCurrentPage(0)
+        }
+    }
+
+    const filterProduct = () => {
+        if (search.length === 0) {
+            return lista.slice(currentPage, currentPage + 4);
+        }
+
+        const filtered = lista.filter(product => product.nombre.includes(search));
+        return filtered.slice(currentPage, currentPage + 4);
+    }
+
+    const nextPage = () => {
+        if(lista.filter(product => product.nombre.includes(search)).length > currentPage + 4){
+            setCurrentPage(currentPage + 4)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const prevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 4)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const onSearchChange = ({target}) => {
+        setCurrentPage(0);
+        setSearch(target.value);
     }
 
     state ? peticionGet() : '';
@@ -63,7 +121,14 @@ export default function ProductsPage() {
                 <div id="pagosDatos">
                     <h2>Datos de Productos</h2>
 
-                    <BuscadorTabla/>
+                    <div id="pagosDMenu">
+                        <div id="pagosDMenuButton">
+                            <Button onClick={prevPage}>Anterior</Button>
+                            <Button onClick={nextPage}>Siguiente</Button>
+                        </div>
+
+                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+                    </div>
 
                     <div id="tablaPago">
                         <Table responsive striped bordered hover id="tabla" className='producto'>
@@ -81,7 +146,7 @@ export default function ProductsPage() {
 
                             <tbody>
                                 {
-                                    lista.map(product => (
+                                    filterProduct().map(product => (
                                         <tr key={product.id}>
                                             <td>{product.id}</td>
                                             <td>{product.nombre}</td>
@@ -129,6 +194,15 @@ export default function ProductsPage() {
                     <h2>Opciones</h2>
 
                     <Button onClick={handleShow}>Crear Producto</Button>
+                    <Button onClick={() => {
+                        peticionGet(true);
+                    }} variant='secondary'>Ver todos</Button>
+                    <Button variant='info' onClick={() => {
+                        peticionGetA(true)
+                    }}>Ver Activados</Button>
+                    <Button variant='danger' onClick={() => {
+                        peticionGetD(true)
+                    }}>Ver Desactivados</Button>
                     <ReactHTMLTableExcel
                         id="btn-excel"
                         className="btn btn-success"
@@ -139,7 +213,6 @@ export default function ProductsPage() {
                     />
                     <Link to="/functions/gerentegeneral/reportes" className="btn btn-warning">Ver Reporte</Link>
                 </div>
-
             </Container>
             <CreateModalProducts show={show} setShow={setShow} setState={setState}/>
             <EditModalProducts show={showE} setShow={setShowE} code={codeE} formData={form} setFormData={setForm} setState={setState}/>

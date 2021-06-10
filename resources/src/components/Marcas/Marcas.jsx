@@ -5,8 +5,18 @@ import BuscadorTabla from '../BuscadorTabla'
 export default function Marcas() {
     return (
         <div id="marcasData">
+            <div id='mDTitle'>
+                <h2>Marcas de la empresa</h2>
+            </div>
+
+            <div id="mDButtons">
+                <Button variant='success' onClick={() => {}}>Crear Marca</Button>
+                <Button variant='info' onClick={() =>{}}>Mostrar Activadas</Button>
+                <Button variant='secondary' onClick={() =>{}}>Mostrar Desactivadas</Button>
+            </div>
+
             <BuscadorTabla/>
-            <div id="marcasTable">
+            <div id="mDTable">
                 <Table id="tabla" striped bordered hover>
                     <thead>
                         <tr>

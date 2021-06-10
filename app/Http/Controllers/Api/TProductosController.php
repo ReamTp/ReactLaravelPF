@@ -15,7 +15,7 @@ class TProductosController extends Controller
             $tProduct->estado = isset($request['estado']) ? $request['estado'] : true;
             $tProduct->save();
 
-            $response['message'] = 'Tipo de Producto Insertado Correctamente';
+            $response['message'] = 'Tipo de Producto Creado';
             $response['success'] = true;
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
