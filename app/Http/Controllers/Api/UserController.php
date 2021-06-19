@@ -139,10 +139,8 @@ class UserController extends Controller
     }
 
     public function desactivarUser(Request $request){
-        $request['estado'] = false;
-
         $user = User::find($request['id']);
-        $result = $user->fill($request->all())->save();
+        $result = $user->update(['estado' => false]);
 
         if($result){
             $response['message'] = 'Usuario Desactivado';
@@ -156,10 +154,8 @@ class UserController extends Controller
     }
 
     public function activarUser(Request $request){
-        $request['estado'] = true;
-
         $user = User::find($request['id']);
-        $result = $user->fill($request->all())->save();
+        $result = $user->update(['estado' => true]);
 
         if($result){
             $response['message'] = 'Usuario Activado';

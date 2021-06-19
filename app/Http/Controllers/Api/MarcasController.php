@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Marcas;
+use App\Models\Productos;
 use Illuminate\Http\Request;
 
 class MarcasController extends Controller
@@ -98,11 +99,12 @@ class MarcasController extends Controller
     }
 
     function deactiveMark(Request $request){
-        $request['estado'] = false;
-
         try{
+            $products = Productos::where('marca',$request['id']);
+            $products->update(['estado' => false]);
+
             $mark = Marcas::find($request['id']);
-            $result = $mark->fill($request->all())->save();
+            $result = $mark->update(['estado' => false]);
 
             $response['message'] = 'Marca Desactivada';
             $response['success'] = $result;
@@ -115,11 +117,9 @@ class MarcasController extends Controller
     }
 
     function activeMark(Request $request){
-        $request['estado'] = true;
-
         try{
             $mark = Marcas::find($request['id']);
-            $result = $mark->fill($request->all())->save();
+            $result = $mark->update(['estado' => true]);
 
             $response['message'] = 'Marca Activada';
             $response['success'] = $result;

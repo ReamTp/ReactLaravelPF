@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Productos;
 use App\Models\TipoProductos;
 use Illuminate\Http\Request;
 
@@ -102,7 +103,7 @@ class TProductosController extends Controller
 
         try{
             $mark = TipoProductos::find($request['id']);
-            $result = $mark->fill($request->all())->save();
+            $result = $mark->update(['estado' => true]);
 
             $response['message'] = 'Tipo de Producto Activado';
             $response['success'] = $result;
@@ -115,11 +116,12 @@ class TProductosController extends Controller
     }
 
     function desactivar(Request $request) {
-        $request['estado'] = false;
-
         try{
+            $product = Productos::where('marca', $request['id']);
+            $product->update(['estado' => false]);
+
             $mark = TipoProductos::find($request['id']);
-            $result = $mark->fill($request->all())->save();
+            $result = $mark->update(['estado' => false]);
 
             $response['message'] = 'Tipo de Producto Desactivado';
             $response['success'] = $result;

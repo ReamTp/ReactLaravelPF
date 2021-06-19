@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\MarcasController;
 use App\Http\Controllers\Api\ProductosController;
 use App\Http\Controllers\Api\TProductosController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\VentasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -96,3 +97,6 @@ Route::put('/products/update', [ProductosController::class, 'update']);
 Route::put('/products/activar', [ProductosController::class, 'activar']);
 
 Route::put('/products/desactivar', [ProductosController::class, 'desactivar']);
+
+// Ventas
+Route::post('/sales/crear', [VentasController::class, 'create']);

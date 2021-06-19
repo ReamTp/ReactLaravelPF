@@ -8,7 +8,7 @@ import './MyProfile.scss';
 export default function MyProfile(props) {
     if(props.datos && props.tUser){
         const { datos, tUser } = props;
-
+        console.log(datos);
         return (
             <div id='myprofile'>
                 <div id='profilemedia'>
@@ -21,7 +21,7 @@ export default function MyProfile(props) {
                     <div id='profilemdata'>
                         <p>{tUser? tUser : ''}</p>
                         <p>-</p>
-                        <p>{datos ? datos.depart_name : ''}</p>
+                        <p>{datos ? datos.departamento.nombre : ''}</p>
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@ export default function MyProfile(props) {
                             <div className='info-data'>
                                 <p>Departamento</p>
                                 <div>
-                                    <FontAwesomeIcon icon={faBuilding}/>{datos ? datos.depart_name : ''}
+                                    <FontAwesomeIcon icon={faBuilding}/>{datos ? datos.departamento.nombre : ''}
                                 </div>
                             </div>
 

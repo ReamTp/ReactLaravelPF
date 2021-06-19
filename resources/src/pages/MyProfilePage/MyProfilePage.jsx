@@ -28,7 +28,7 @@ export default function MyProfilePage() {
 
     iniciarDatos();
     if(datos){
-        let title = datos.titulo.split(' ')
+        let title = datos.tipo_usuario.titulo.split(' ')
         datos ? tUser = title[0] : '';
     }
 

@@ -29,6 +29,7 @@ export default function CreateModalTProducts(props) {
             setCargando(false);
             setState(true);
             handleClose();
+            setFormData({nombre: ''});
         } else {
             toast.error('Complete todos los campos')
             setCargando(false);

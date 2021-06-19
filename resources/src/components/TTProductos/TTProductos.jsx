@@ -88,16 +88,16 @@ export default function TTProductos() {
     // Funciones de Busqueda
     const filterTProduct = () => {
         if (search.length === 0) {
-            return lista.slice(currentPage, currentPage + 4);
+            return lista.slice(currentPage, currentPage + 6);
         }
 
         const filtered = lista.filter(tproduct => tproduct.nombre.includes(search));
-        return filtered.slice(currentPage, currentPage + 4);
+        return filtered.slice(currentPage, currentPage + 6);
     }
 
     const nextPage = () => {
-        if(lista.filter(tproduct => tproduct.nombre.includes(search)).length > currentPage + 4){
-            setCurrentPage(currentPage + 4)
+        if(lista.filter(tproduct => tproduct.nombre.includes(search)).length > currentPage + 6){
+            setCurrentPage(currentPage + 6)
         } else {
             toast.error('No hay más datos');
         }
@@ -105,7 +105,7 @@ export default function TTProductos() {
 
     const prevPage = () => {
         if (currentPage > 0) {
-            setCurrentPage(currentPage - 4)
+            setCurrentPage(currentPage - 6)
         } else {
             toast.error('No hay más datos');
         }

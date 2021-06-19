@@ -151,7 +151,7 @@ export default function ProductsPage() {
                                             <td>{product.id}</td>
                                             <td>{product.nombre}</td>
                                             <td>{product.tipo_producto.nombre}</td>
-                                            <td>{product.stock}</td>
+                                            <td>{product.stock} Tm</td>
                                             <td>S/. {product.precio_unit}</td>
                                             <td>
                                                 <div className='estado-a'>

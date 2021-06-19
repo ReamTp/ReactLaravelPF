@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Marcas;
 use App\Models\Productos;
+use App\Models\TipoProductos;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -90,10 +92,20 @@ class ProductosController extends Controller
         try{
             $product = Productos::find($request['id']);
 
-            $result = $product->fill($request->all())->save();
+            try {
+                $tProduct = TipoProductos::find($request['tipo_producto']);
+                $marca = Marcas::find($request['marca']);
 
-            $response['message'] = 'Producto Actualizado';
-            $response['success'] = $result;
+                if ($tProduct->estado && $marca->estado){
+                    $result = $product->fill($request->all())->save();
+
+                    $response['message'] = 'Producto Activado';
+                    $response['success'] = $result;
+                } else {
+                    $response['message'] = 'No se pudo activar, tipo de producto o marca desactivado';
+                    $response['success'] = false;
+                }
+            } catch (\Throwable $th) {}
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
@@ -108,10 +120,22 @@ class ProductosController extends Controller
         try{
             $product = Productos::find($request['id']);
 
-            $result = $product->fill($request->all())->save();
+            try {
+                $tProduct = TipoProductos::find($product->tipo_producto);
+                $marca = Marcas::find($product->marca);
 
-            $response['message'] = 'Producto Activado';
-            $response['success'] = $result;
+                if ($tProduct->estado && $marca->estado){
+                    $result = $product->update(['estado' => true]);
+
+                    $response['message'] = 'Producto Activado';
+                    $response['success'] = $result;
+                } else {
+                    $response['message'] = 'No se pudo activar, tipo de producto o marca desactivado';
+                    $response['success'] = false;
+                }
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
@@ -125,8 +149,7 @@ class ProductosController extends Controller
 
         try{
             $product = Productos::find($request['id']);
-
-            $result = $product->fill($request->all())->save();
+            $result = $product->update(['estado' => true]);
 
             $response['message'] = 'Producto Desactivado';
             $response['success'] = $result;

@@ -19,14 +19,14 @@ export default function CreateModalProducts(props) {
     }, []);
 
     const peticionGetMark = async() => {
-        const urlListar = 'http://localhost:8000/api/mark/listar';
+        const urlListar = 'http://localhost:8000/api/mark/listara';
         const resp = await fetch(urlListar);
         const pro = await resp.json();
         setMarca(pro.data);
     }
 
     const peticionGetTipoP = async() => {
-        const urlListar = 'http://localhost:8000/api/tproducts/listar';
+        const urlListar = 'http://localhost:8000/api/tproducts/listara';
         const resp = await fetch(urlListar);
         const pro = await resp.json();
         setTipoP(pro.data);
@@ -46,10 +46,13 @@ export default function CreateModalProducts(props) {
             // Verificar si hay informacion
             if (res && res.success) {
                 toast.success(res.message);
+                setCargando(false);
+                setState(true);
+                handleClose();
+                setFormData(inicialesValores());
+            } else {
+                toast.error(res.message);
             }
-            setCargando(false);
-            setState(true);
-            handleClose();
         } else {
             toast.error('Complete todos los campos')
             setCargando(false);
@@ -68,7 +71,7 @@ export default function CreateModalProducts(props) {
             </Modal.Header>
 
             <Modal.Body>
-            <div>
+                <div>
                     <h2>Datos del Producto</h2>
 
                     <Form onSubmit={onSubmit} onChange={onChange} id='crearProducto'>
@@ -110,7 +113,12 @@ export default function CreateModalProducts(props) {
                             <Col>
                                 <Form.Group>
                                     <Form.Label>Stock</Form.Label>
-                                    <Form.Control type="number" name="stock" placeholder="Stock" defaultValue={formData.stock} required/>
+                                    <InputGroup>
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text>Tn</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control type="number" name="stock" placeholder="Stock" defaultValue={formData.stock} required/>
+                                    </InputGroup>
                                 </Form.Group>
                             </Col>
                             <Col>

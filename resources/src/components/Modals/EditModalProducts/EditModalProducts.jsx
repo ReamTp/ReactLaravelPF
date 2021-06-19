@@ -64,9 +64,11 @@ export default function EditModalProducts(props) {
         // Verificar si hay informacion
         if (res && res.success) {
             toast.success(res.message);
+            setCargando(false);
+            setState(true);
+        } else {
+            toast.error(res.message);
         }
-        setCargando(false);
-        setState(true);
     };
 
     const onChange = (e) => {
@@ -121,7 +123,12 @@ export default function EditModalProducts(props) {
                             <Col>
                                 <Form.Group>
                                     <Form.Label>Stock</Form.Label>
-                                    <Form.Control type="number" name="stock" placeholder="Stock" defaultValue={formData.stock}/>
+                                    <InputGroup>
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text>Tn</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control type="number" name="stock" placeholder="Stock" defaultValue={formData.stock}/>
+                                    </InputGroup>
                                 </Form.Group>
                             </Col>
                             <Col>

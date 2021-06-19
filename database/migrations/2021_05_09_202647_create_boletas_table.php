@@ -17,7 +17,7 @@ class CreateBoletasTable extends Migration
             $table->id();
             $table->string('nombre_empresa');
             $table->string('direccion');
-            $table->integer('ruc');
+            $table->bigInteger('ruc');
             $table->date('fecha');
             $table->double('total');
             $table->timestamps();
