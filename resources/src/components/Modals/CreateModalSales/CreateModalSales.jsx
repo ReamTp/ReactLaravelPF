@@ -17,6 +17,11 @@ export default function CreateModalSales(props) {
         setFormData({...formData, productos: products});
     }, [products]);
 
+    const borrarProducto = (id) => {
+        const newProduct = products.filter( product => product.producto !== id);
+        setProducts(newProduct);
+    }
+
     const handleClose = () => setShow(false);
 
     const peticionGetProductos = async() => {
@@ -36,6 +41,7 @@ export default function CreateModalSales(props) {
                 toast.success(res.message);
                 handleClose();
                 setFormData(iniciarDatos());
+                setProducts([]);
             } else {
                 toast.error(res.message);
             }
@@ -47,7 +53,6 @@ export default function CreateModalSales(props) {
 
     const onChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
-        console.log(formData);
     }
 
     const editarTotal = (id, cant) => {
@@ -164,21 +169,27 @@ export default function CreateModalSales(props) {
                         </thead>
                         <tbody>
                             {
-                            products.map(product => (
-                                <tr key={product.producto}>
-                                    {productos.map(producto => {
-                                        if (producto.id == product.producto) {
-                                            return <td key={product.producto}>{producto.nombre}</td>
-                                        }
-                                    })}
-                                    <td>{product.cantidad} Tm.</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD()
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
+                                products.length !== 0 ?
+                                    products.map(product => (
+                                        <tr key={product.producto}>
+                                            {productos.map(producto => {
+                                                if (producto.id == product.producto) {
+                                                    return <td key={product.producto}>{producto.nombre}</td>
+                                                }
+                                            })}
+                                            <td>{product.cantidad} Tm.</td>
+                                            <td>
+                                                <Button onClick={() => {
+                                                    borrarProducto(product.producto)
+                                                }} variant="danger">Quitar</Button>
+                                            </td>
+                                        </tr>
+                                    ))
+                                :
+                                <tr>
+                                    <td colSpan="3">Sin Productos</td>
                                 </tr>
-                            ))}
+                            }
                         </tbody>
                     </Table>
                 </div>
