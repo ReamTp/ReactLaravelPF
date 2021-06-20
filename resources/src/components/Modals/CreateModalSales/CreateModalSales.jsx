@@ -20,6 +20,12 @@ export default function CreateModalSales(props) {
     const borrarProducto = (id) => {
         const newProduct = products.filter( product => product.producto !== id);
         setProducts(newProduct);
+
+        const valores = products.filter(product => product.producto === id);
+
+        valores.forEach(valor => {
+            editarTotal(valor.producto, valor.cantidad, false)
+        })
     }
 
     const handleClose = () => setShow(false);
@@ -55,7 +61,7 @@ export default function CreateModalSales(props) {
         setFormData({...formData, [e.target.name]: e.target.value});
     }
 
-    const editarTotal = (id, cant) => {
+    const editarTotal = (id, cant, ope = true) => {
         setFormData({...formData, productos: products});
 
         const obj = productos.map(producto => {
@@ -66,7 +72,13 @@ export default function CreateModalSales(props) {
 
         obj.forEach(datos => {
             if (datos != null) {
-                const tot = parseFloat(document.getElementById('total').value) + (datos.precio * datos.cantidad);
+                let tot = 0;
+                if (ope) {
+                    tot = parseFloat(document.getElementById('total').value) + (datos.precio * datos.cantidad);
+                } else {
+                    tot = parseFloat(document.getElementById('total').value) - (datos.precio * datos.cantidad);
+                }
+
                 setFormData({...formData, total : tot.toFixed(2)});
                 document.getElementById('total').value = tot.toFixed(2);
             }
