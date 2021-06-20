@@ -88,12 +88,34 @@ export default function CreateModalSales(props) {
     const agregarProductos = () => {
         const prod = document.getElementById('producto').value;
         const cant = document.getElementById('cantidad').value;
+        let coincidencia = false;
 
         if (prod != 0 && cant != 0){
-            setProducts([...products, {producto: prod, cantidad: cant}]);
-            editarTotal(prod, cant);
-            document.getElementById('cantidad').value = 0;
-            document.getElementById('producto').value = 0;
+            products.forEach(pro => {
+                if (pro.producto == prod) {
+                    coincidencia = true;
+                }
+            });
+
+            if (coincidencia) {
+                const newProducts = products.map(product => {
+                    if (product.producto == prod) {
+                        const valor = parseInt(product.cantidad) + parseInt(cant);
+                        return { ...product, cantidad: valor}
+                    }
+                    return user;
+                });
+
+                setProducts(newProducts);
+                editarTotal(prod, cant);
+                document.getElementById('cantidad').value = 0;
+                document.getElementById('producto').value = 0;
+            } else {
+                setProducts([...products, {producto: prod, cantidad: cant}]);
+                editarTotal(prod, cant);
+                document.getElementById('cantidad').value = 0;
+                document.getElementById('producto').value = 0;
+            }
         } else {
             toast.error("Ingrese un producto y su cantidad");
         }
