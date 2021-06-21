@@ -100,3 +100,9 @@ Route::put('/products/desactivar', [ProductosController::class, 'desactivar']);
 
 // Ventas
 Route::post('/sales/crear', [VentasController::class, 'create']);
+
+Route::post('/sales/get', [VentasController::class, 'get']);
+
+Route::get('/sales/listar', [VentasController::class, 'listar']);
+
+Route::post('/sales/getProducts', [VentasController::class, 'getProducts']);

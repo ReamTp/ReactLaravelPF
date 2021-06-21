@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
-import BuscadorTabla from '../../components/BuscadorTabla';
+import { toast } from 'react-toastify';
 import CreateModalSales from '../../components/Modals/CreateModalSales';
 import DetailModalSales from '../../components/Modals/DetailModalSales';
 import './SalesPage.scss';
@@ -8,13 +8,70 @@ import './SalesPage.scss';
 export default function SalesPage() {
     const [show, setShow] = useState(false);
     const [showD, setShowD] = useState(false);
+    const [sale, setSale] = useState(null);
     const [code, setCode] = useState(null);
 
     const handleShow = () => setShow(true);
-    const handleShowD = cod => {
+    const handleShowD = (s, c) => {
         setShowD(true);
-        setCode(cod);
+        setSale(s);
+        setCode(c);
     }
+
+    // useState para Buscador
+    const [ lista, setLista ] = useState([]);
+    const [ search, setSearch ] = useState('');
+    const [ currentPage, setCurrentPage ] = useState(0);
+    const [ state, setState ] = useState(false);
+
+    useEffect(() => {
+        peticionGet();
+    }, []);
+
+    // Obtener registros
+    const peticionGet = async(reset = false) => {
+        const urlListar = 'http://localhost:8000/api/sales/listar';
+        const resp = await fetch(urlListar);
+        const pro = await resp.json();
+        setLista(pro.data);
+        setState(false);
+        if (reset) {
+            setCurrentPage(0);
+        }
+    }
+
+    // Funciones de Busqueda
+    const filterSales = () => {
+        if (search.length === 0) {
+            return lista.slice(currentPage, currentPage + 8);
+        }
+
+        const filtered = lista.filter(sale => sale.nombre_empresa.includes(search));
+        return filtered.slice(currentPage, currentPage + 8);
+    }
+
+    const nextPage = () => {
+        if(lista.filter(sale => sale.nombre_empresa.includes(search)).length > currentPage + 8){
+            setCurrentPage(currentPage + 8)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const prevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 8)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const onSearchChange = ({target}) => {
+        setCurrentPage(0);
+        setSearch(target.value);
+    }
+
+    state ? peticionGet() : '';
 
     return (
         <>
@@ -25,7 +82,16 @@ export default function SalesPage() {
 
                 <div id="salesData">
                     <Button variant="success" onClick={handleShow}>Generar Venta</Button>
-                    <BuscadorTabla/>
+
+                    <div id="mDMenu">
+                        <div id="tPDMenuButton">
+                            <Button onClick={prevPage}>Anterior</Button>
+                            <Button onClick={nextPage}>Siguiente</Button>
+                        </div>
+
+                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+                    </div>
+
                     <div id="salesTable">
                         <Table id="tabla" striped bordered hover>
                             <thead>
@@ -40,91 +106,30 @@ export default function SalesPage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tecsup</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tecsup</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>TecLoad</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tecsup</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tecsup</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Tecsup</td>
-                                    <td>Av. España 452</td>
-                                    <td>85741254254</td>
-                                    <td>10/11/2020</td>
-                                    <td>1500</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowD(1)
-                                        }} variant="warning">Ver más</Button>
-                                    </td>
-                                </tr>
+                                {
+                                    filterSales().map(sale => (
+                                        <tr key={sale.id}>
+                                            <td>{sale.id}</td>
+                                            <td>{sale.nombre_empresa}</td>
+                                            <td>{sale.direccion}</td>
+                                            <td>{sale.ruc}</td>
+                                            <td>{sale.fecha}</td>
+                                            <td>{sale.total}</td>
+                                            <td>
+                                                <Button onClick={() => {
+                                                    handleShowD(sale, sale.id)
+                                                }} variant="warning">Ver más</Button>
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
                             </tbody>
                         </Table>
                     </div>
                 </div>
             </Container>
             <CreateModalSales show={show} setShow={setShow}/>
-            <DetailModalSales show={showD} setShow={setShowD} code={code}/>
+            <DetailModalSales show={showD} setShow={setShowD} sale={sale} code={code}/>
         </>
     )
 }

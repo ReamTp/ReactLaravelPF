@@ -7,6 +7,7 @@ use App\Models\Boletas;
 use App\Models\BoletasProductos;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VentasController extends Controller
 {
@@ -36,6 +37,50 @@ class VentasController extends Controller
             $response['success'] = true;
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
+            $response['success'] = false;
+        }
+
+        return $response;
+    }
+
+    function get(Request $request){
+        try {
+            $ventas = Boletas::find($request['id']);
+            $productos = BoletasProductos::where('boleta', $request['id'])->get();
+            $ventas['productos'] = $productos;
+
+            $response['data'] = $ventas;
+            $response['success'] = true;
+        } catch (\Exception $e) {
+            $response['data'] = $e->getMessage();
+            $response['success'] = false;
+        }
+
+        return $response;
+    }
+
+    function listar(){
+        try {
+            $data = Boletas::all();
+
+            $response['data'] = $data;
+            $response['success'] = true;
+        } catch (\Exception $e) {
+            $response['data'] = $e->getMessage();
+            $response['success'] = false;
+        }
+
+        return $response;
+    }
+
+    function getProducts(Request $request){
+        try {
+            $productos = DB::select("SELECT p.id, p.nombre, p.precio_unit, pb.cantidad, ROUND(p.precio_unit * pb.cantidad, 2) AS total FROM productos_boletas pb, productos p WHERE pb.producto = p.id AND pb.boleta = ".$request['id'].";");
+
+            $response['data'] = $productos;
+            $response['success'] = true;
+        } catch (\Exception $e) {
+            $response['data'] = $e->getMessage();
             $response['success'] = false;
         }
 
