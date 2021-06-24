@@ -10,6 +10,7 @@ export default function SalesPage() {
     const [showD, setShowD] = useState(false);
     const [sale, setSale] = useState(null);
     const [code, setCode] = useState(null);
+    const [reload, setReload] = useState(false);
 
     const handleShow = () => setShow(true);
     const handleShowD = (s, c) => {
@@ -17,6 +18,13 @@ export default function SalesPage() {
         setSale(s);
         setCode(c);
     }
+
+    useEffect(() => {
+        if (reload) {
+            peticionGet();
+            setReload(false);
+        }
+    }, [reload]);
 
     // useState para Buscador
     const [ lista, setLista ] = useState([]);
@@ -70,8 +78,6 @@ export default function SalesPage() {
         setCurrentPage(0);
         setSearch(target.value);
     }
-
-    state ? peticionGet() : '';
 
     return (
         <>
@@ -128,7 +134,7 @@ export default function SalesPage() {
                     </div>
                 </div>
             </Container>
-            <CreateModalSales show={show} setShow={setShow}/>
+            <CreateModalSales show={show} setShow={setShow} setReload={setReload}/>
             <DetailModalSales show={showD} setShow={setShowD} sale={sale} code={code}/>
         </>
     )

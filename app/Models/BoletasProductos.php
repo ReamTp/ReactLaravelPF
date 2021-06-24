@@ -15,7 +15,7 @@ class BoletasProductos extends Model
         'producto',
         'cantidad'
     ];
-    
+
     // Llave foranea
     public function boleta()
     {

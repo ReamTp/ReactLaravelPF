@@ -9,10 +9,10 @@ export default function LevelRoute({component: Component, ...rest}) {
     const [cargando, setCargando] = useState(true)
     const [level, setLevel] = useState(null);
     let spinner = '';
-    
+
     const usarApi = async () => {
         const res = await userServices.level();
-        
+
         if(res){
             setVerificado(true);
             setCargando(false);
@@ -28,14 +28,14 @@ export default function LevelRoute({component: Component, ...rest}) {
             if (cargando) {
                 usarApi();
             }
-            
+
             return verficado ? <Component nivel={level} /> : '';
         } else {
             toast.warn('No tienes acceso a esta pagina');
             return <Redirect to='/page404' />;
         }
     }
-    
+
     if (cargando) {
         spinner = <SpinnerPage/>;
     } else {

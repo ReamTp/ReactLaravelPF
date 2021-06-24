@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import ventasService from '../../../services/Ventas';
 
 export default function CreateModalSales(props) {
-    const {show, setShow} = props;
+    const {show, setShow, setReload} = props;
     const [formData, setFormData] = useState(iniciarDatos());
     const [productos, setProductos] = useState([]);
     const [products, setProducts] = useState([]);
@@ -45,6 +45,7 @@ export default function CreateModalSales(props) {
 
             if(res && res.success){
                 toast.success(res.message);
+                setReload(true);
                 handleClose();
                 setFormData(iniciarDatos());
                 setProducts([]);
@@ -54,7 +55,6 @@ export default function CreateModalSales(props) {
         } else {
             toast.error("Agregue un Producto como minimo!!");
         }
-        console.log(formData);
     }
 
     const onChange = (e) => {

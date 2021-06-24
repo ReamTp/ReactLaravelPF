@@ -23,7 +23,7 @@ class Notificaciones extends Model
         return $this->belongsTo("App\Models\User", 'emisor');
     }
 
-    public function tNotificaciones()
+    public function tipo()
     {
         return $this->belongsTo("App\Models\TipoNotificaciones", 'tipo');
     }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { SpinnerDotted } from "spinners-react";
 import { Redirect } from "react-router-dom";
 import { size } from "lodash";
@@ -15,6 +15,9 @@ export default function ComponenteDer() {
     const [cargando, setCargando] = useState(false);
     const [redireccionar, setRedireccionar] = useState(false);
 
+    // Iniciar variable dataToken
+    let dataToken = null;
+
     // Funcion para cuando se envie el formulario
     const onSubmit = async (e) => {
         // Evitar que el formulario recargue la pagina
@@ -26,14 +29,13 @@ export default function ComponenteDer() {
         } else {
             // Activar Spinner
             setCargando(true);
-            // Iniciar variable dataToken
-            let dataToken = null;
 
             // Realizar consulta asyncrona
             const res = await usuario.login(formData);
 
             // Verificar si hay informacion (Login correcto)
-            if (res && res.data != null) {
+            if (res && res.success) {
+                console.log(res);
                 toast.success("Inicio de Sesión Correcto");
                 dataToken = JSON.stringify(res.data);
 
@@ -44,6 +46,7 @@ export default function ComponenteDer() {
                 } else {
                     toast.warning("No se pudo guardar la sesión");
                 }
+                setFormData(valoresInciales())
                 setRedireccionar(true);
             } else {
                 toast.error(res.message);
@@ -103,7 +106,7 @@ export default function ComponenteDer() {
 // Establecer valores iniciales de los campos del formulario para el UseState
 function valoresInciales() {
     return {
-        email: "",
-        password: "",
-    };
+        email: '',
+        password: ''
+    }
 }

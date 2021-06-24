@@ -16,17 +16,20 @@ class ComisionesSeeder extends Seeder
     {
         $comision = new Comisiones();
         $comision->nombre = 'AFP';
-        $comision->cantidad = 1.25;
+        $comision->porcentaje = 1.25;
+        $comision->operacion = false;
         $comision->save();
-        
+
         $comision2 = new Comisiones();
         $comision2->nombre = 'Asignación Familiar';
-        $comision2->cantidad = 10;
+        $comision2->porcentaje = 10;
+        $comision2->operacion = true;
         $comision2->save();
-        
+
         $comision3 = new Comisiones();
         $comision3->nombre = 'IGV';
-        $comision3->cantidad = 18;
+        $comision3->porcentaje = 18;
+        $comision3->operacion = false;
         $comision3->save();
     }
 }

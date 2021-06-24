@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\BoletasUserController;
+use App\Http\Controllers\Api\ComisionesController;
 use App\Http\Controllers\Api\MarcasController;
+use App\Http\Controllers\Api\NotificacionesController;
 use App\Http\Controllers\Api\ProductosController;
 use App\Http\Controllers\Api\TProductosController;
 use App\Http\Controllers\Api\UserController;
@@ -23,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Comisiones
+Route::get('/comisiones/listar', [ComisionesController::class, 'listar']);
 
 // Usuario
 Route::post('/user/registrar', [UserController::class, 'registrarUser']);
@@ -106,3 +112,21 @@ Route::post('/sales/get', [VentasController::class, 'get']);
 Route::get('/sales/listar', [VentasController::class, 'listar']);
 
 Route::post('/sales/getProducts', [VentasController::class, 'getProducts']);
+
+// Notificaciones
+Route::post('/notifications/crear', [NotificacionesController::class, 'create']);
+
+Route::get('/notifications/listar/{id}', [NotificacionesController::class, 'listar']);
+
+Route::put('/notifications/leido', [NotificacionesController::class, 'marcarLeida']);
+
+Route::put('/notifications/leidos', [NotificacionesController::class, 'marcarLeidos']);
+
+Route::put('/notifications/noshow', [NotificacionesController::class, 'noMostrar']);
+
+// Boletas de Pago
+Route::post('/pagos/crear', [BoletasUserController::class, 'create']);
+
+Route::get('/pagos/listar', [BoletasUserController::class, 'listar']);
+
+Route::get('/pagos/getempleados', [BoletasUserController::class, 'infoEmpleado']);

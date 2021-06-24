@@ -26,7 +26,7 @@ class ProductosController extends Controller
             $response['success'] = true;
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
-            $response['success'] = true;
+            $response['success'] = false;
         }
 
         return $response;
@@ -54,7 +54,7 @@ class ProductosController extends Controller
             $response['success'] = true;
         } catch (\Exception $e) {
             $response['data'] = $e->getMessage();
-            $response['success'] = true;
+            $response['success'] = false;
         }
 
         return $response;
@@ -115,8 +115,6 @@ class ProductosController extends Controller
     }
 
     function activar(Request $request){
-        $request['estado'] = true;
-
         try{
             $product = Productos::find($request['id']);
 
@@ -145,11 +143,9 @@ class ProductosController extends Controller
     }
 
     function desactivar(Request $request){
-        $request['estado'] = false;
-
         try{
             $product = Productos::find($request['id']);
-            $result = $product->update(['estado' => true]);
+            $result = $product->update(['estado' => false]);
 
             $response['message'] = 'Producto Desactivado';
             $response['success'] = $result;

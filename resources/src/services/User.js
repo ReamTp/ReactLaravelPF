@@ -50,12 +50,10 @@ usuario.level = async () => {
     const urlLevel = baseUrl+'/level';
 
     const res = await axios.post(urlLevel, dato)
-        .then(response => {
-            let tipo_usuario = response.data.level;
-            return tipo_usuario
-        })
-        .catch(() => { return null; })
-    return await res;
+        .then(response => {return response.data.data;})
+        .catch((e) => { return e; })
+
+        return res;
 }
 
 usuario.auth = async () => {

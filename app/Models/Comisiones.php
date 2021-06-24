@@ -13,7 +13,8 @@ class Comisiones extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'nombre',
-        'cantidad'
+        'porcentaje',
+        'operacion'
     ];
 
     public $timestamps = false;

@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function getUser(Request $request){
+    public function getUser(Request $request)
+    {
         $user = User::with('tipoUsuario', 'departamento')->find($request['id']);
 
         $response['data'] = $user;
@@ -18,14 +19,18 @@ class UserController extends Controller
         return $response;
     }
 
-    public function loginUser(Request $request){
+    public function loginUser(Request $request)
+    {
         $correo = strtolower($request['email']);
         $password = $request['password'];
         $response = $this->userLogin($correo, $password);
+        $response['data'] = ["id" => $response['data']->id, "correo" => $response['data']->correo, "password" => $response['data']->password, "message" => $response['message'], "success" => $response['success']];
+
         return $response;
     }
 
-    public function registrarUser(Request $request){
+    public function registrarUser(Request $request)
+    {
         try {
             $user = new User();
             $user->nombre = $request['nombre'];
@@ -51,52 +56,56 @@ class UserController extends Controller
         return $response;
     }
 
-    public function listar(){
-        try{
+    public function listar()
+    {
+        try {
             // Obtener datos con clave foranea
             $data = User::with('tipoUsuario', 'departamento')->get();
 
             $response['data'] = $data;
             $response['message'] = 'Carga Completa';
             $response['success'] = true;
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
         }
         return $response;
     }
 
-    public function listarA(){
-        try{
+    public function listarA()
+    {
+        try {
             // Obtener datos con clave foranea
             $data = User::with('tipoUsuario', 'departamento')->where('estado', true)->get();
 
             $response['data'] = $data;
             $response['message'] = 'Carga Completa';
             $response['success'] = true;
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
         }
         return $response;
     }
 
-    public function listarD(){
-        try{
+    public function listarD()
+    {
+        try {
             // Obtener datos con clave foranea
             $data = User::with('tipoUsuario', 'departamento')->where('estado', false)->get();
 
             $response['data'] = $data;
             $response['message'] = 'Carga Completa';
             $response['success'] = true;
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
         }
         return $response;
     }
 
-    public function comprobarUser(Request $request){
+    public function comprobarUser(Request $request)
+    {
         $correo = $request['correo'];
         $password = $request['password'];
         $response = $this->userLogin($correo, $password);
@@ -105,28 +114,35 @@ class UserController extends Controller
         return $resp;
     }
 
-    public function obtenerLevel(Request $request){
-        $id = $request['id'];
-        $correo = strtolower($request['correo']);
-        $password = $request['password'];
+    public function obtenerLevel(Request $request)
+    {
+        try {
+            $id = $request['id'];
+            $correo = strtolower($request['correo']);
+            $password = $request['password'];
 
-        $data = DB::select("SELECT tipo_usuario, password FROM users WHERE id = '".$id."' AND correo = '".$correo."'");
+            $data = DB::select("SELECT tipo_usuario, password FROM users WHERE id = '" . $id . "' AND correo = '" . $correo . "'");
 
-        if(Crypt::decrypt($data[0]->password) == $password){
-            $response['level'] = $data[0]->tipo_usuario;
-        } else {
-            $response['level'] = null;
+            if (Crypt::decrypt($data[0]->password) == $password) {
+                $response['data'] = $data[0]->tipo_usuario;
+            } else {
+                $response['data'] = null;
+            }
+        } catch (\Exception $e) {
+            $response['data'] = $e->getMessage();
+            $response['success'] = false;
         }
         return $response;
     }
 
-    public function updateUser(Request $request){
+    public function updateUser(Request $request)
+    {
         $request['password'] = Crypt::encrypt($request['password']);
 
         $user = User::find($request['id']);
         $result = $user->fill($request->all())->save();
 
-        if($result){
+        if ($result) {
             $response['datos'] = $result;
             $response['message'] = 'Datos Actualizados';
             $response['success'] = true;
@@ -138,11 +154,12 @@ class UserController extends Controller
         return $response;
     }
 
-    public function desactivarUser(Request $request){
+    public function desactivarUser(Request $request)
+    {
         $user = User::find($request['id']);
         $result = $user->update(['estado' => false]);
 
-        if($result){
+        if ($result) {
             $response['message'] = 'Usuario Desactivado';
             $response['success'] = $result;
         } else {
@@ -153,11 +170,12 @@ class UserController extends Controller
         return $response;
     }
 
-    public function activarUser(Request $request){
+    public function activarUser(Request $request)
+    {
         $user = User::find($request['id']);
         $result = $user->update(['estado' => true]);
 
-        if($result){
+        if ($result) {
             $response['message'] = 'Usuario Activado';
             $response['success'] = $result;
         } else {
@@ -168,29 +186,26 @@ class UserController extends Controller
         return $response;
     }
 
-    private function userLogin($correo, $password){
+    private function userLogin($correo, $password)
+    {
         try {
             // Realizar Consulta a la Base de datos
             $data = DB::table('users')->where('correo', $correo)->first();
             // Comprobar si existe informacion y si la contraseña encriptada es igual
             // que la contraseña ingresada
-            if($data && Crypt::decrypt($data->password) == $password){
-                $datos = ['id' => $data->id, 'correo' => $data->correo, 'password' => Crypt::decrypt($data->password)];
-                $response['data'] = $datos;
+            if ($data && Crypt::decrypt($data->password) == $password) {
+                $data->password = Crypt::decrypt($data->password);
+                $response['data'] = $data;
                 $response['message'] = 'Carga Completa';
                 $response['success'] = true;
-                $response['status'] = 200;
             } else {
                 $response['data'] = null;
                 $response['message'] = 'Error Datos incorrectos';
                 $response['success'] = false;
-                $response['status'] = 400;
             }
-
         } catch (\Exception $e) {
             $response['message'] = $e->getMessage();
             $response['success'] = false;
-            $response['status'] = 400;
         }
         return $response;
     }

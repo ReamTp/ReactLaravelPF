@@ -35,6 +35,14 @@
                 overflow-y: scroll;
                 overflow-x: scroll;
 
+                > h3 {
+                    height: 95%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #C82333;
+                }
+
                 &::-webkit-scrollbar {
                     width: 5px;
                     overflow: hidden;
@@ -74,10 +82,36 @@
 
                         div{
                             display: flex;
-                            flex-flow: column wrap;
+                            flex-direction: column;
                             align-items: flex-start;
                             justify-content: center;
                             height: 100%;
+
+                            h3 {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .badge {
+                                    margin: 0 14px;
+                                    font-size: 40%;
+                                }
+                            }
+                        }
+
+                        .buttons {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            button{
+                                width: 100%;
+
+                                &:nth-of-type(2) {
+                                    margin-top: 12px;
+                                }
+                            }
                         }
                     }
                 }

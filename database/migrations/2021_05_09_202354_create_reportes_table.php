@@ -13,13 +13,13 @@ class CreateReportesTable extends Migration
      */
     public function up()
     {
-        Schema::create('reportes', function (Blueprint $table) {
-            $table->unsignedBigInteger('reporte');
-            $table->foreign('reporte')->references('id')->on('documentos');
-            $table->unsignedBigInteger('tipo_reporte');
-            $table->foreign('tipo_reporte')->references('id')->on('tipo_reporte');
-            $table->timestamps();
-        });
+        // Schema::create('reportes', function (Blueprint $table) {
+        //     $table->unsignedBigInteger('reporte');
+        //     $table->foreign('reporte')->references('id')->on('documentos');
+        //     $table->unsignedBigInteger('tipo_reporte');
+        //     $table->foreign('tipo_reporte')->references('id')->on('tipo_reporte');
+        //     $table->timestamps();
+        // });
     }
 
     /**
