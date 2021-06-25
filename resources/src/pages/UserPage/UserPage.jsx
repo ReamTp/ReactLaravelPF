@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import { faEdit, faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import CreateModalUser from '../../components/Modals/CreateModalUser';
 import DeleteModalUser from '../../components/Modals/DeleteModalUser';
 import EditModalUser from '../../components/Modals/EditModalUser';
+import userServices from '../../services/User.js';
 import './UserPage.scss';
 
 export default function UserPage() {
@@ -11,17 +15,89 @@ export default function UserPage() {
     const [codeE, setCodeE] = useState(null);
     const [showD, setShowD] = useState(false);
     const [codeD, setCodeD] = useState(null);
+    const [lista, setLista ] = useState([]);
+    const [ search, setSearch ] = useState('');
+    const [ currentPage, setCurrentPage ] = useState(0);
+    const [reload, setReload] = useState(false);
+    const [formData, setFormData] = useState({});
 
     const handleShow = () => setShow(true);
+
+    useEffect(() => {
+        getUsers();
+    }, []);
+
+    useEffect(() => {
+        if (reload) {
+            getUsers()
+            setReload(false);
+        }
+    }, [reload])
 
     const handleShowEdit = (cod) => {
         setShowE(true);
         setCodeE(cod);
+        setFormData({})
     }
 
     const handleShowDelete = (cod) => {
         setShowD(true);
         setCodeD(cod)
+    }
+
+    const getUsers = async () => {
+        const res = await userServices.listar();
+        setLista(res);
+    }
+
+    // Funciones de Busqueda
+    const filterUsers = () => {
+        if (search.length === 0) {
+            return lista.slice(currentPage, currentPage + 5);
+        }
+
+        let filtered = lista.filter(sale => sale.nombre.includes(search));
+
+        if(filtered.length <= 0) {
+            filtered = lista.filter(sale => sale.apellido.includes(search));
+        }
+
+        if(filtered.length <= 0) {
+            filtered = lista.filter(sale => sale.correo.includes(search));
+        }
+
+        return filtered.slice(currentPage, currentPage + 5);
+    }
+
+    const nextPage = () => {
+        let cant = lista.filter(sale => sale.nombre.includes(search)).length;
+
+        if (cant <= 0 ){
+            cant = lista.filter(sale => sale.apellido.includes(search)).length;
+        }
+
+        if (cant <= 0 ){
+            cant = lista.filter(sale => sale.correo.includes(search)).length;
+        }
+
+        if(cant > currentPage + 5){
+            setCurrentPage(currentPage + 5)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const prevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 5)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const onSearchChange = ({target}) => {
+        setCurrentPage(0);
+        setSearch(target.value);
     }
 
     return (
@@ -37,8 +113,13 @@ export default function UserPage() {
                             <Button variant="success" onClick={handleShow}>Crear Nuevo Usuario</Button>
                         </div>
 
-                        <div id="userPageBuscador">
-                            <input type="text" id="userName" placeholder="Buscar..."/>
+                        <div id="mDMenu">
+                            <div id="tPDMenuButton">
+                                <Button onClick={prevPage}>Anterior</Button>
+                                <Button onClick={nextPage}>Siguiente</Button>
+                            </div>
+
+                            <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
                         </div>
                     </div>
 
@@ -62,63 +143,53 @@ export default function UserPage() {
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Rafael Elias</td>
-                                    <td>Arriaga Mendoza</td>
-                                    <td>ream_tp@outlook.com</td>
-                                    <td>74027083</td>
-                                    <td>956271174</td>
-                                    <td>2356114</td>
-                                    <td>Recursos Humanos</td>
-                                    <td>Gerente</td>
-                                    <td>15000</td>
-                                    <td>10/04/2003</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowEdit(1)
-                                        }} variant='warning'>Editar</Button>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }} variant='danger'>Desactivar</Button>
-                                    </td>
-                                </tr>
+                                {
+                                    filterUsers().map(user => (
+                                        <tr key={user.id}>
+                                            <td>{user.id}</td>
+                                            <td>{user.nombre}</td>
+                                            <td>{user.apellido}</td>
+                                            <td>{user.correo}</td>
+                                            <td>{user.dni}</td>
+                                            <td>{user.celular}</td>
+                                            <td>{user.telefono}</td>
+                                            <td>{(user.tipo_usuario.titulo.split(' '))[0]}</td>
+                                            <td>{user.departamento.nombre}</td>
+                                            <td>S/.{user.sueldo_bruto}</td>
+                                            <td>{user.fecha}</td>
+                                            <td>
+                                                <Button onClick={() => {
+                                                    handleShowEdit(user.id)
+                                                }} variant='warning'>
+                                                    <FontAwesomeIcon icon={faEdit}/>
+                                                </Button>
+                                                {
+                                                    user.estado ?
+                                                        <Button onClick={() => {
+                                                            handleShowDeactive(user.id)
+                                                        }}variant='danger'>
+                                                            <FontAwesomeIcon icon={faMinusCircle}/>
+                                                        </Button>
+                                                    :
+                                                        <Button onClick={() => {
+                                                            handleShowActive(user.id)
+                                                        }}variant='success'>
+                                                            <FontAwesomeIcon icon={faPlusCircle}/>
+                                                        </Button>
+                                                }
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
                             </tbody>
-
-                            <tfoot>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>Correo</th>
-                                    <th>DNI</th>
-                                    <th>Celular</th>
-                                    <th>Telefono</th>
-                                    <th>Tipo de Usuario</th>
-                                    <th>Departamento</th>
-                                    <th>Sueldo Bruto</th>
-                                    <th>Cumpleaños</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </tfoot>
                         </Table>
-                    </div>
-
-                    <div id="userPagePagination">
-                        <Button>Anterior</Button>
-                        <Button>Siguiente</Button>
                     </div>
                 </div>
             </Container>
-            <CreateModalUser show={show} setShow={setShow}>
-                <h1>Hola</h1>
-            </CreateModalUser>
 
-            <EditModalUser show={showE} setShow={setShowE} code={codeE}>
-                <h1>Hola</h1>
-            </EditModalUser>
-
-            <DeleteModalUser show={showD} setShow={setShowD} code={codeD}/>
+            <CreateModalUser show={show} setShow={setShow} setReload={setReload}/>
+            <EditModalUser show={showE} setShow={setShowE} code={codeE} setReload={setReload} formData={formData} setFormData={setFormData}/>
+            <DeleteModalUser show={showD} setShow={setShowD} code={codeD} setReload={setReload}/>
         </>
     )
 }

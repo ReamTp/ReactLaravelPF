@@ -48,6 +48,10 @@ Route::get('/user/listara', [UserController::class, 'listarA']);
 
 Route::get('/user/listard', [UserController::class, 'listarD']);
 
+Route::get('/user/gettipouser', [UserController::class, 'getTipoUsuario']);
+
+Route::get('/user/getdepartments', [UserController::class, 'getDepartaments']);
+
 Route::put('/user/update', [UserController::class, 'updateUser']);
 
 Route::put('/user/desactivar', [UserController::class, 'desactivarUser']);

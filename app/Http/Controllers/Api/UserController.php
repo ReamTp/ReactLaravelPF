@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Departamentos;
+use App\Models\Notificaciones;
+use App\Models\ReceptoresNotificaciones;
+use App\Models\TipoUsuario;
 use App\Models\User;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -24,13 +29,14 @@ class UserController extends Controller
         $correo = strtolower($request['email']);
         $password = $request['password'];
         $response = $this->userLogin($correo, $password);
-        $response['data'] = ["id" => $response['data']->id, "correo" => $response['data']->correo, "password" => $response['data']->password, "message" => $response['message'], "success" => $response['success']];
+        $response['data'] = ["id" => $response['data']->id, "correo" => $response['data']->correo, "password" => $response['data']->password,];
 
         return $response;
     }
 
     public function registrarUser(Request $request)
     {
+        $fecha = new DateTime();
         try {
             $user = new User();
             $user->nombre = $request['nombre'];
@@ -44,7 +50,23 @@ class UserController extends Controller
             $user->departamento = $request['departamento'];
             $user->sueldo_bruto = $request['sueldo_bruto'];
             $user->fecha = date('Y-m-d', strtotime($request['fecha']));
+            $user->estado = $request['estado'] == 'true' ? true : false;
             $user->save();
+
+            $not = new Notificaciones();
+            $not->emisor = $request['encargado'];
+            $not->tipo = "2";
+            $not->fecha = $fecha->format('Y-m-d');
+            $not->save();
+
+            $receptores = [3, 5];
+
+            foreach($receptores as $receptor) {
+                $rnot = new ReceptoresNotificaciones();
+                $rnot->notificacion = $not->id;
+                $rnot->receptor = $receptor;
+                $rnot->save();
+            }
 
             $response['message'] = 'Usuario Registrado';
             $response['success'] = true;
@@ -207,6 +229,34 @@ class UserController extends Controller
             $response['message'] = $e->getMessage();
             $response['success'] = false;
         }
+        return $response;
+    }
+
+    function getTipoUsuario() {
+        try {
+            $data = TipoUsuario::all();
+
+            $response['data'] = $data;
+            $response['success'] = false;
+        } catch (\Exception $e) {
+            $response['data'] = null;
+            $response['success'] = false;
+        }
+
+        return $response;
+    }
+
+    function getDepartaments() {
+        try {
+            $data = Departamentos::all();
+
+            $response['data'] = $data;
+            $response['success'] = true;
+        } catch (\Exception $e) {
+            $response['data'] = null;
+            $response['success'] = false;
+        }
+
         return $response;
     }
 }

@@ -14,7 +14,6 @@ export default function TrainingsPage() {
     const [reload, setReload] = useState(false);
     const [ search, setSearch ] = useState('');
     const [ currentPage, setCurrentPage ] = useState(0);
-    const [ state, setState ] = useState(false);
 
     useEffect(() => {
         getCapacitaciones();

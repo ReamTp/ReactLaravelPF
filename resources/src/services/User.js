@@ -13,12 +13,20 @@ usuario.login = async (user) => {
     return res;
 }
 
-usuario.datos = async () => {
-    const dato = JSON.parse(localStorage.getItem('token'));
+usuario.datos = async (code = null) => {
+    let dato;
+
+    if (code === null) {
+        dato = JSON.parse(localStorage.getItem('token'));
+    } else {
+        dato = {id: code};
+    }
 
     const urlDatos = baseUrl+'/datos';
     const res = await axios.post(urlDatos, dato)
-        .then(response => { return response.data})
+        .then(response => {
+            return response.data
+        })
         .catch(response => { return response.data})
     return res;
 }
@@ -69,6 +77,39 @@ usuario.auth = async () => {
             return bol;
         })
         .catch(e => { return e; })
+    return res;
+}
+
+usuario.listar = async() => {
+    const urlGet = baseUrl + '/listar';
+
+    const res = await axios.get(urlGet)
+        .then(response => {
+            return response.data.data;
+        })
+        .catch(response => { throw response.data; })
+    return res;
+}
+
+usuario.getTipoUsers = async () => {
+    const url = baseUrl + '/gettipouser';
+
+    const res = await axios.get(url)
+        .then(response => {
+            return response.data.data;
+        })
+        .catch(response => { throw response.data; })
+    return res;
+}
+
+usuario.getDepartaments = async () => {
+    const url = baseUrl + '/getdepartments';
+
+    const res = await axios.get(url)
+        .then(response => {
+            return response.data.data;
+        })
+        .catch(response => { throw response.data; })
     return res;
 }
 
