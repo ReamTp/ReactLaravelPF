@@ -51,11 +51,13 @@
 #btn-menu {
     display: none;
 
-    &:checked~.container-menu {
+    &:checked {
+        ~.container-menu {
         opacity: 1;
         visibility: visible;
+        }
 
-        .cont-menu {
+        ~.cont-menu {
             transform: translateX(0%);
         }
     }
@@ -75,16 +77,19 @@
 }
 
 .cont-menu {
+    position: absolute;
     width: 100%;
     max-width: 250px;
     background: #1C1C1C;
     height: 100vh;
-    position: relative;
     transition: all 500ms ease;
+    top: 0;
+    left: 0;
     transform: translateX(-100%);
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    z-index: 1001;
 
     &::-webkit-scrollbar {
         width: 5px;

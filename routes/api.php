@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\BoletasUserController;
+use App\Http\Controllers\Api\CapacitacionesController;
 use App\Http\Controllers\Api\ComisionesController;
 use App\Http\Controllers\Api\MarcasController;
 use App\Http\Controllers\Api\NotificacionesController;
@@ -130,3 +131,12 @@ Route::post('/pagos/crear', [BoletasUserController::class, 'create']);
 Route::get('/pagos/listar', [BoletasUserController::class, 'listar']);
 
 Route::get('/pagos/getempleados', [BoletasUserController::class, 'infoEmpleado']);
+
+// Capacitaciones
+Route::post('/capacitaciones/crear', [CapacitacionesController::class, 'create']);
+// Capacitaciones
+Route::get('/capacitaciones/listar', [CapacitacionesController::class, 'listar']);
+
+Route::get('/capacitaciones/getusers/{id}', [CapacitacionesController::class, 'getUsers']);
+
+Route::put('/capacitaciones/desactivar', [CapacitacionesController::class, 'desactivar']);

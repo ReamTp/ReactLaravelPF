@@ -32,11 +32,6 @@ class CreateUsersTable extends Migration
             $table->boolean('estado')->default(true);
             $table->timestamps();
         });
-
-        if (Schema::hasTable('documentos'))
-        {
-            DB::statement("ALTER TABLE users ADD UNIQUE (correo)");
-        }
     }
 
     /**

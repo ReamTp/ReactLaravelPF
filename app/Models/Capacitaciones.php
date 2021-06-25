@@ -13,9 +13,17 @@ class Capacitaciones extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'titulo',
+        'descripcion',
         'fecha',
         'hora_inicio',
         'hora_fin',
+        'organizador',
         'estado'
     ];
+
+    // Llave foranea
+    public function organizador()
+    {
+        return $this->belongsTo("App\Models\User", 'organizador');
+    }
 }

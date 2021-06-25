@@ -16,9 +16,12 @@ class CreateCapacitacionesTable extends Migration
         Schema::create('capacitaciones', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
+            $table->string('descripcion')->nullable();
             $table->date('fecha');
             $table->time('hora_inicio');
             $table->time('hora_fin');
+            $table->unsignedBigInteger('organizador');
+            $table->foreign('organizador')->references('id')->on('users');
             $table->boolean('estado')->default(true);
             $table->timestamps();
         });

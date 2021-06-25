@@ -1,18 +1,72 @@
-import React, { useState } from 'react';
-import { Button, Container, Table } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Badge, Button, Container, Table } from 'react-bootstrap';
 import DeleteModalTrainings from '../../components/Modals/DeleteModalTrainings';
 import CreateModalTrainings from '../../components/Modals/CreateModalTrainings';
+import cServices from '../../services/Capacitaciones';
 import './TrainingsPage.scss';
+import { toast } from 'react-toastify';
 
 export default function TrainingsPage() {
     const [show, setShow] = useState(false);
     const [showD, setShowD] = useState(false);
     const [codeD, setCodeD] = useState(null);
+    const [lista, setLista ] = useState([]);
+    const [reload, setReload] = useState(false);
+    const [ search, setSearch ] = useState('');
+    const [ currentPage, setCurrentPage ] = useState(0);
+    const [ state, setState ] = useState(false);
+
+    useEffect(() => {
+        getCapacitaciones();
+    }, []);
+
+    useEffect(() => {
+        if (reload) {
+            getCapacitaciones()
+            setReload(false);
+        }
+    }, [reload])
 
     const handleShow = () => setShow(true);
     const handleShowDelete = (cod) => {
         setShowD(true);
         setCodeD(cod)
+    }
+
+    const getCapacitaciones = async () => {
+        const res = await cServices.listar();
+        setLista(res);
+    }
+
+    // Funciones de Busqueda
+    const filterCapacitaciones = () => {
+        if (search.length === 0) {
+            return lista.slice(currentPage, currentPage + 8);
+        }
+
+        const filtered = lista.filter(sale => sale.titulo.includes(search));
+        return filtered.slice(currentPage, currentPage + 8);
+    }
+
+    const nextPage = () => {
+        if(lista.filter(sale => sale.titulo.includes(search)).length > currentPage + 8){
+            setCurrentPage(currentPage + 8)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const prevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 8)
+        } else {
+            toast.error('No hay más datos');
+        }
+    }
+
+    const onSearchChange = ({target}) => {
+        setCurrentPage(0);
+        setSearch(target.value);
     }
 
     return (
@@ -28,8 +82,13 @@ export default function TrainingsPage() {
                             <Button onClick={handleShow} variant="success">Crear Nueva Capacitacion</Button>
                         </div>
 
-                        <div id="userPageBuscador">
-                            <input type="text" id="userName" placeholder="Buscar..."/>
+                        <div id="mDMenu">
+                            <div id="tPDMenuButton">
+                                <Button onClick={prevPage}>Anterior</Button>
+                                <Button onClick={nextPage}>Siguiente</Button>
+                            </div>
+
+                            <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
                         </div>
                     </div>
 
@@ -38,7 +97,7 @@ export default function TrainingsPage() {
                             <thead>
                                 <tr>
                                     <th>Código</th>
-                                    <th>Descripción</th>
+                                    <th>Titulo</th>
                                     <th>Fecha</th>
                                     <th>Hora Inicio</th>
                                     <th>Hora Fin</th>
@@ -48,45 +107,39 @@ export default function TrainingsPage() {
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Capacitacion de Juegos</td>
-                                    <td>10/12/2021</td>
-                                    <td>10:50</td>
-                                    <td>14:50</td>
-                                    <td>Activa</td>
-                                    <td>
-                                        <Button onClick={() => {
-                                            handleShowDelete(1)
-                                        }} variant='danger'>Desactivar</Button>
-                                    </td>
-                                </tr>
+                                {
+                                    filterCapacitaciones().length > 0 ? (
+                                        filterCapacitaciones().map(cap => (
+                                            <tr key={cap.id}>
+                                                <td>{cap.id}</td>
+                                                <td>{cap.titulo}</td>
+                                                <td>{cap.fecha}</td>
+                                                <td>{cap.hora_inicio}</td>
+                                                <td>{cap.hora_fin}</td>
+                                                <td>
+                                                    {
+                                                        cap.estado ? <Badge variant="success">Vigente</Badge> : <Badge variant="danger">Finalizada</Badge>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <Button disabled={!cap.estado} onClick={() => {
+                                                        handleShowDelete(cap.id)
+                                                    }} variant='danger'>Desactivar</Button>
+                                                </td>
+                                            </tr>
+                                        ))
+                                    )
+                                    : <td colSpan="7" key="0"><center>Sin Capacitaciones</center></td>
+                                }
                             </tbody>
-
-                            <tfoot>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Descripción</th>
-                                    <th>Fecha</th>
-                                    <th>Hora Inicio</th>
-                                    <th>Hora Fin</th>
-                                    <th>Estado</th>
-                                    <th>Opciones</th>
-                                </tr>
-                            </tfoot>
                         </Table>
-                    </div>
-
-                    <div id="userPagePagination">
-                        <Button>Anterior</Button>
-                        <Button>Siguiente</Button>
                     </div>
                 </div>
             </Container>
-            <CreateModalTrainings show={show} setShow={setShow}>
+            <CreateModalTrainings show={show} setShow={setShow} setReload={setReload}>
                 <h2>Crear Carousel</h2>
             </CreateModalTrainings>
-            <DeleteModalTrainings show={showD} setShow={setShowD} code={codeD}/>
+            <DeleteModalTrainings show={showD} setShow={setShowD} code={codeD} setReload={setReload}/>
         </>
     )
 }
