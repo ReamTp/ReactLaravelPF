@@ -113,4 +113,30 @@ usuario.getDepartaments = async () => {
     return res;
 }
 
+usuario.active = async(id) => {
+    const urlActive = baseUrl + '/activar';
+    const data = {id: id};
+
+    const res = await axios.put(urlActive, data)
+        .then(response => {
+            return response.data;
+        })
+        .catch(response => { throw response.data;})
+
+    return res;
+}
+
+usuario.deactive = async(id) => {
+    const urlDeactive = baseUrl + '/desactivar';
+    const data = {id: id};
+
+    const res = await axios.put(urlDeactive, data)
+        .then(response => {
+            return response.data;
+        })
+        .catch(response => { throw response.data;})
+
+    return res;
+}
+
 export default usuario;

@@ -1,9 +1,19 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import { toast } from 'react-toastify';
+import userServices from '../../../services/User';
 
 export default function DeleteModalUser(props) {
-    const {show, setShow, code} = props;
+    const {show, setShow, code, setReload} = props;
     const handleClose = () => setShow(false);
+
+    const handleDeactive = async () => {
+        await userServices.deactive(code).then((res) => {
+            res.success ? toast.success(res.message) : toast.error(res.message);
+        });
+        setShow(false);
+        setReload(true);
+    };
 
     return (
         <Modal show={show} onHide={handleClose} centered>
@@ -18,7 +28,7 @@ export default function DeleteModalUser(props) {
 
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>Cancelar</Button>
-                <Button variant="danger" onClick={handleClose}>Desactivar</Button>
+                <Button variant="danger" onClick={handleDeactive}>Desactivar</Button>
             </Modal.Footer>
         </Modal>
     )

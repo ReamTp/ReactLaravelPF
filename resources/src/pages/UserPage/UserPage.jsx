@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
 import { toast } from 'react-toastify';
+import ActiveModalUser from '../../components/Modals/ActiveModalUser';
 import CreateModalUser from '../../components/Modals/CreateModalUser';
 import DeleteModalUser from '../../components/Modals/DeleteModalUser';
 import EditModalUser from '../../components/Modals/EditModalUser';
@@ -14,6 +15,7 @@ export default function UserPage() {
     const [showE, setShowE] = useState(false);
     const [codeE, setCodeE] = useState(null);
     const [showD, setShowD] = useState(false);
+    const [showA, setShowA] = useState(false);
     const [codeD, setCodeD] = useState(null);
     const [lista, setLista ] = useState([]);
     const [ search, setSearch ] = useState('');
@@ -42,6 +44,11 @@ export default function UserPage() {
 
     const handleShowDelete = (cod) => {
         setShowD(true);
+        setCodeD(cod)
+    }
+
+    const handleShowActive = (cod) => {
+        setShowA(true);
         setCodeD(cod)
     }
 
@@ -166,7 +173,7 @@ export default function UserPage() {
                                                 {
                                                     user.estado ?
                                                         <Button onClick={() => {
-                                                            handleShowDeactive(user.id)
+                                                            handleShowDelete(user.id)
                                                         }}variant='danger'>
                                                             <FontAwesomeIcon icon={faMinusCircle}/>
                                                         </Button>
@@ -190,6 +197,7 @@ export default function UserPage() {
             <CreateModalUser show={show} setShow={setShow} setReload={setReload}/>
             <EditModalUser show={showE} setShow={setShowE} code={codeE} setReload={setReload} formData={formData} setFormData={setFormData}/>
             <DeleteModalUser show={showD} setShow={setShowD} code={codeD} setReload={setReload}/>
+            <ActiveModalUser show={showA} setShow={setShowA} code={codeD} setReload={setReload}/>
         </>
     )
 }
