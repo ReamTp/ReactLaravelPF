@@ -117,33 +117,39 @@ export default function UserPage() {
                 <div id="userPageDatos">
                     <div id="userPageMenu">
                         <div id="userPageBasic">
+                            <h2>Datos de los Usuarios</h2>
                             <Button variant="success" onClick={handleShow}>Crear Nuevo Usuario</Button>
                         </div>
 
                         <div id="mDMenu">
-                            <div id="tPDMenuButton">
+                            <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+
+                            <div class="pagination">
                                 <Button onClick={prevPage}>Anterior</Button>
+
+                                <div class="pagination-number">
+                                    <p>{currentPage + 1} - {currentPage + 5 < lista.length ? <span>{currentPage + 5}</span> : <span>{lista.length}</span>} de {lista.length}</p>
+                                </div>
+
                                 <Button onClick={nextPage}>Siguiente</Button>
                             </div>
-
-                            <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
                         </div>
                     </div>
 
                     <div id="userPageTabla">
-                        <Table>
+                        <Table striped bordered hover>
                             <thead>
                                 <tr>
-                                    <th>Código</th>
+                                    <th>ID</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
                                     <th>Correo</th>
                                     <th>DNI</th>
                                     <th>Celular</th>
                                     <th>Telefono</th>
-                                    <th>Tipo de Usuario</th>
+                                    <th>Tipo</th>
                                     <th>Departamento</th>
-                                    <th>Sueldo Bruto</th>
+                                    <th>Sueldo</th>
                                     <th>Cumpleaños</th>
                                     <th>Opciones</th>
                                 </tr>

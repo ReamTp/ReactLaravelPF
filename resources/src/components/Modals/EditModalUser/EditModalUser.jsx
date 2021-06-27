@@ -67,6 +67,7 @@ export default function EditModalUser(props) {
         if (res && res.success) {
             toast.success(res.message);
             setReload(true);
+            setShow(false);
         } else {
             toast.error(res.message);
         }

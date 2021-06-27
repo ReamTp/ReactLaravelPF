@@ -1,0 +1,37 @@
+#salesPage {
+    #salesTitle{
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    #salesData  {
+        width: 100%;
+        padding: 2.5rem 1.675rem;
+        border-radius: 1.5625rem;
+        box-shadow: 20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
+        height: 39rem;
+
+        #salesDataHeader{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #mDMenu {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input[type="text"] {
+                width: 38%;
+            }
+
+            .pagination {
+                width: 50%;
+            }
+        }
+    }
+}

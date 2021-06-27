@@ -62,10 +62,15 @@ export default function PaymentsPage() {
                 <div id="pagosDatos">
                     <h2>Datos de Pagos</h2>
 
-                    <div>
+                    <div id="payOptions">
                         <BuscadorTabla/>
-                        <div>
+                        <div class="pagination">
                             <Button onClick={prevPage}>Anterior</Button>
+
+                            <div class="pagination-number">
+                                <p>{currentPage + 1} - {currentPage + 3 < lista.length ? <span>{currentPage + 3}</span> : <span>{currentPage+3 - ((currentPage+3) - 5)}</span>} de {lista.length}</p>
+                            </div>
+
                             <Button onClick={nextPage}>Siguiente</Button>
                         </div>
                     </div>

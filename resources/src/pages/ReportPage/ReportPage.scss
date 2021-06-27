@@ -1,15 +1,289 @@
 #reports {
-    & > div{
-        #ac-chart-container {
+    h1 {
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    #reportProducts{
+        width: 100%;
+        padding: 1.5rem 1.675rem;
+        border-radius: 1.5625rem;
+        box-shadow: 10px 10px 30px #bebebe,
+            -10px -10px 30px #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            text-align: center;
+        }
+
+        > div {
+            width: 100%;
             display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
 
-            > div {
-                position: static !important;
+            #rPGP-masComprados {
+                width: 33%;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 1rem;
 
-                .anychart-credits {
-                    display: none;
+                h2 {
+                    font-size: 1.25rem;
                 }
             }
+
+            #rP-centerInfo {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                #rP-cI {
+                    &-superior{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #ccc;
+                        border-radius: 15px;
+                        padding: 1rem;
+
+                        h2 {
+                            font-size: 1.25rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                text-align: center;
+                                font-weight: 700;
+                            }
+
+                            &:nth-of-type(2) {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    &-inferior{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #ccc;
+                        border-radius: 15px;
+                        padding: 1rem;
+
+                        h2 {
+                            font-size: 1.25rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                text-align: center;
+                                font-weight: 700;
+                            }
+
+                            &:nth-of-type(2) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #rPGB-masCompradosMarks {
+                width: 33%;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 1rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    #reportIncomeExponese{
+        width: 100%;
+        padding: 2.5rem 1.675rem;
+        border-radius: 1.5625rem;
+        box-shadow: 10px 10px 30px #bebebe,
+            -10px -10px 30px #ffffff;
+        margin: 65px 0;
+
+        h2 {
+            text-align: center;
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            height: 400px;
+
+            #rIEGL-latestSales {
+                width: 35%;
+                height: 100%;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 1rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            #rIE {
+                &-centerInfo {
+                    width: 35%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h2 {
+                        font-size: 1.25rem;
+                    }
+
+                    #rIEGP-cI-sueldosAltos {
+                        border: 1px solid #ccc;
+                        border-radius: 15px;
+                        padding: 1rem;
+                    }
+
+                    #rIE-cI-totalSueldos {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #ccc;
+                        border-radius: 15px;
+                        padding: 1rem;
+
+                        h2 {
+                            font-size: 1.25rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                text-align: center;
+                                font-weight: 700;
+                            }
+
+                            &:nth-of-type(2) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                &-leftInfo {
+                    width: 26%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h2 {
+                        font-size: 1.25rem;
+                    }
+
+                    #rIE {
+                        &-ingresos {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 15px;
+                            padding: 1rem;
+                            background-color: #FFC14F;
+
+                            h2 {
+                                font-size: 1.25rem;
+                            }
+
+                            p {
+                                margin: 0;
+                                &:nth-of-type(1) {
+                                    font-size: 1.5rem;
+                                    text-align: center;
+                                    font-weight: 700;
+                                }
+
+                                &:nth-of-type(2) {
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &-egresos {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 15px;
+                            padding: 1rem;
+                            background-color: #DD3551;
+                            color: #ffffff;
+
+                            h2 {
+                                font-size: 1.25rem;
+                            }
+
+                            p {
+                                margin: 0;
+                                &:nth-of-type(1) {
+                                    font-size: 1.5rem;
+                                    text-align: center;
+                                    font-weight: 700;
+                                }
+
+                                &:nth-of-type(2) {
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &-ganancias {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 15px;
+                            padding: 1rem;
+                            background-color: #6DAB4B;
+                            color: #ffffff;
+
+                            h2 {
+                                font-size: 1.25rem;
+                            }
+
+                            p {
+                                margin: 0;
+                                &:nth-of-type(1) {
+                                    font-size: 1.5rem;
+                                    text-align: center;
+                                    font-weight: 700;
+                                }
+
+                                &:nth-of-type(2) {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

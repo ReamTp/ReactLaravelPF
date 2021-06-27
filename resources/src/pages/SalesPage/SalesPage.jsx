@@ -51,16 +51,16 @@ export default function SalesPage() {
     // Funciones de Busqueda
     const filterSales = () => {
         if (search.length === 0) {
-            return lista.slice(currentPage, currentPage + 8);
+            return lista.slice(currentPage, currentPage + 6);
         }
 
         const filtered = lista.filter(sale => sale.nombre_empresa.includes(search));
-        return filtered.slice(currentPage, currentPage + 8);
+        return filtered.slice(currentPage, currentPage + 6);
     }
 
     const nextPage = () => {
-        if(lista.filter(sale => sale.nombre_empresa.includes(search)).length > currentPage + 8){
-            setCurrentPage(currentPage + 8)
+        if(lista.filter(sale => sale.nombre_empresa.includes(search)).length > currentPage + 6){
+            setCurrentPage(currentPage + 6)
         } else {
             toast.error('No hay más datos');
         }
@@ -68,7 +68,7 @@ export default function SalesPage() {
 
     const prevPage = () => {
         if (currentPage > 0) {
-            setCurrentPage(currentPage - 8)
+            setCurrentPage(currentPage - 6)
         } else {
             toast.error('No hay más datos');
         }
@@ -87,15 +87,24 @@ export default function SalesPage() {
                 </div>
 
                 <div id="salesData">
-                    <Button variant="success" onClick={handleShow}>Generar Venta</Button>
+                    <div id="salesDataHeader">
+                        <h2>Informacion de boletas</h2>
+                        <Button variant="success" onClick={handleShow}>Generar Venta</Button>
+                    </div>
+
 
                     <div id="mDMenu">
-                        <div id="tPDMenuButton">
+                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+
+                        <div class="pagination">
                             <Button onClick={prevPage}>Anterior</Button>
+
+                            <div class="pagination-number">
+                                <p>{currentPage + 1} - {currentPage + 6 < lista.length ? <span>{currentPage + 6}</span> : <span>{lista.length}</span>} de {lista.length}</p>
+                            </div>
+
                             <Button onClick={nextPage}>Siguiente</Button>
                         </div>
-
-                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
                     </div>
 
                     <div id="salesTable">

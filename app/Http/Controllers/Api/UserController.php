@@ -29,7 +29,16 @@ class UserController extends Controller
         $correo = strtolower($request['email']);
         $password = $request['password'];
         $response = $this->userLogin($correo, $password);
-        $response['data'] = ["id" => $response['data']->id, "correo" => $response['data']->correo, "password" => $response['data']->password,];
+
+        if ($response['data']->estado) {
+            $response['data'] = ["id" => $response['data']->id, "correo" => $response['data']->correo, "password" => $response['data']->password];
+            $response['success'] = true;
+        } else {
+            $response['data'] = null;
+            $response['message'] = "Sin acceso!";
+            $response['success'] = false;
+        }
+
 
         return $response;
     }

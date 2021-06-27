@@ -99,10 +99,10 @@ class ProductosController extends Controller
                 if ($tProduct->estado && $marca->estado){
                     $result = $product->fill($request->all())->save();
 
-                    $response['message'] = 'Producto Activado';
+                    $response['message'] = 'Producto Actualizado';
                     $response['success'] = $result;
                 } else {
-                    $response['message'] = 'No se pudo activar, tipo de producto o marca desactivado';
+                    $response['message'] = 'No se pudo actualizar el producto';
                     $response['success'] = false;
                 }
             } catch (\Throwable $th) {}

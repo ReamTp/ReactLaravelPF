@@ -1,0 +1,106 @@
+#userPage{
+    #userPageTitle {
+        padding: 18px 0;
+        text-align: center;
+    }
+
+    #userPageDatos {
+        width: 100%;
+        padding: 2.5rem 1.675rem;
+        border-radius: 1.5625rem;
+        box-shadow: 20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
+        height: 40rem;
+
+        #userPageMenu{
+            height: 25%;
+
+            #userPageBasic {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #mDMenu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 78px;
+
+                input[type="text"] {
+                    width: 25%;
+                }
+
+                .pagination{
+                    width: 50%;
+                }
+            }
+
+        }
+
+        #userPageTabla {
+            height: 78%;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                height: 5px;
+                overflow: hidden;
+
+                &-thumb {
+                    background-color: #042241;
+                    border-radius: 10px;
+                }
+            }
+
+            table {
+                max-height: 100%;
+
+                thead {
+                    tr {
+                        th {
+                            &:nth-of-type(3) {
+                                min-width: 95px;
+                                max-width: 95px;
+                            }
+
+                            &:nth-of-type(4) {
+                                overflow: hidden;
+                                min-width: 170px;
+                                max-width: 170px;
+                            }
+
+                            &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(10) {
+                                min-width: 90px;
+                                max-width: 90px;
+                            }
+
+                            &:nth-of-type(11) {
+                                min-width: 112px;
+                                max-width: 112px;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            &:nth-of-type(12) {
+                                display: flex;
+                                justify-content: space-between;
+                                height: 100%;
+
+                                button {
+                                    &:nth-of-type(1) {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

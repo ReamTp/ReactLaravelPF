@@ -122,12 +122,17 @@ export default function ProductsPage() {
                     <h2>Datos de Productos</h2>
 
                     <div id="pagosDMenu">
-                        <div id="pagosDMenuButton">
+                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+
+                        <div class="pagination">
                             <Button onClick={prevPage}>Anterior</Button>
+
+                            <div class="pagination-number">
+                                <p>{currentPage + 1} - {currentPage + 4 < lista.length ? <span>{currentPage + 4}</span> : <span>{currentPage+4 - ((currentPage+4) - lista.length)}</span>} de {lista.length}</p>
+                            </div>
+
                             <Button onClick={nextPage}>Siguiente</Button>
                         </div>
-
-                        <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
                     </div>
 
                     <div id="tablaPago">

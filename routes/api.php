@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\ComisionesController;
 use App\Http\Controllers\Api\MarcasController;
 use App\Http\Controllers\Api\NotificacionesController;
 use App\Http\Controllers\Api\ProductosController;
+use App\Http\Controllers\Api\ReportController;
 use App\Http\Controllers\Api\TProductosController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\VentasController;
@@ -138,9 +139,22 @@ Route::get('/pagos/getempleados', [BoletasUserController::class, 'infoEmpleado']
 
 // Capacitaciones
 Route::post('/capacitaciones/crear', [CapacitacionesController::class, 'create']);
-// Capacitaciones
+
 Route::get('/capacitaciones/listar', [CapacitacionesController::class, 'listar']);
 
 Route::get('/capacitaciones/getusers/{id}', [CapacitacionesController::class, 'getUsers']);
 
 Route::put('/capacitaciones/desactivar', [CapacitacionesController::class, 'desactivar']);
+
+// Reportes
+Route::get('/reportes/most_products_sales', [ReportController::class, 'mostSelledProducts']);
+
+Route::get('/reportes/most_mark_sales', [ReportController::class, 'mostSelledMarks']);
+
+Route::get('/reportes/sales_money', [ReportController::class, 'getSalesMoney']);
+
+Route::get('/reportes/last_sales', [ReportController::class, 'lastestSales']);
+
+Route::get('/reportes/high_salaries', [ReportController::class, 'highSalaries']);
+
+Route::get('/reportes/total_salaries', [ReportController::class, 'totalSalaries']);

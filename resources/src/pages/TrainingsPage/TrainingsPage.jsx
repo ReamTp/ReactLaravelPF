@@ -40,16 +40,16 @@ export default function TrainingsPage() {
     // Funciones de Busqueda
     const filterCapacitaciones = () => {
         if (search.length === 0) {
-            return lista.slice(currentPage, currentPage + 8);
+            return lista.slice(currentPage, currentPage + 6);
         }
 
         const filtered = lista.filter(sale => sale.titulo.includes(search));
-        return filtered.slice(currentPage, currentPage + 8);
+        return filtered.slice(currentPage, currentPage + 6);
     }
 
     const nextPage = () => {
-        if(lista.filter(sale => sale.titulo.includes(search)).length > currentPage + 8){
-            setCurrentPage(currentPage + 8)
+        if(lista.filter(sale => sale.titulo.includes(search)).length > currentPage + 6){
+            setCurrentPage(currentPage + 6)
         } else {
             toast.error('No hay más datos');
         }
@@ -57,7 +57,7 @@ export default function TrainingsPage() {
 
     const prevPage = () => {
         if (currentPage > 0) {
-            setCurrentPage(currentPage - 8)
+            setCurrentPage(currentPage - 6)
         } else {
             toast.error('No hay más datos');
         }
@@ -78,12 +78,20 @@ export default function TrainingsPage() {
                 <div id="userPageDatos">
                     <div id="userPageMenu">
                         <div id="userPageBasic">
+                            <h2>Datos de Capacitaciones</h2>
                             <Button onClick={handleShow} variant="success">Crear Nueva Capacitacion</Button>
                         </div>
 
                         <div id="mDMenu">
-                            <div id="tPDMenuButton">
+                            <div class="pagination">
                                 <Button onClick={prevPage}>Anterior</Button>
+
+                                <div class="pagination-number">
+                                    {
+                                        lista.length > 0 ? <p>{currentPage + 1} - {currentPage + 6 < lista.length ? <span>{currentPage + 6}</span> : <span>{lista.length}</span>} de {lista.length}</p> : <p>0 - 0 de 0</p>
+                                    }
+                                </div>
+
                                 <Button onClick={nextPage}>Siguiente</Button>
                             </div>
 
@@ -92,7 +100,7 @@ export default function TrainingsPage() {
                     </div>
 
                     <div id="userPageTabla">
-                        <Table>
+                        <Table striped bordered hover>
                             <thead>
                                 <tr>
                                     <th>Código</th>
