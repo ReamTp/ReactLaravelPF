@@ -7,6 +7,7 @@ import CreateModalMarks from '../Modals/CreateModalMarks';
 import EditModalMark from '../Modals/EditModalMark';
 import DeactiveModalMarca from '../Modals/DeactiveModalMarca';
 import ActiveModalMarca from '../Modals/ActiveModalMarcas';
+import './Marcas.scss';
 
 export default function Marcas() {
     const [ form, setForm ] = useState({});
@@ -87,16 +88,16 @@ export default function Marcas() {
     // Funciones de Busqueda
     const filterMark = () => {
         if (search.length === 0) {
-            return lista.slice(currentPage, currentPage + 6);
+            return lista.slice(currentPage, currentPage + 3);
         }
 
         const filtered = lista.filter(tproduct => tproduct.nombre.includes(search));
-        return filtered.slice(currentPage, currentPage + 6);
+        return filtered.slice(currentPage, currentPage + 3);
     }
 
     const nextPage = () => {
-        if(lista.filter(mark => mark.nombre.includes(search)).length > currentPage + 6){
-            setCurrentPage(currentPage + 6)
+        if(lista.filter(mark => mark.nombre.includes(search)).length > currentPage + 3){
+            setCurrentPage(currentPage + 3)
         } else {
             toast.error('No hay más datos');
         }
@@ -104,7 +105,7 @@ export default function Marcas() {
 
     const prevPage = () => {
         if (currentPage > 0) {
-            setCurrentPage(currentPage - 6)
+            setCurrentPage(currentPage - 3)
         } else {
             toast.error('No hay más datos');
         }
@@ -124,12 +125,17 @@ export default function Marcas() {
             </div>
 
             <div id="mDMenu">
-                <div id="tPDMenuButton">
+                <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+
+                <div class="pagination">
                     <Button onClick={prevPage}>Anterior</Button>
+
+                    <div class="pagination-number">
+                        <p>{currentPage + 1} - {currentPage + 3 < lista.length ? <span>{currentPage + 3}</span> : <span>{lista.length}</span>} de {lista.length}</p>
+                    </div>
+
                     <Button onClick={nextPage}>Siguiente</Button>
                 </div>
-
-                <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
             </div>
 
             <div id="mDButtons">

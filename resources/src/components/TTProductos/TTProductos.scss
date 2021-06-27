@@ -1,0 +1,25 @@
+#tProductData{
+    width: 100%;
+    padding: 1.5rem;
+
+    #tPDMenu {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+
+        input[type="text"] {
+            width: 25%;
+        }
+
+        .pagination {
+            width: 50%;
+        }
+    }
+
+    #tPDataButtons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0 15px 0;
+    }
+}

@@ -45,10 +45,10 @@ export default function MyProfilePage() {
                             <Nav.Item>
                                 <Nav.Link eventKey="second">Mis Ajustes</Nav.Link>
                             </Nav.Item>
-
+{/* 
                             <Nav.Item className="nav-renuncia">
                                 <Nav.Link eventKey="third">Renuncia</Nav.Link>
-                            </Nav.Item>
+                            </Nav.Item> */}
                         </Nav>
                     </Col>
 

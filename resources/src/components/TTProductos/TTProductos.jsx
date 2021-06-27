@@ -7,6 +7,7 @@ import ActiveModalTProducts from '../Modals/ActiveModalTProducts';
 import CreateModalTProducts from '../Modals/CreateModalTProducts';
 import DeactiveModalTProduct from '../Modals/DeactiveModalTProduct';
 import EditModalTProducts from '../Modals/EditModalTProducts';
+import './TTProductos.scss';
 
 export default function TTProductos() {
     const [ form, setForm ] = useState({});
@@ -88,16 +89,16 @@ export default function TTProductos() {
     // Funciones de Busqueda
     const filterTProduct = () => {
         if (search.length === 0) {
-            return lista.slice(currentPage, currentPage + 6);
+            return lista.slice(currentPage, currentPage + 5);
         }
 
         const filtered = lista.filter(tproduct => tproduct.nombre.includes(search));
-        return filtered.slice(currentPage, currentPage + 6);
+        return filtered.slice(currentPage, currentPage + 5);
     }
 
     const nextPage = () => {
-        if(lista.filter(tproduct => tproduct.nombre.includes(search)).length > currentPage + 6){
-            setCurrentPage(currentPage + 6)
+        if(lista.filter(tproduct => tproduct.nombre.includes(search)).length > currentPage + 5){
+            setCurrentPage(currentPage + 5)
         } else {
             toast.error('No hay más datos');
         }
@@ -105,7 +106,7 @@ export default function TTProductos() {
 
     const prevPage = () => {
         if (currentPage > 0) {
-            setCurrentPage(currentPage - 6)
+            setCurrentPage(currentPage - 5)
         } else {
             toast.error('No hay más datos');
         }
@@ -125,12 +126,17 @@ export default function TTProductos() {
             </div>
 
             <div id="tPDMenu">
-                <div id="tPDMenuButton">
+                <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
+
+                <div class="pagination">
                     <Button onClick={prevPage}>Anterior</Button>
+
+                    <div class="pagination-number">
+                        <p>{currentPage + 1} - {currentPage + 5 < lista.length ? <span>{currentPage + 5}</span> : <span>{lista.length}</span>} de {lista.length}</p>
+                    </div>
+
                     <Button onClick={nextPage}>Siguiente</Button>
                 </div>
-
-                <input type="text" className='form-control' placeholder='Buscar Producto' value={search} onChange={onSearchChange} />
             </div>
 
             <div id="tPDataButtons">

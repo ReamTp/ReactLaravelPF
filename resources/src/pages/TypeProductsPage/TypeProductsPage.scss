@@ -1,0 +1,103 @@
+@import '../../../sass/index.scss';
+
+#tProductos{
+    padding: 1.5625rem;
+
+    h1{
+        margin-bottom: 2rem;
+    }
+
+    .col-sm-3{
+        height: 10.75rem;
+
+        .flex-column{
+            .nav-item{
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0px;
+                color: $dark-green !important;
+                margin-bottom: 0.9375rem;
+
+                &:hover{
+                    color: $dark-green !important;
+                    border-radius: 0.5625rem;
+                    box-shadow:  20px 20px 60px #cccccc,
+                        -20px -20px 60px #f0f0f0;
+                }
+            }
+        }
+    }
+
+    .nav-link {
+        color: $c-secundary-color !important;
+        transition: all 500ms ease-in-out;
+
+        &:hover{
+            color: $dark-green !important;
+        }
+    }
+
+
+    .tab-content{
+        width: 48.75rem;
+        height: 37.5rem;
+        overflow: hidden;
+        margin-left: 2.5rem;
+        border-radius: 10px;
+        box-shadow:  20px 20px 60px #cccccc,
+        -20px -20px 60px #ffffff;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+        background-color: $dark-green !important;
+        color: white !important;
+    }
+
+    .nav-renuncia .nav-link{
+        color: $ligth-red !important;
+
+        &.active{
+            color: white !important;
+            background-color: $red !important;
+        }
+    }
+
+}
+
+@media all and (max-width: 1202px){
+    #myprofile #profilemedia h2 {
+        font-size: 1.625rem;
+    }
+
+    #myprofile #profilemedia #profilemdata p {
+        font-size: 0.875rem;
+    }
+
+    #myprofile #profilemedia #profileimage {
+        width: 5.625rem;
+        height: 5.625rem;
+    }
+
+    #profile .tab-content {
+        width: auto;
+        margin-left: 0;
+    }
+
+    #myprofile .container .row .col{
+        font-size: 0.875rem;
+    }
+
+    #myprofile .container .row h2 {
+        font-size: 1.625rem;
+    }
+}
+
+@media all and (max-width: 375px){
+    #profile .container .row .col {
+        font-size: 0.75rem;
+    }
+
+    #profile .container .row h2 {
+        font-size: 1.375rem;
+    }
+}
