@@ -9,7 +9,13 @@ usuario.login = async (user) => {
     const urlLogin = baseUrl+'/login';
     const res = await axios.post(urlLogin, user)
         .then(response => { return response.data })
-        .catch(response => { return response.data; })
+        .catch(() => {
+            return {
+                data: null,
+                message: "Datos Incorrectos",
+                success: false,
+            }
+         })
     return res;
 }
 
