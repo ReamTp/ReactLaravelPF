@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">Sistema Administrativo</h1>
 
-## Sobre el Sistema Administrativo v0.1 beta
+## Sobre el Sistema Administrativo v1.0
 
 Este proyecto es un sistema administrativo basado en la estructura jerárquica de la empresa [Camposol](https://www.camposol.com.pe/), el cual esta desarrollado en React y Laravel, con el fin de brinda una una administración a una empresa con las siguientes opciones:
 
